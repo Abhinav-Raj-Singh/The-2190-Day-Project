@@ -2,7 +2,7 @@
 
 int main(){
     // Compiler time error --> Correct statement:std::cout<< "Hello World" << std::endl;
-    std::cout<< "Hello World" << std::endl;
+    std::cout<< "Hello World" << std::endl
 
     // Run time error
     int value = 7/0; // Terminal: warning: division by zero
