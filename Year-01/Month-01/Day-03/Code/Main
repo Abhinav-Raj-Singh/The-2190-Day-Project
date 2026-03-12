@@ -1,0 +1,29 @@
+# include <iostream>
+
+int addNumber(int first_param , int second_param){
+
+    int result = first_param + second_param;
+
+    return result;
+}
+
+int main(){
+
+    int first_number {5}; //Statement
+    int second_number {5}; //Statement
+
+    std::cout << "First Number: " << first_number << std::endl; // Expecting 5 on terminal
+    std::cout << "Second Number: " << second_number << std::endl; // Expecting 5 on terminal
+
+    int sum = first_number + second_number;
+
+    std::cout << "Sum :" << sum << std::endl; // Expecting 10 on terminal
+
+    sum = addNumber(25,7); // Passing 25 & 7 as parameters in our addNumber function and then storing in sum variable 
+ 
+    std::cout << "Sum :" << sum << std::endl; // Expecting 32 on terminal
+
+    sum = addNumber(30,54); // Passing 30 & 54 as parameters in our addNumber function and then storing in sum
+    std::cout << "Sum :" << sum << std::endl; // Expecting 84 on terminal
+    return 0;
+}
