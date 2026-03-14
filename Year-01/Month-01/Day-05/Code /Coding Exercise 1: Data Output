@@ -1,0 +1,9 @@
+// Your task is to print the message "I am the phoenix king!" on the terminal using std::cout. You don't need to put in a new line character using std::endl, just the message.
+
+#include <iostream>
+
+int main(){
+
+    std::cout << "I am the phoenix King!";
+    return 0;
+}
