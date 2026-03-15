@@ -1,0 +1,28 @@
+// Details of assignment below :
+
+/*
+Write a C++ program that asks which country the user lives in, lets the user type in the country and  and prints out a message
+
+I've heard great things about [Country]. I'd like to go there sometime.
+
+
+Questions for this assignment
+What does the solution for your source code look like?
+*/
+
+// Solution: 
+
+#include <iostream>
+#include <string>
+
+int main(){
+
+    std::string country_name;
+    
+    std::cout << "Please enter your country name :" << std::endl;
+
+    std::cin >> country_name;
+
+    std::cout << " I've heard great things about " << country_name << " I'd like to go there sometime. " << std::endl;
+    return 0;
+}
