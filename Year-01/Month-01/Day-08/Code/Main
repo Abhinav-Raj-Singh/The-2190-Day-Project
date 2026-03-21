@@ -1,0 +1,68 @@
+#include <iostream>
+
+int main(){
+
+/*
+    // Braced initiallizers
+        // Variable may contain random garbage value by compiler . Warning
+    int elephant_count;
+
+    int lion_count {}; // Initiallizes to zero 
+
+    int dog_count {10}; // Initiallizes to 10 
+
+    int cat_count {15}; // Initiallizes to 15 
+    
+    int domestic_animals { dog_count + cat_count }; // We can use expression as initiallizer 
+
+    // int new_number{does_not_exist} ; // This line will throw a compiler error.
+
+    // int narrowing_conversion {2.9}; // This line will throw a compiler error.
+
+    std::cout << "Elephant count : " << elephant_count << std::endl;
+    std::cout << "Lion count : " << lion_count << std::endl;
+    std::cout << "Dog count : " << dog_count << std::endl;
+    std::cout << "Cat count : " << cat_count << std::endl;
+    std::cout << "Domestic animal count : " << domestic_animals << std::endl;
+
+    */
+
+    /*
+// Functional Initializers 
+    int apple_count (5);
+    int orange_count (10);
+    int fruit_count (apple_count + orange_count);
+    
+    // int bad_initialization (doesnt_exist3 + doesnt_exist4)
+    // Information lost less safe than braced initializers
+    int narrowing_conversion_functional (2.9);
+
+    std::cout << "Apple count : " << apple_count << std::endl;
+    std::cout << "Orange count : " << orange_count << std::endl;
+    std::cout << "Fruit count : " << fruit_count << std::endl;
+    std::cout << "Narrowing conversion : " << narrowing_conversion_functional << std::endl;
+    std::cout << "size of narrowing convesion  : " << sizeof(narrowing_conversion_functional) << std::endl;
+
+    */
+
+    // Assignment initialization 
+
+    int bike_count = 2 ;
+    int truck_count = 7;
+    int vechile_count = bike_count + truck_count;
+
+    int narrowing_conversion_assignment = 2.9;
+
+    std::cout << "Bike count : " << bike_count << std::endl;
+    std::cout << "Truck count : " << truck_count << std::endl;
+    std::cout << "Vechile count : " << vechile_count << std::endl;
+    std::cout << "Narrowing conversion  : " << narrowing_conversion_assignment << std::endl;
+
+    // Check the size with sizeof
+
+    std::cout << "Size of int : " << sizeof(int) << std::endl;
+    std::cout << "Size of vechile_count : " <<sizeof(vechile_count) << std::endl;
+
+
+    return 0;
+}
