@@ -1,0 +1,68 @@
+#include <iostream>
+
+int main(){
+
+    int value = 5;
+
+    // Increment by 1
+    value = value + 1;
+    std::cout << "The value is : " << value << std::endl;
+    
+    value = 5 ; // Reset value to 5
+
+    // Decrement by 1
+    value = value - 1; 
+    std::cout << "The value is : " << value << std::endl;
+
+    // ================================================================
+
+    std:: cout << "========== Postfix Increment & Decrement  ================" << std::endl;
+
+    // Rest value to 5 
+    value = 5 ; 
+
+    // Increment with postfix
+    std::cout << "The value is (incrementing) : " << value++ << std::endl;
+    std::cout << "The value is : " << value << std::endl;
+
+    // Rest value to 5 
+    value = 5 ; 
+
+    std::cout << std::endl; 
+
+    // Decrement with postfix
+    std::cout << "The value is (decrementing) : " << value-- << std::endl;
+    std::cout << "The value is : " << value << std::endl;
+
+    // ================================================================
+
+    std:: cout << "========== Prefix Increment & Decrement  ================" << std::endl;
+
+    // Prefix : Increment
+
+    // Rest value to 5
+    value = 5;
+
+    ++value ;
+    std:: cout << "The value is (prefix++)" << value << std::endl; 
+    
+    // Rest value to 5
+    value = 5;
+    std:: cout << "The value is (prefix++ in place) " << ++value << std::endl; 
+
+    std::cout << std::endl;
+
+    // Prefix : Decrement
+
+    // Rest value to 5
+    value = 5;
+
+    --value ;
+    std:: cout << "The value is (prefix--)" << value << std::endl; 
+    
+    // Rest value to 5
+    value = 5;
+    std:: cout << "The value is (prefix-- in place) " << --value << std::endl; 
+
+    return 0;
+}
