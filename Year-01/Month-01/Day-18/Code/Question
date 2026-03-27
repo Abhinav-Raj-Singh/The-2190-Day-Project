@@ -1,0 +1,23 @@
+// Below is the question from Hacker rank 
+
+// Question -> In short -> Take 3 numbers as input and show their sum 
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int a;
+    int b;
+    int c;
+    std::cout << "Enter numbers in a,b,c" << std::endl;
+    
+    std::cin >> a >> b >> c;
+    int sum = a + b + c;
+    std::cout << "Sum of a , b & c is : " << sum << std::endl;
+    return 0;
+}
