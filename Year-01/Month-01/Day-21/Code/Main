@@ -1,0 +1,40 @@
+#include <iostream>
+#include <cmath>
+
+int main(){
+
+    double weight {7.7};
+
+    //floor
+    std::cout << "Weight rounded to floor is : " << std::floor(weight) << std::endl;
+    
+    //ceil
+    std::cout << "Weight rounded off to ceil is : " << std::ceil(weight) << std::endl;
+
+    //abs
+    double savings{-5000};
+    std::cout << "abs of wegith is : " << std::abs(weight) << std::endl;
+    std::cout << "abs of savings is : " << std::abs(savings) << std::endl;
+
+    //exp 
+    double exponential {std::exp(10)};
+    std::cout << "exponential of 10 is : "  << exponential << std::endl;
+
+    //pow 
+    std::cout << "3 ^ 4 is : " << std::pow(3,4) << std::endl;
+    std::cout << "9 ^ 3 is : " << std::pow(9,3) << std::endl;
+
+    //log
+
+    std::cout << "log; to get 54.59 , you would evaluate e to the power of " << std::log(54.59) << std::endl;
+    std::cout << "To get 10000 , you would have to evaluate 10 to the power of " << std::log10(10000) << std::endl;
+
+    //sqrt
+    std::cout << "The square root of 81 is : " << std::sqrt(81) << std::endl;
+
+    //round
+    std::cout << "The rounded off value of 3.654 is : " << std::round(3.654) << std::endl;
+    std::cout << "The rounded off value of 2.5 is : " << std::round(2.5) << std::endl;
+    std::cout << "The rounded off value of 2.4 is : " << std::round(2.4) << std::endl;
+    return 0;
+}
