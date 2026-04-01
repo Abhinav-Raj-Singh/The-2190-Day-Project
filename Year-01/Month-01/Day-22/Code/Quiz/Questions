@@ -1,0 +1,20 @@
+Quiz 6: So you think you know more about C++. Let's find out
+
+Question 1:
+How is the precedence and associativity table useful
+
+
+Question 2:
+Why would one want to use prefix and postfix increment/decrement operators in their C++ programs
+
+
+Question 3:
+What is the type of result and why
+
+
+
+char var1 {40}; 
+char var2 {50};
+ 
+auto result = var1 + var2 ;
+
