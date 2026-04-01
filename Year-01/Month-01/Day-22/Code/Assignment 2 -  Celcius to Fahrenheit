@@ -1,0 +1,17 @@
+/*
+Write a C++ program that reads in Celsius degree data from the terminal with std::cin and stores that in a double variable. The program then converts that to Fahrenheit and prints out a message like 50.2 Celsius is 122.36 Fahrenheit .
+*/
+
+#include <iostream>
+
+int main(){
+
+    double cel_temp{0};
+    std::cout << "Enter your temperature in celsius : " << std::endl;
+    std::cin >> cel_temp;
+
+    double conversion = (9.0 / 5) * cel_temp + 32;
+    std::cout << cel_temp << " Celsius is " << conversion << " Fahrenheit " << std::endl;
+
+    return 0 ;
+}
