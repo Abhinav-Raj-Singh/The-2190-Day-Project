@@ -1,0 +1,296 @@
+#include <iostream>
+#include <iomanip>
+int main(){
+    //std::endl; --> places new line character on output stream and \n is similar to it
+
+    std::cout << "Hello";
+    std::cout << " World";
+
+    std::cout << std::endl;
+
+    std::cout << "-------------------" << std::endl;
+    std::cout << "Hello" << std::endl;
+    std::cout << "World" << std::endl;
+
+    std::cout << std::endl;
+
+    std::cout << "Hello\n" ;
+    std::cout << "World\n" ;
+
+    // =======================================
+    std::cout << std::endl;
+
+    //std::flush --> flushes the output buffer to final destination.
+
+    std::cout << "This is nice message" << std::endl << std::flush ;
+    // By this we sure that we will get output on final stream
+    // This is very important for some special cases.
+
+    // =======================================
+    std::cout << std::endl;
+
+    //std::setw() : Adjusts the field where the data is to be printed out
+    // this affects only the next value to be printed out .
+
+    std::cout << "The Unformatted table : " << std::endl;
+    std::cout << "FirstName" << "LastName" << "Age" << std::endl;
+    std::cout << "Daniel" << "Gray" << 25 << std::endl;
+    std::cout << "Stanley" << "Woods" << 33 << std::endl;
+    std::cout << "Aarav" << "Singh" << 27 << std::endl;
+    std::cout << "Raj" << "Shamani" << 42 << std::endl;
+    std::cout << "Raghav" << "Chadha" << 28 << std::endl;
+    std::cout << "Donald" << "Trump" << 79 << std::endl;
+
+    std::cout << std::endl;
+    
+    std::cout << "The Formatted table : " << std::endl;
+    std::cout << std::setw(10) << "FirstName" << std::setw(10) << "LastName" << std::setw(10) << "Age" << std::endl;
+    std::cout << std::setw(10) << "Daniel" << std::setw(10) << "Gray" << std::setw(10) << 25 << std::endl;
+    std::cout << std::setw(10) << "Stanley" << std::setw(10) <<  "Woods" << std::setw(10) << 33 << std::endl;
+    std::cout << std::setw(10) << "Aarav" << std::setw(10) << "Singh" << std::setw(10) << 27 << std::endl;
+    std::cout << std::setw(10) << "Raj" << std::setw(10) << "Shamani" << std::setw(10) << 42 << std::endl;
+    std::cout << std::setw(10) << "Raghav" << std::setw(10) << "Chadha" << std::setw(10) << 28 << std::endl;
+    std::cout << std::setw(10) << "Donald" << std::setw(10) << "Trump" << std::setw(10) << 79 << std::endl;
+
+    std::cout << std::endl;
+    std::cout << "The Formatted table with variables : " << std::endl;
+    int width_value{15};
+
+    std::cout << std::setw(width_value) << "FirstName" << std::setw(width_value) << "LastName" << std::setw(width_value) << "Age" << std::endl;
+    std::cout << std::setw(width_value) << "Daniel" << std::setw(width_value) << "Gray" << std::setw(width_value) << 25 << std::endl;
+    std::cout << std::setw(width_value) << "Stanley" << std::setw(width_value) <<  "Woods" << std::setw(width_value) << 33 << std::endl;
+    std::cout << std::setw(width_value) << "Aarav" << std::setw(width_value) << "Singh" << std::setw(width_value) << 27 << std::endl;
+    std::cout << std::setw(width_value) << "Raj" << std::setw(width_value) << "Shamani" << std::setw(width_value) << 42 << std::endl;
+    std::cout << std::setw(width_value) << "Raghav" << std::setw(width_value) << "Chadha" << std::setw(width_value) << 28 << std::endl;
+    std::cout << std::setw(width_value) << "Donald" << std::setw(width_value) << "Trump" << std::setw(width_value) << 79 << std::endl;
+    // =======================================
+    std::cout << std::endl;
+
+    // Justified : values can be justified in therir field. We have 3 manipulators for this that are right, left & internal
+
+    // Right justified 
+
+    std::cout << "Right justified table(default) : " << std::endl;
+    width_value = {20};
+
+    std::cout << std::right;
+    std::cout << std::setw(width_value) << "FirstName" << std::setw(width_value) << "LastName" << std::setw(width_value) << "Age" << std::endl;
+    std::cout << std::setw(width_value) << "Daniel" << std::setw(width_value) << "Gray" << std::setw(width_value) << 25 << std::endl;
+    std::cout << std::setw(width_value) << "Stanley" << std::setw(width_value) <<  "Woods" << std::setw(width_value) << 33 << std::endl;
+    std::cout << std::setw(width_value) << "Aarav" << std::setw(width_value) << "Singh" << std::setw(width_value) << 27 << std::endl;
+    std::cout << std::setw(width_value) << "Raj" << std::setw(width_value) << "Shamani" << std::setw(width_value) << 42 << std::endl;
+    std::cout << std::setw(width_value) << "Raghav" << std::setw(width_value) << "Chadha" << std::setw(width_value) << 28 << std::endl;
+    std::cout << std::setw(width_value) << "Donald" << std::setw(width_value) << "Trump" << std::setw(width_value) << 79 << std::endl;    
+
+    std::cout << std::endl;
+// Left justified 
+
+    std::cout << "Left justified table : " << std::endl;
+    width_value = {20};
+
+    std::cout << std::left;
+    std::cout << std::setw(width_value) << "FirstName" << std::setw(width_value) << "LastName" << std::setw(width_value) << "Age" << std::endl;
+    std::cout << std::setw(width_value) << "Daniel" << std::setw(width_value) << "Gray" << std::setw(width_value) << 25 << std::endl;
+    std::cout << std::setw(width_value) << "Stanley" << std::setw(width_value) <<  "Woods" << std::setw(width_value) << 33 << std::endl;
+    std::cout << std::setw(width_value) << "Aarav" << std::setw(width_value) << "Singh" << std::setw(width_value) << 27 << std::endl;
+    std::cout << std::setw(width_value) << "Raj" << std::setw(width_value) << "Shamani" << std::setw(width_value) << 42 << std::endl;
+    std::cout << std::setw(width_value) << "Raghav" << std::setw(width_value) << "Chadha" << std::setw(width_value) << 28 << std::endl;
+    std::cout << std::setw(width_value) << "Donald" << std::setw(width_value) << "Trump" << std::setw(width_value) << 79 << std::endl;    
+
+    // Internal justified : Data will be right justified and sign will be left justified 
+    std::cout << std::endl;
+
+    std::cout << "Internal justified : " << std::endl;
+    std::cout << std::right;
+    std::cout << std::setw(10) << -123.5 << std::endl;
+    std::cout << std::internal;
+    std::cout << std::setw(10) << -122.5 << std::endl;
+    
+    std::cout << std::endl;
+    width_value = {20};
+
+    std::cout << std::left;
+    std::cout << std::setfill('-'); // The fill character
+    std::cout << "Table with fill characters : " << std::endl;
+    std::cout << std::setw(width_value) << "FirstName" << std::setw(width_value) << "LastName" << std::setw(width_value) << "Age" << std::endl;
+    std::cout << std::setw(width_value) << "Daniel" << std::setw(width_value) << "Gray" << std::setw(width_value) << 25 << std::endl;
+    std::cout << std::setw(width_value) << "Stanley" << std::setw(width_value) <<  "Woods" << std::setw(width_value) << 33 << std::endl;
+    std::cout << std::setw(width_value) << "Aarav" << std::setw(width_value) << "Singh" << std::setw(width_value) << 27 << std::endl;
+    std::cout << std::setw(width_value) << "Raj" << std::setw(width_value) << "Shamani" << std::setw(width_value) << 42 << std::endl;
+    std::cout << std::setw(width_value) << "Raghav" << std::setw(width_value) << "Chadha" << std::setw(width_value) << 28 << std::endl;
+    std::cout << std::setw(width_value) << "Donald" << std::setw(width_value) << "Trump" << std::setw(width_value) << 79 << std::endl;    
+  
+// ========================================================
+
+    std::cout << std::endl;
+    // boolalpha & noboolapha : used to control output in true/false or 1/0 format.
+
+    bool condition1{true};
+    bool condition2{false};
+
+    std::cout << "condition1 is : " << condition1 << std::endl;
+    std::cout << "condition2 is : " << condition2 << std::endl;
+    
+    std::cout << std::endl;
+    std::cout << std::boolalpha ; 
+    std::cout << "condition1 is : " << condition1 << std::endl;
+    std::cout << "condition2 is : " << condition2 << std::endl;
+
+    std::cout << std::endl;
+    std::cout << std::noboolalpha ; 
+    std::cout << "condition1 is : " << condition1 << std::endl;
+    std::cout << "condition2 is : " << condition2 << std::endl;
+
+    // ==============================================
+    std::cout << std::endl;
+
+    int post_numb{40};
+    int neg_numb{-36};
+
+    std::cout << "post_numb : " << post_numb << std::endl;
+    std::cout << "neg_numb : " << neg_numb << std::endl;
+
+    std::cout << std::endl;
+    std::cout << std::showpos;
+    std::cout << "post_numb : " << post_numb << std::endl;
+    std::cout << "neg_numb : " << neg_numb << std::endl;
+
+    std::cout << std::endl;
+    std::cout << std::noshowpos;
+    std::cout << "post_numb : " << post_numb << std::endl;
+    std::cout << "neg_numb : " << neg_numb << std::endl;
+
+    // ==============================================
+    std::cout << std::endl;
+
+    // Different number systems : std::hex , std::oct , std::dec
+
+    int posti_numb{45678};
+    int negati_numb {-3456};
+    double doub_numb {456.456};
+
+    std::cout << std::endl;
+    std::cout << "All numbers in default format : " << std::endl;
+    std::cout << "posti_numb : " << posti_numb << std::endl;
+    std::cout << "negati_numb : " << negati_numb << std::endl;
+    std::cout << "doub_numb : " << doub_numb << std::endl;
+
+    std::cout << std::endl;
+    std::cout << "posti_numb in different number systems : " << std::endl;
+    std::cout << "posti_numb in dec : " << std::dec << posti_numb << std::endl;
+    std::cout << "posti_numb in hex : " << std::hex << posti_numb << std::endl;
+    std::cout << "posti_numb in oct : " << std::oct << posti_numb << std::endl;
+
+    std::cout << std::endl;
+    std::cout << "negati_numb in different number systems : " << std::endl;
+    std::cout << "negati_numb in dec : " << std::dec << negati_numb << std::endl;
+    std::cout << "negati_numb in hex : " << std::hex << negati_numb << std::endl;
+    std::cout << "negati_numb in oct : " << std::oct << negati_numb << std::endl;
+
+    std::cout << std::endl;
+    std::cout << "doub_numb in different number systems : " << std::endl;
+    std::cout << "doub_numb in dec : " << std::dec << doub_numb << std::endl;
+    std::cout << "doub_numb in hex : " << std::hex << doub_numb << std::endl;
+    std::cout << "doub_numb in oct : " << std::oct << doub_numb << std::endl;
+    
+    // ==============================================
+    std::cout << std::endl;
+    
+    // Upercase & nouppercase
+
+    int numb{163543};
+
+    std::cout << "numb (default : nouppercase )"  << std::endl;
+    std::cout << "numb in (dec) : " << std::dec << numb << std::endl;
+    std::cout << "numb in (hex) : " << std::hex << numb << std::endl;
+    std::cout << "numb in (oct) : " << std::oct << numb << std::endl;
+
+    std::cout << std::endl;
+
+    std::cout << "numb with uppercase : " << std::endl;
+    std::cout << std::uppercase; 
+    std::cout << "numb in (dec) : " << std::dec << numb << std::endl;
+    std::cout << "numb in (hex) : " << std::hex << numb << std::endl;
+    std::cout << "numb in (oct) : " << std::oct << numb << std::endl;
+
+    // ==============================================
+    std::cout << std::endl;
+
+    // fixed and scientific for floating point values 
+
+    double a {5.3564678913278946513};
+    double b {4561.0};
+    double c {1.35e-10};
+  
+    std::cout << std::endl;
+    std::cout << "double values in default format : use scientific notation where is necessary " << std::endl;
+    std::cout << "a : " << a << std::endl;
+    std::cout << "b : " << b << std::endl;
+    std::cout << "c : " << c << std::endl;
+
+
+    std::cout << std::endl;
+    std::cout << "double values in fixed format : " << std::endl;
+    std::cout << std::fixed;
+    std::cout << "a : " << a << std::endl;
+    std::cout << "b : " << b << std::endl;
+    std::cout << "c : " << c << std::endl;    
+
+    std::cout << std::endl;
+    std::cout << "double values in scientific format :  " << std::endl;
+    std::cout << std::scientific;
+    std::cout << "a : " << a << std::endl;
+    std::cout << "b : " << b << std::endl;
+    std::cout << "c : " << c << std::endl;    
+
+    std::cout << "double values back to default : " << std::endl;
+    std::cout.unsetf(std::ios::fixed | std::ios::scientific );
+    std::cout << "a : " << a << std::endl;
+    std::cout << "b : " << b << std::endl;
+    std::cout << "c : " << c << std::endl;  
+
+    // =========================================================
+    std::cout << std::endl;
+
+    // setprecision() : force output to maximum possible correct values as per our input in ()
+    // values as per data type is used and rest will be garbage values. Default if 6
+    
+    a = 3.4561237846513278996385274112365;
+
+    std::cout << std::endl;
+    std::cout << "a (default precision is (6) ) : " << a << std::endl;
+    std::cout << std::endl;
+    std::cout << std::setprecision(10);
+    std::cout << "a (precision(10) ) : " << a << std::endl;
+    std::cout << std::endl;
+    std::cout << std::setprecision(20);
+    std::cout << "a (precision(20) ) : " << a << std::endl;
+
+    // If you the precision is bigger than the supported type than that values out of possible range will be just garbage values
+    
+
+    // =====================================
+    std::cout << std::endl;
+    std::cout << std::dec;
+    // showpoint : shows trailing zeroes if necessary
+    double d{45.01};
+    double e{3.14};
+    double f{29.0};
+    int g {45};
+
+    std::cout << "noshowpoint (default) : " << std::endl;
+    std::cout << "d : " << d << std::endl;
+    std::cout << "e : " << e << std::endl;
+    std::cout << "f : " << f << std::endl;
+    std::cout << "g : " << g << std::endl;
+
+    std::cout << std::endl;
+    std::cout << "showpoint : " << std::endl;
+    std::cout << std::showpoint ;
+    std::cout << "d : " << d << std::endl;
+    std::cout << "e : " << e << std::endl;
+    std::cout << "f : " << f << std::endl;
+    std::cout << "g : " << g << std::endl; 
+    return 0;
+
+}
