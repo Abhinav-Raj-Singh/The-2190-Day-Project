@@ -1,34 +1,33 @@
 #include <iostream>
 
-const int val1 {33};
-constexpr int val2{34};
-int val3 {35}; // Run time value
+const int var1{67};
+constexpr int var2{64};
+int var3{6};
 
-constinit int age = 88; // This is initialized at compile time
-const constinit int age1 {val1}; // const and constinit can be combined
-constinit int age2 {age1}; // Initializing with age would lead to a compiler error
-                                 // age is not const
-//constinit int age3 {val3}; // Error : val3 is evaluated at run time
-                           // can't const initialize age3
-                           
-const constinit double weight {33.33};
-//constexpr constinit double scale_factor{3.11};// Can't combine constexpr and constinit
+constinit int age{78}; // This initialized at compile time
+const constinit int age1{var1}; // const and constinit can be combined
+constinit int age2{age1}; // would lead to error because age is no constant so it can be later in code changed to run time variable
 
+// constinit int age3{var3};// Error : run time variable can't be used to initialize a compile time variable.
+
+const constinit double weight{77.78};
+
+// constexpr constinit double height{46.7}; // Error : constexpr and constinit can't be combined .
+
+// age = 3678; // not allowed only initialization is only allowed out of main function
 
 int main(){
 
-    //constinit double height{1.72};
+    // constinit short{5}; // Error : because we can't use constinit inside main function this can be only used out of main function
 
     std::cout << "age : " << age << std::endl;
     std::cout << "age1 : " << age1 << std::endl;
     std::cout << "age2 : " << age2 << std::endl;
-    
-    age =33; // Can change a const init variable
+    age = 7124; // Can change a constinit variable. 
     std::cout << "age : " << age << std::endl;
-    
-    //Combining const and constinit
-    std::cout << "weight : " << weight << std::endl;
-    //weight = 44.44; // Compiler error
-    
-    return 0;
+
+    // const and constinit can be combined.
+    std::cout << "weight :" << weight << std::endl;
+    // weight = 101.6;  // Error : since weight is cosntant 
+    return 0; 
 }
