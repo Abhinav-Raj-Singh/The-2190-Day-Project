@@ -1,0 +1,21 @@
+Quiz - 7
+
+Question 1:
+Suppose we have a variable declaration below : 
+
+const unsigned int leg_count {4};
+
+Choose the most fitting description.
+
+
+Question 2:
+You have the program below
+
+int main(){
+  const int age;
+}
+and you compile it. What will happen?
+
+
+Question 3:
+Why can't we leave constants uninitialized ? 
