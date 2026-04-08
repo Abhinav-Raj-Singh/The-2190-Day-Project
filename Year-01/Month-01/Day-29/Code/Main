@@ -1,0 +1,36 @@
+#include <iostream>
+
+int main(){
+
+    // Overflow
+
+    unsigned char data{250};
+
+    ++data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;
+
+    ++data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;
+
+    ++data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;
+
+    ++data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;
+
+    ++data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;//255
+
+    ++data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl; //256 but this wont fit in char data type
+
+    //Underflow
+    data = 1;
+    --data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;
+
+    --data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;
+
+    return 0;
+}
