@@ -1,0 +1,23 @@
+Quiz 8
+
+Question 1:
+What do implicit conversions do?
+
+
+
+Question 2:
+Code below will cause for an explicit conversion to take place
+
+double price { 45.6 };
+int units {10};
+auto total_price = price * units;
+
+
+Question 3:
+Code below will cause an overflow  : 
+
+unsigned char data {-1};
+
+
+Question 4:
+We should carefully watch out for data overflow/underflow because
