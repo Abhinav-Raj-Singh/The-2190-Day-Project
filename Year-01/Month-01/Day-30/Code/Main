@@ -1,0 +1,14 @@
+#include <iostream>
+#include <bitset>
+
+int main(){
+
+    unsigned short int data{0b11111110};
+    std::cout << std::showbase ;
+    std::cout << "data in hex : " << std::hex << data << std::endl;
+    std::cout << "data in dec : " << std::dec << data << std::endl;
+    std::cout << "data in oct : " << std::oct << data << std::endl;
+    std::cout << "data in binary : " << std::bitset<16>(data) << std::endl;
+
+    return 0;
+}
