@@ -1,0 +1,54 @@
+#include <iostream>
+#include <bitset>
+
+int main(){
+
+    unsigned short int value;
+
+    value = {0xff0u};
+
+    std::cout << "size of unsigned short int : " << sizeof(unsigned short int) << std::endl;
+
+    std::cout << "Value in binary : " << std::bitset<16>(value) << "Value in decimal : " << value << std::endl;
+
+    value = static_cast<unsigned short int> (value << 1);
+    std::cout << "value in binary : " << std::bitset<16>(value) << "Value in decimal : " << value << std::endl;
+
+    // Shifting again by 1 bit 
+
+
+    value = static_cast<unsigned short int> (value << 1);
+    std::cout << "value in binary : " << std::bitset<16>(value) << "Value in decimal : " << value << std::endl;
+
+    // Lets do this again and again until we get lost of our 1 and then see what answer we will get 
+
+
+    value = static_cast<unsigned short int> (value << 1);
+    std::cout << "value in binary : " << std::bitset<16>(value) << "Value in decimal : " << value << std::endl;
+
+
+    value = static_cast<unsigned short int> (value << 1);
+    std::cout << "value in binary : " << std::bitset<16>(value) << "Value in decimal : " << value << std::endl;
+
+
+    value = static_cast<unsigned short int> (value << 1);
+    std::cout << "value in binary : " << std::bitset<16>(value) << "Value in decimal : " << value << std::endl;
+
+    // Shifting data to right 
+
+    value = static_cast<unsigned short int> (value >> 1);
+    std::cout << "Value in binary : " << std::bitset<16>(value) << "Value in decimal : " << value << std::endl;
+
+    // Shifting by multiples bits in one go 
+    // Shifting right by 4 bits
+
+    value = static_cast<unsigned short int > (value >> 4);
+    std::cout << "Value in binary : " << std::bitset<16>(value) << "Value in decimal : " << value << std::endl; 
+
+    // Directly printing things on console using std
+
+    std::cout << (value>>4) << std::endl;
+
+
+    return 0;
+}
