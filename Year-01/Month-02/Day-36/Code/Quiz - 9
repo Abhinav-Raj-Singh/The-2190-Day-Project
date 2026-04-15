@@ -1,0 +1,96 @@
+// Quiz - 9
+
+/*
+
+Q1. In this chapter, we mainly used the std::bitset type to 
+
+Q2. What'll be the output of this program -> int main(){
+double data {15.4};
+std::cout << "data : " << (data >> 2) << std::endl;
+return 0; 
+}
+Note : please try an and figure this out without actually
+running the code and then run this code and see if you get it right.
+
+Q3. What will be the output of this program
+
+int main(){
+
+int data {15};
+std::cout << "data : " << (data >> 1) << std::endl;
+
+return 0;
+}
+
+Q4. A mask is
+
+Q5. What is the purpose of the line 
+Var |= mask_bit_5;
+in the program below
+
+// Masks
+const unsigned char mask_bit_0 {0b00000001};
+const unsigned char mask_bit_0 -------
+------
+
+const unsigned char mask_bit_7{0b10000000};
+
+// Sandbox variable 
+unsigned char var{0b00000000};
+
+// Operation
+var |= mask_bit_5;
+
+Q6.What is the purpose of the line 
+Var ^= mask_bit_5;
+in the program below
+
+// Masks
+const unsigned char mask_bit_0 {0b00000001};
+const unsigned char mask_bit_0 -------
+------
+
+const unsigned char mask_bit_7{0b10000000};
+
+// Sandbox variable 
+unsigned char var{0b00000000};
+
+// Operation
+var ^= mask_bit_5;
+
+Q7. What is the purpose of the line 
+(var & mask_bit_2) >> 2
+in the program below
+
+// Masks
+const unsigned char mask_bit_0 {0b00000001};
+const unsigned char mask_bit_0 -------
+------
+
+const unsigned char mask_bit_7{0b10000000};
+
+// Sandbox variable 
+unsigned char var{0b00000000};
+
+// Operation
+std::cout << "bit2 is : " << ((var & mask_bit_2) >> 2) << std::endl;
+
+Q8. What is the purpose of the line
+var &= (~mask_bit_1);
+in the program below
+
+// Masks
+const unsigned char mask_bit_0 {0b00000001};
+const unsigned char mask_bit_0 -------
+------
+
+const unsigned char mask_bit_7{0b10000000};
+
+// Sandbox variable 
+unsigned char var{0b00000000};
+
+// Operation
+var &= (~mask_bit_1);
+
+
+*/
