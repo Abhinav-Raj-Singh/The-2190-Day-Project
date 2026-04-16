@@ -1,0 +1,32 @@
+// Just having idea of how these works
+
+/*#include <iostream>
+
+
+    int static_var2{30}; // Static duratioin : Dies when the program will Dies
+    
+    void some_function(){
+        
+        int local_var{60}; // Local (automatic) duration : dies at end of block
+        static int static_var1{20}; // static duration : dies when program dies.
+        int dynamic_var1{10}; // You(developer) decide when to die.
+    }
+
+int main(int argc, char**argv){
+    
+    int local_var1{5}; // local (automatic) duration : dies when the program dies.
+    int dynamic_var2{15}; // You(developer) decide when to die.
+    
+    { 
+        int local_var2{25}; // Local(automatic) duration : dies at the end of block
+        int dynamic_var3{95}; // You decide when to die 
+        
+        
+    }
+    
+    // We just had rough idea about dynamic variables , as we move further we will learn how to declare 
+    // and delete dynamic variables.
+    
+    return 0;
+}
+*/
