@@ -1,0 +1,22 @@
+/*
+
+Quiz - 10
+
+Q1. Please take a look at the program below
+
+int age{23};
+
+int main(){
+
+    int age{25};
+    std::cout << "age : " << age << std::endl;
+
+return 0;
+}
+
+Q2. What is the difference between variable lifetime and variable scope?
+
+Q3. Does it make senes to be super exact, for example in minute, seconds,
+.. about the variable lifetime in our c++ program?
+
+*/
