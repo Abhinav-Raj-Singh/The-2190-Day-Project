@@ -1,0 +1,65 @@
+// Assignment 6: Is the day valid?
+
+/* You'll write a C++ console program that lets the user type in a day 1 : Monday,..., 7 : Sunday]. If the day is valid (between 1 and 7) we say which day it is, otherwise we print an error message saying the day is invalid and terminate the program.
+*/
+
+#include <iostream>
+
+int main(){
+
+    int today;
+    std::cout << "Which day is today : [1 : Monday ,,,,, 7 : Sunday]" << std::endl;
+
+    std::cin >> today ;
+
+    if ( (today < 1 ) || (today > 7) ){
+    std::cout << today << " is not a valid day , please enter between 1 to 7 both are inclusive" << std::endl;
+        return 0;
+
+
+    }
+
+    switch(today){
+
+        case 1 : {
+            std::cout << "Today is Monday , Enjoy your work" << std::endl;
+        }
+        break;
+
+        case 2 : {
+            std::cout << "Today is Tuesday , Work Hard Dude " << std::endl;
+        }
+        break;
+
+        case 3 : {
+            std::cout << "Today is Wednesday , Work is worship" << std::endl;
+        }
+        break;
+
+        case 4 : {
+            std::cout << "Today is Thursday , Work..." << std::endl;
+        }
+        break;
+
+
+        case 5 : {
+            std::cout << "Today is Friday , Weekends are approaching" << std::endl;
+        }
+        break;
+
+        case 6 : {
+            std::cout << "Today is Saturday , Re-energizing mind" << std::endl;
+        }
+        break;
+
+
+        case 7 : {
+            std::cout << "Today is Sunday , Full on Enjoy & Relax" << std::endl;
+        }
+        break;
+        
+       
+    }
+
+    return 0;
+}
