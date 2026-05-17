@@ -1,0 +1,35 @@
+// Assignment - 8 : Are you completely surrounded?
+
+/*
+You'll write a C++ program that prompts the user to enter their location point (x, y) .The program will check whether the point is within the rectangle centered at (0, 0) with width of 20 and height 10.
+*/
+
+/*
+If the user is within the rectangle we'll print a message
+You are completely surrounded. Don't move!
+otherwise we'll print a message
+You're out of reach!
+*/
+
+#include <iostream>
+
+int main(){
+
+    double x;
+    double y;
+
+    std::cout << "Type in your x location" << std::endl;
+    std::cin >> x;
+    std::cout << "Type in your y location" << std::endl;
+    std::cin >> y;
+
+    if(((x >= - 10 && x <= 10))   && ((y >= - 5 && y <= 5))){
+        std::cout << "You are completely surrounded. Don't move!" << std::endl;
+    }
+    else{
+        std::cout << "You're out of reach!" << std::endl;
+    }
+    
+
+    return 0 ;
+}
