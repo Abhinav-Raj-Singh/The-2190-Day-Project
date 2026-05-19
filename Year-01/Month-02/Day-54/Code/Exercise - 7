@@ -1,0 +1,27 @@
+/*
+Your job is to in the exercise.cpp file and write a range based for loop that only filters in multiples of 3 from a collection and print them out using std::cout. For example if we have a collection containing the data below : 
+
+std::vector<int> numbers {1,21,4,5,7,3,9,3,5,17,15};
+and filter multiples of 3, we would print
+
+21 3 9 3 15
+
+PAY ATTENTION ! : Your code should put a trailing space (" ") after the last multiple of 3 that you print out. If you leave that out, our testing code will register that as a problem!
+*/
+
+
+#include <iostream>
+#include <vector>
+
+int main(){
+
+    std::vector<int> numbers {1,21,4,5,7,3,9,3,5,17,15};
+    
+    for(int& multiple : numbers) {
+        if(multiple % 3 == 0){
+            std::cout << multiple << " "  ;
+        }
+    }
+
+    return 0;
+}
