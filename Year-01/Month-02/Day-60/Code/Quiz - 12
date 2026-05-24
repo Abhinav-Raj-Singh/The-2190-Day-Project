@@ -1,0 +1,14 @@
+Quiz 12: Throwing you off :-)
+
+Question 1:
+We know that it is possible to treat char types as integers, provided the range of values in a char type satisfy our needs. Now, without compiling and running this program, what will this program do when run ? 
+
+  #include <iostream>  
+    int main(){
+ 
+        for( unsigned char i{10}; i >= 0 ; --i){
+            std::cout << "value : " << static_cast<unsigned int>(i) << std::endl;
+        }
+     
+        return 0;
+    }
