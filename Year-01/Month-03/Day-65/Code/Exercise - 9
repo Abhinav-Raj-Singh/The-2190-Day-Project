@@ -1,0 +1,51 @@
+/*
+Your are given an array of size collection_size, containing integers, potentially including duplicates. An example is
+
+int data[] {1,2,4,5,1,8,2,3,6,1,4,2};
+
+Your job is to write code that eliminates duplicates and print a message exactly like
+
+The collection contains 7 unique numbers, they are : 1 2 4 5 8 3 6
+
+with a single space after the last element, in this case, a space after the 6. Please note that the message you print has to be exactly formatted like the above one, just adapted for any collection your code is given as input.  
+*/
+
+#include <iostream>
+
+
+int main(){
+
+  int data[] {1,2,1,1,5,6,7,8,9,10,10,10};
+  size_t collection_size = sizeof(data) / sizeof(data[0]);
+
+  int unique_data[20];
+
+  unsigned int counter{0};
+
+
+  for(size_t i{0} ; i < collection_size ; ++i){
+  bool already_in {false};
+  
+    
+  for(size_t j{0} ; j < counter ; ++j){
+    if(data[i] == unique_data[j]){
+      already_in = true;
+      break;
+    }
+    }
+    if(already_in == false){
+      unique_data[counter++] = data[i];
+    
+  } 
+
+  
+  }
+
+  std::cout << "the collection contains " << counter << " unique elements and they are , ";
+  for (unsigned int i{0} ; i < counter ; ++i){
+    std::cout << unique_data[i] << " " ;
+  }  
+
+
+  return 0;
+}
