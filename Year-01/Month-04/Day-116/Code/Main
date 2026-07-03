@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+
+	using std::cout;
+	int r;
+	// cin >> c; // This can break on other comptuers
+	cout << "Hello" << " " << "abhinav" <<std::endl ;
+
+
+	// int a = 2; // 2 in a
+	// int b = 8;
+	// int sum = a + b;
+	// cout << a + b << endl;
+	// char c = 'a' ;
+	// cout << c << endl;
+	// double d = 3.5;
+	// cout << d << endl;
+	// bool e = false;
+	// bool f = -123;
+	// cout << f ; 
+
+	
+	// long long int a = 12354;
+	// long long b = 53345;
+	// cout << a << " "  << b ; 
+
+	// cout << 100 % 14 ;
+
+	// int a = 5;
+	// cout << a++ << endl;
+	// cout << a << endl;
+	// cout << ++a << endl;
+
+	// char c = 'a';
+	// char d = 'c';
+	// cout << (int) d-c ;
+
+	int a ; 
+	double b ;
+	char c;
+	cin >> a >> b  >> c;
+	cout << a << " " << b << " " << c << " " << (int) c << "\n"   ; 
+	cout << a ;
+
+
+}
