@@ -1,0 +1,48 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+	// cout << 7/2 << endl; // Calculations are done in higher data type
+
+	// cout << 'c' + 1 << endl; // Ascii value of c + 1
+
+	// double a = 3/2;
+	// cout << a << endl; // Calculations are done first and then they are stored in variable.
+
+	// cout << 3 * 7  / 2 << endl; // 3 * 7 = 21 / 2 = 10.5 = 10
+	// cout << 7/2 * 3 ; // 7/2 = 3.5 = 3*3=9
+
+	// int a = 100000;
+	// int b = 100000;
+	// int c = a*b;
+	// cout << c << endl; // Overflow -10^9 < int < 10^9 
+	// int mx = INT_MAX;
+	// cout << mx + 1 << endl;
+
+	// long long int a = 100000;
+	// long long int b = 100000;
+	// long long int c = a*b;
+	// cout << c << endl;
+
+/*	int a = 100000;
+	int b = 100000;
+	long long c = a  * 1LL * b;
+	cout << c << endl;
+*/
+
+/*	int a = 100000;
+	int b = 100000;
+	double c = a * 1LL * b;
+	cout << fixed << setprecision(0) << c  << endl;
+	c = 1e24;
+	cout << c << endl; */
+
+	long long l,b;
+	cin >> l >> b;
+	cout << (l*b) << endl;
+
+	
+
+	return 0;
+}
