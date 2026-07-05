@@ -1,0 +1,152 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int y = 2;
+
+int main(){
+
+    // int a = 3;
+    // int b = 4;
+    // int c = 6;
+    // cout << ((b > a) && (c > b)) << endl;// 1 , True         
+    // cout << ((b>a) || (c>a)) << endl; // 1, True
+
+
+    // int a ;
+    // cout << "Type a number " << endl;
+    // cin >> a ;
+
+    // if(a % 2 == 0){
+    //     cout << "Yes" << endl;
+    // }
+    // else if(a % 3 == 0){
+    //     cout << "Divisible by 3" << endl;
+    //     int x = 5;
+    //     y = 3; // Global variable can be used anywhere in the program.
+    // }
+    // else{
+    //     cout << "No" << endl;      
+    // }
+    // // cout << x;  // x is out of scope. 
+
+    // int a = 1;
+    // while(a <= 10){
+    //     cout << a << endl;
+    //     a++;
+    // }
+    // For loop : we can do many variations , but syntax is for(initialization,condition,operation){body}
+    // int i{1} ;
+    // for(; i<=10 ; ){
+    //     cout << i << endl;
+    //     i++;
+    // }
+
+    // * Pattern using for loop 
+    // int a ;
+    // cin >> a;
+    // for(int i{1} ; i <= a ; i++ ){
+    //     for(int j{0} ; j<i  ; ++j){
+    //         cout << "*" ;
+           
+    //     }
+    //     cout << endl;
+    // }
+
+
+    // // Revser of * Pattern using for loop 
+    // int a ;
+    // cin >> a;
+    // for(int i{1} ; i <= a ; i++ ){
+    //     for(int j{0} ; j<(a-i + 1 )  ; ++j){
+    //         cout << "*" ;
+           
+    //     }
+    //     cout << endl;
+    // }
+
+    // Testcases : Input:- the first lines contain an integer T, the total numer of test cases. 
+    // The follow T lines, each line contain an integer n
+
+
+    // int a , t;
+    // cin >> t;
+
+
+    // while(t--){
+    // cin >> a;
+    // for(int i{1} ; i <= a ; i++ ){
+    //     for(int j{0} ; j<(a-i + 1 )  ; ++j){
+    //         cout << "*" ;
+           
+    //     }
+    //     cout << endl;
+    // }
+    // }
+
+
+    // Test case using for loop
+    // int a,t;
+    // cin >> t;
+    // for(int i{0};i<t;i++){
+    // cin >> a;
+    // for(int i{1} ; i <= a ; i++ ){
+    //     for(int j{0} ; j<(a-i + 1 )  ; ++j){
+    //         cout << "*" ;
+           
+    //     }
+    //     cout << endl;
+    // }
+    // }
+
+    // Infinite loop
+        // For loop
+            // First way
+            // for(;;){
+            //     cout << "printing loop infinitely : " << endl;
+            // }    
+            // Second way
+                // for(int i{0} ; ; i++){
+                //     cout << "printing loop infinitely : " << i<< endl;
+                    
+                // }
+
+        // While loop
+            // while(true){
+            //     cout << "printing loop infinitely : " << endl;
+            // }    
+
+    // Jump statements : Break & Continue
+    
+        //Break : will end innermost loop in which that break was used
+
+        // int a , b{0};
+        // for(b ; b < 10 ; b++){
+        // for(a ; a < 10 ; a++){
+        //     if(a == 7){
+        //         if(true){
+        //             if(true){
+        //         break;
+        //         }
+        //       }      
+        //     }
+        //     cout << a << endl;
+        // }
+        // cout << "Loop is still running : " << b << endl;
+        // }
+
+        // Continue 
+        // int a , b{0};
+        // for(b ; b < 10 ; b++){
+        // for(a ; a < 10 ; a++){
+        //     if(a == 7){
+        //         continue;
+        //     }
+        //     cout << a << endl;
+        // }
+        // cout << "Loop is still running : " << b << endl;
+        // }
+
+
+    return 0;
+}
