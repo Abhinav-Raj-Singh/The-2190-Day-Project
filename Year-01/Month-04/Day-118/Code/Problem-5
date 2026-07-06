@@ -1,0 +1,47 @@
+/*
+Reverse The Number
+Given an Integer N, write a program to reverse it.
+
+Input
+The first line contains an integer T, total number of testcases. Then follow T lines, each line contains an integer N.
+
+Output
+For each test case, display the reverse of the given number N, in a new line.
+
+Constraints
+1 ≤ T ≤ 1000
+1 ≤ N ≤ 1000000
+
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    unsigned int t,n;
+    cin >> t;
+
+    while(t--){
+        
+        cin >> n;
+        if(n == 0){
+            cout << n << endl;
+        } else if(n!=0){
+        int reversed_numb{0};
+
+        while(n != 0 ){
+        int last_digit ;
+            last_digit = n % 10 ;
+            n = n / 10;
+            reversed_numb = (reversed_numb*10) + (last_digit);
+
+        }
+            cout << reversed_numb << endl;;
+
+        }
+    }
+    
+    return 0;
+}
+
