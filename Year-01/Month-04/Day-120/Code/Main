@@ -1,0 +1,124 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    // string a = "Hello";
+    // cout << a <<  endl;;
+    // string b ;
+    // cin >> b;
+    // cout << b << endl; 
+
+    // Operations on strings
+        // Concetination of strings
+        // string stra , strb , result;
+        // cin >> stra >> strb;
+        // result = stra + strb;
+        // cout << result << endl;
+        // // Equating strings
+        // if(stra == strb){
+        //     cout << "Equal" << endl;
+        // }
+        // else{
+        //     cout << "Not equal" << endl;
+        // }
+    // Indexing and size of string 
+        
+        // string stra ;
+        // cin >> stra;
+        // cout << stra[0] << endl;
+        // stra[0] = 'F';
+        // // stra[0] = "F";  // Invalid as we can't assign string at indices only char is allowed to assign.
+        // int size = stra.size();
+        // cout << size << endl;
+        // cout << stra << endl;
+
+    // Taking input of a string as exact
+        // string stra , strb , strc;
+        // cin >> stra >> strb;
+        // strc = stra + " " + strb;
+        // cout << strc << endl;
+        
+        // But what if we have multiple spaces then getline function will be required
+            // string stra;
+            // getline(cin , stra);
+            // cout << stra << endl;    
+
+        // Suspicious case of getline 
+            // int t ; 
+            // cin >> t;
+            // cin.ignore();
+            // while(t--){
+            //     string s;
+            //     getline(cin,s);
+            //     cout << s << endl;
+            // }
+
+    // Reversing a string 
+        // Method 1 
+        // string str ;
+        // cin >> str;
+        // string str_rev;
+        // for(int i = str.size() - 1; i >= 0 ; i--){
+        //     str_rev = str_rev + str[i];
+        // }
+        // cout << str_rev << endl;
+        // Method 2 - recommedned 
+            // string str ; 
+            // cin >> str;
+            // string str_rev;
+            // for(int i = str.size() - 1 ; i >= 0 ; i--){
+            //     str_rev.push_back(str[i]);
+            // }
+            // cout << str_rev << endl;
+
+    // Checking whether a string is a pallindrome or not
+        // Method - 1:-
+            // int t ;
+            // cin >> t;
+            // while(t--){
+            // string str , str_rev;
+
+            // cin >> str;
+            // for(int i = str.size() - 1 ; i >= 0 ; i--){
+            //     str_rev.push_back(str[i]);
+            // }
+            // if(str == str_rev){
+            //     cout << "Yes above string is a pallindrome" << endl;
+            // }
+            // else{
+            //     cout << "No above string is not a pallindrome" << endl;
+            // }
+            // }
+
+        // Method 2 :-
+            // int t;
+            // cin >> t;
+            // while(t--){
+            //     string str;
+            //     bool check;
+            //     cin >> str;
+            //     for(int i = ((str.size())/2)- 1 ; i >= 0 ; i--){
+            //         if(str[i] == str[str.size() - i - 1 ]){
+            //             check = true;
+            //         }
+            //         else{
+            //             check = false;
+            //         }
+
+            //     }
+            //     if(check == true){
+            //         cout << "yes" << endl;
+            //     }
+            //     else if (check == false){
+            //         cout << "no" << endl;
+            //     }
+            // }
+
+    // Working on big integers
+        string s;
+        cin >> s;
+        int last_digit = s[s.size()-1] - '0';        
+        cout << last_digit << endl;
+    return 0;
+}
