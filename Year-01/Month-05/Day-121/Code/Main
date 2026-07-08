@@ -1,0 +1,61 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+const int b = 1e7;
+int c [b];
+
+int main(){
+
+
+//     // Arrays introductory use
+//     int toffee[10];
+//     int t;
+
+//     int i =0;
+
+//     cin >> t;
+//     while(t--){
+//         int a ;
+//         cin >> a;
+        
+//         toffee[i] = a;
+//         i++;
+        
+    
+//    }
+   
+//    for(int j = 0; j<=9 ; j++){
+//    cout << toffee[j];
+//    }
+
+   // 1D,2D,& N dimensional arrays
+
+//    int m,n;
+//    cin >> m >> n;
+//    int array2D [m][n];
+
+//    for(int i = 0 ; i < m ; i++){
+//     for(int j = 0 ; j < n ; j++){
+        
+//         cin >> array2D[i][j] ; 
+//     }
+//    }
+//    for(int i = 0 ; i < m ; i++){
+//     for(int j = 0 ; j<n; j++){
+//         cout << array2D[i][j] << " ";
+//     }
+// }
+
+    // Maximum array size
+        // Declared locally(in main or in any other function is somewhere around 10 raise to 5)
+
+        // int n = 1e7;// Segmentation fault , exceeding limit
+        int n = 1e5;
+        int a[n];
+        a[n-1] = 70;
+        cout << a[n-1] << endl; 
+
+        // Globally size is of order of 10 raise to 7 and variable should be constant used for declaring array.
+        c[n-1] = 12;
+        cout << c[n-1] << endl;
+}
