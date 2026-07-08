@@ -1,0 +1,40 @@
+/*
+Remove character
+
+Given two strings str1 and str2, remove those characters from the first string(str1) which are present in 
+the second string(str2). Both the strings are different and contain only lowercase characters.
+NOTE: Size of the first string is always greater than the size of the second string( |str1| > |str2|).
+
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    string str1 , str2 , new_s;
+    cin >> str1 >> str2;
+
+    int s1, s2;
+    s1 = str1.size()-1;
+    s2 = str2.size() -1;
+    bool check ;
+
+    for(int i = 0 ; i <= s1 ; i++ ){
+        check = true;
+        for(int j = 0 ; j <= s2; j++){
+            if(str1[i] == str2[j]){
+                check = false;
+                break;
+            }
+        }
+            
+    if(check == true){
+        new_s.push_back(str1[i]);
+                }
+        }
+
+    
+    cout << new_s << endl;
+
+}
