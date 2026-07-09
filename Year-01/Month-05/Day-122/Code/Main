@@ -1,0 +1,102 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+const int b = 1e5+10;
+const int c = 1e5+10;
+
+int a[b][c];
+void funct(){
+    a[0][0] = 100;
+}
+
+//  void funct(int a[][10]){
+//     a[0][0] = 8;
+//  }
+
+// void increment(int &n , int n1){
+//     n++;
+//     n1++;
+// }
+
+// void swap(int &a , int &b){
+//     int temp = a; 
+//     a = b; 
+//     b = temp;
+
+// }
+
+
+// void printHello(){
+//     cout << "Hello world" << endl;
+// }
+// int sum(int a , int b){
+//     int result = a+b;
+//     return result;
+// }
+// int sum_digits(){
+//     int n;
+//     int final_numb {0};
+//     cin >> n; 
+
+//     while(n != 0){
+//         int last_digit = n % 10;
+//         final_numb = final_numb + last_digit;
+//         n = n/10;
+        
+//     }
+//     return final_numb;
+// }
+
+int main(){
+
+    // printHello(); 
+    // cout << printHello() << endl; // WIll give a error because void function don't return any data back .
+
+    // cout << sum(1,8) << endl;
+    // int a = sum_digits();
+    // int b = sum_digits();
+    // cout << (a+b) << endl;
+
+    // return 0; // return 0 ; is optional in modern day compilers as they by default assume return 0; at the end of code
+    
+    // References : by using &n this will force function to work on original value
+    // int a = 3;
+    // int b = 5;
+    // increment(a,b);
+    
+    // int a = 5;
+    // int b = 3;
+    // swap(a,b);
+    
+    // cout << a << " " << b << endl;
+
+    // There are many built in functions in c++ : swap , min , max etc
+        // Swap
+            // int a = 5;
+            // int b = 9;
+            // swap(a,b) ;
+            // cout << a << " " << b << endl;
+        // min
+            // int a = 3;
+            // int b = 7;
+            // cout << min(a,b) << endl; 
+        
+        // max
+            // int a = 99;
+            // int b = 153;
+            // cout << max(a,b) << endl;
+
+    // int a[5][10] ;
+    // a[0][0] = 500;
+    // cout << a[0][0] << endl;
+    // funct(a);
+    // cout << a[0][0] << endl;
+    a[0][0] = 90;
+    cout << a[0][0] << endl;
+    funct();
+    cout << a[0][0] << endl;
+
+
+
+    
+}
