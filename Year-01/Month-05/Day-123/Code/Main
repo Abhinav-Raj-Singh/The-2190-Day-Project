@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void increment(int *x){ // Passing by pointer 
+    (*x) = (*x) + 2 ;
+}
+
+int main(){
+
+//     int x = 4; // compiler will allocaate some space for integer x  
+//     // cout << &x << endl;
+//     int *p_x = &x; // creating pointer 
+//     // cout << p_x << endl; // Accessing address at pointer
+//     // cout << *p_x << endl; // accessing value at the addresss stored in the pointer
+//     // x = 5 ; // changing original variable by normal way
+//     // *p_x = 5; // changing original variable through pointer 
+//     // cout << *p_x << endl; 
+//     // p_x = p_x + 1 ; // 4 bytes will be added in the address so address will shift by 4 bytes.
+
+//     int a[10]; // Array is by default point and here all 10 integers will be arragned in a continuous manner as array's
+//     // all elements are arranged in a continuous manner
+//     a[0] = 5 ; 
+//     a[1] = 60;
+
+//     cout << a << endl;// will give location of array a that is location of array's first element that is a[0]
+//     cout << &a << endl;// This will also give us location of array a that is location of array's first element that is a[0]
+//     cout << *a << endl; // Will print value at a that is value at a[0] that is 5 
+//     cout << *(a+1) << endl; // Will print value at a that is value at a[1] that is 60
+
+// //   int *p = &x;
+// //   int **pp = &p;// value at pp is address of point p 
+// //   cout << *pp << endl; // value at pointer pp that is value at address of p or address of x
+// //   cout << &pp << endl; // value at pointer pp that is value at address of p or address of x
+// //   cout << **pp << endl; // value at pointer pp that is value at p is address of x and value at x is 4 
+// //   cout << p << endl; 
+// //   cout << p+1 << endl; // address of x will be shifted by 4 bytes.
+// //   cout << *(p+1) << endl; // garbage value as we don't know what integer is stored after 4 bytes from the actual address of x variable.
+// //   **pp = 7;
+// //   cout << x << endl; // changing value of x by double pointer 
+// //   cout << p_x << endl;
+// //   cout << (p_x-1)  << endl; // Will move our address of x by 4 bytes backward
+
+    int b = 4;
+    increment(&b);
+    cout << b << endl;
+
+
+
+}
