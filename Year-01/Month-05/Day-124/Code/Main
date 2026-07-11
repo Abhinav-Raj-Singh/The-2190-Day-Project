@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// const int N = 1e4;
+// int a [N]; 
+// const int N = 1e8; // We get MLE on online websites because they have a limit for programs but there is no such limit
+// at local level
+// because mostly 256 mb is the limit for memory for online judges but locall it depends on hardware
+// int a[N];
+
+int main(){
+
+    // cout << "hello world" << endl;  // We get accepted when our code runs successfully against all test cases and we
+    // aim to attain this verdict 
+    // cout << "hello world" << endl // Compilation error when there is issue in syntax in our code
+
+//     for(int i = 0 ; i < N ; i++){
+//         a[i] = i;
+//     }
+//     cout << a[N-1] << endl;   
+
+    // for(int i = 0; i < (4*N) ; i++){ // by 4*N trying to accessing indices beyond allowed indices
+        // cout << a[(4*N)-1] << endl; // Trying to access beyond legal indices and locally we will encounter segmentation fault 
+        // but on online judges it will be Run time error (RE)
+
+    // }
+
+// secondly if not using pointers carefully we can explicitly try to access illegal memory and that will cause RE
+// Thirdly if we are doing any undefined behavious in our code then this will throw RE
+    
+    // cout << 4/0 << endl; // Not allowed undefined behaviour
+    // TLE : time limit exceeded error will be encountered in code if we exceeded our given execution time limit
+
+ }
