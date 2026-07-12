@@ -1,0 +1,114 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+
+    // int a ;
+    // int sum  = 0 ;
+    // sum = a+a;
+// Each statement in code is one iteration 
+// So there are 3 iterations 
+// SO above 'O' is O(3)
+    // int n ;
+    // cin >> n ; 
+    // for(int i = 0 ; i < n ; i++){
+    //     int b ;
+    //     b = 5;
+    //     b++;
+    // }
+// above code's 'O' is O(5) + O(3*n)  
+// Suppose n < 1e5 so 5 is very insignificant number as compare to n and 3*n is order of 1e5 so overall 'O' is O(n)
+
+// N < 1e5;
+// a[i] < 1e5;
+
+    // int n ;
+    // cin >> n;
+    // for(int i = 0 ; i < n ; i++){
+    //     cin >> a[i];
+    // }
+// 'O' :- O(1) + O(1) + O(n) = O(n) so our code will run within a second becauase 1e7 iterations take 1 second
+
+    // int n ;
+    // cin >> n;
+    // for(int i = 0 ; i < n ; i++){
+    //     cin >> a[i];
+    // }
+
+    // for(int i = 0 ; i < n ; i++){
+    //     cin >> a[i];
+    // }
+
+    // for(int i = 0 ; i < n ; i++){
+    //     cin >> a[i];
+    // }
+
+    // for(int i = 0 ; i < n ; i++){
+    //     cin >> a[i];
+    // }
+
+// 'O' :- O(1) + O(1) + O(n) + O(n) + O(n) + O(n) = O(n) until we don't have O(n*n) adding O(n) multiple times won't affect
+
+    // int n ;
+    // cin >> n;
+    // for(int i = 0 ; i < n ; i++){
+    //     for(int i = 0 ; i < n ; i++){
+    //     cin >> a[i];
+    // }
+    // }
+// 'O' :- O(1) + O(1) + O(n*n) = O(n^2) but n < 1e5 so this is 1e10 so this will take 15 minutes and throw a eror
+     
+
+// O(log(N)) why it is desireable :
+// N < 1e5
+
+    // int n;
+    // cin >> n ;
+    // int ct = 0;
+    // while(n > 0){
+    //     n = n/2;
+    //     ct++;
+    // }
+    // 'O' = O(1) + O(1) + O(1) + O(Log(n)) = Log(n) = log(1e5) = 5 * 3 = 15 iterations only 
+
+// Time complexity that doesn't seem to be n^2
+
+    int n ; 
+    cin >> n; 
+    int ct = 0;
+    for(int i = 0 ; i <= n ; i++){
+        for(int j = 0 ; j <= i ; j++){
+            ct++;
+        }
+    }
+    // n < 1e5
+    // 'O' = O(1) + O(1) + O(1) + O(ct) , O(ct) = 0 + 1 + 2... sum upto n = number of iterations of ct = O(n^2/2) + O(n/5)
+    // 'O' = O(ct) = O(n^2)
+
+/*
+Give T testcases and an array of size N . print sum of array of size N in each test case
+
+1 <= T <= 1000
+1 <= N <= 1000
+1 <= a[i] <= 1000
+*/
+
+    int sum = 0;
+    int t ; 
+    cin >> t;
+    while(t--){
+        int n ;
+        cin >> n ; 
+        sum = 0; 
+        for(int i = 0 ; i < n ; i++){
+            int x; 
+            cin >> x; 
+            sum = sum + x;
+        }
+    }
+        cout << sum << endl; 
+
+// 'O' :- O(T*N) = O(N^2) , because they are similar and we always give time complexity in one variable in higher one
+
+}
