@@ -1,0 +1,45 @@
+#include <array> // for std::vector 
+#include <vector> // for std::vector
+#include <iostream>
+
+int main(){
+
+    // std::array <int , 5> a {}; // a std::array of 5 ints
+    // std::vector <int> b(5) ;    // b std::vector of 5 ints
+
+    // std::array must have a constant expression 
+    // std::array <int , 5> a{}; // using int literal
+
+    // constexpr int len {5};
+    // std::array <int , len> b{}; // using constexpr
+    
+    // enum colour{
+    //     GREEN,
+    //     BLUE,
+    //     RED,
+    //     max_colour
+    // };
+
+    // std::array <int , max_colour> c{}; // Using enum
+
+    // zero length std::array 
+    // std::array < int , 0 > arr {}; // Calling any element even operator[] will give undefined behaviour
+    // std:: cout << std::boolalpha<< arr.empty() << std::endl;
+
+    // Initializing std::array 
+    // std::array <int , 6> arr = {0,1,2,3,4,5} ; // Copy list initialization
+    // std::array <int, 5> prime {2,3,5,7,11}; // list initialization
+
+    // without initializor
+    // std::array < int , 5> a ; // members default intializer(int elements are lef un initialized)
+    // std::array < int , 5> b{}; // members value initialized (int elements are intiailized to zero)
+    // std::vector <int> v(5) ; // Member initialized to zero
+
+    // const std::array <int , 5> prime{2,3,5,7,11} ; // all elements of array prime are const despite elements are const written
+    // constexpr std::array <int, 6> a{1,2,3,4,5,6} ; // constexpr is also supported for std::array
+    
+    // CATD for std::array
+    // constexpr std::array a1 {1,23,4,56};// Deduced to <int,4>
+
+    return 0;
+}
