@@ -1,0 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+
+    constexpr auto myArray1 { std::to_array<int, 5>({ 9, 7, 5, 3, 1 }) };
+    cout << myArray1[1] << "\n";
+    return 0;
+}
