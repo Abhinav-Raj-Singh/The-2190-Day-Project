@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    int x; 
+    cin >> x;
+    cout << ceil(x/5.0) << '\n';
+}
+
+int main(){
+    solve();
+
+
+    return 0;
+}
