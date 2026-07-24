@@ -1,0 +1,27 @@
+// 546A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int k,w;
+    long long n;
+    int borrow = 0;
+    int total_money = 0 ;
+    cin >> k >> n >> w;
+    for(int i = 1 ; i <= w ; i++){
+        total_money = total_money + (i*k);
+    }
+    if(total_money > n){
+        borrow = total_money - n;
+    }
+    cout << borrow << '\n';
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+
+    solve();
+    return 0;
+}
