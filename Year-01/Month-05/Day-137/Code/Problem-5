@@ -1,0 +1,49 @@
+// 110A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    long long n;
+    cin >> n; 
+    string a = to_string(n);
+    int numb1 = 0;
+    int numb2 = 0;
+    string check ;
+    if(a.size() <=2){
+        if((n == 44) || (n == 47) || (n == 77) || (n == 74)){
+            check = "YES";
+        }
+        else{
+            check = "NO";
+        }
+    }
+    
+    else if(a.size() > 2){
+        for(int i = 0 ; i < a.size() ; i++){
+            if(a[i] == '4'){
+                numb1++;
+            }
+
+            else if(a[i] == '7'){
+                numb2++;
+            }
+        }
+        if(((numb1 + numb2) == 4) || (numb1 + numb2) == 7){
+            check = "YES";
+        }
+        else{
+            check = "NO";
+        }
+    }
+    cout << check << '\n';
+
+    } 
+
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+    return 0;
+}
