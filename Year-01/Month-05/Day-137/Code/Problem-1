@@ -1,0 +1,28 @@
+// 266A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    int n;
+    string a;
+    cin >> n;
+    cin >> a;
+    int stone_remove = 0 ;
+    for(int i = 0 ; i < n ; i++){
+        if(i < n-1){
+        if(a[i] == a[i+1]){
+            stone_remove++;
+        }
+    }
+    }
+    cout << stone_remove << '\n';
+}
+
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+
+    return 0;
+}
