@@ -1,0 +1,47 @@
+#What i learnt in DAY - 138
+
+1.Don't judge question from its rating read easier questions also with full attention.
+
+2.To prevent program to give undefined behavious always assign whatever variable , 
+array , functions,pointers , and custom data types(classes/structs).
+
+3.Use macros to shorten frequent repeating objects(like std::cin or std::cout in main function)
+
+5. vector <int> a1 (n,0);  --> creating vector of n size(n is user desired input) and 0 will be 
+will initialized value of all elements which this vector array will have.
+
+6. for(int i = 0 ; i < n ; i++) {cin >> a1[i];} --> can be used to take input of values of a vector 
+array from user
+
+7. `ans += (x > h);` --> answer variable will increase 1 if x is greater than h.
+
+8.  `typedef long long ll;` --> after this ll abhinav ; then abhinav will become a long long 
+     int variable and use this typedef for creasing valid alias use this before main function means in 
+     global scope to access that keyword alias anywhere in the code.
+	   > `typedef` is strictly meant for **data types** like `int`, std::vector<int>, or structures, not 
+        for objects or functions.
+
+9. `road_w += 2;` --> this will increase road_w variable by 2.
+
+10. `ans += (x>h);` --> increase answer variable by 1 is x is greater than h.
+
+11. #define MACRO_NAME object_or_expression
+	  - example - #define out std::cout 
+	  - then whenever i will type out in my main function this will do work of std::cout and make sure 
+      to define macros in global scope and don't use semicolon with them because they are not statements in c++ 
+12. Header files are included using `#include`, which is a **preprocessor directive**.
+
+13. In everyday terms, ==**"decimal representation"**== just means **how a number is written down using regular 
+digits (0 through 9)**.
+  
+   - When you read a programming problem or a math definition that says _"numbers whose decimal representations..."
+    _, it simply means **the actual written digits of the number**.
+
+14. string s_rev = t;
+      - reverse(s_rev.begin() , s_rev.end()); --> this reverse function is a void function so it directly changes 
+        the main string to reverse order and store back to same variable.    
+      -  Think of them as a **range boundary**
+       -  **`.begin()`**: Points _at_ the **first element**.
+       - **`.end()`**: Points _just past_ the **last element** (acting as a stop sign).
+       - Together, they form a **`[start, finish)`** window used by algorithms to know where to begin and where 
+          to stop.
