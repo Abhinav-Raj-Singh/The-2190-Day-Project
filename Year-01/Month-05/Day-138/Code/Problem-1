@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int n;
+    cin >> n;
+    string s; 
+    cin >> s;
+    int won_A = 0;
+    int won_D = 0;
+
+    for(int i = 0 ; i < n ; i++){
+        if(s[i] == 'A'){
+            won_A++;
+        }        
+        else if(s[i] == 'D'){
+            won_D++;
+        }
+    }
+    if(won_A > won_D){
+        cout << "Anton" << '\n';
+    }
+    else if(won_A < won_D){
+        cout << "Danik" << '\n';
+    }
+    else if(won_A == won_D){
+        cout << "Friendship" << '\n';
+    }
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+
+    solve();
+
+    return 0;
+}
