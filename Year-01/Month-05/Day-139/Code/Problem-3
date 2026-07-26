@@ -1,0 +1,31 @@
+// 1030A
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int n ; 
+    cin >> n;
+    set <int> diffi;
+    int a;
+
+    for(int i = 0 ; i < n ; i++){
+        cin >> a;
+        diffi.insert(a);
+    }
+    if(*diffi.rbegin() == 1){
+        cout << "HARD" << '\n';
+    }
+    else{
+        cout << "EASY" << '\n';
+    }
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+
+    return 0;
+}
