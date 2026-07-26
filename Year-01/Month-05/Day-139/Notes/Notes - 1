@@ -1,0 +1,35 @@
+1. `SETS` - Store only unique elements
+	 - `set<data_type> set_name` = {element1,element2...}; - for creating initialized set
+	 - `set<data_type> set_name`; - Empty set
+	 - `set_name.insert(5); `--> for inserting element in set and by this 5 will be a element of set_name.
+	 - `set_name.size();` --> For number of elements in set.
+	 - Set is already sorted in increasing order. 
+	 - `*(set_name).rbegin()` --> will give maximum value of set.
+	 - `*(set_name).begin()` --> will give minimum value of set.
+
+2. `size_t` --> This is a non-negative integer storing data type , generally used for counting elements 
+    or something related to counting and this handle any number of numbers in it based on your hardware 
+    architecture but int has a limit of 2 billions numbers only then it will wrap around negative part.
+
+	-  **`long long` works:** Yes, `long long` can handle up to $9 \times 10^{18}$ and won't overflow.
+    
+	- **Why not use it for sizes:** Standard library functions and containers (like `.size()`) are strictly 
+      designed to return `size_t` by definition.
+	
+	- **Portability:** `size_t` matches the exact native word size of your CPU architecture (32-bit on 32-bit 
+      systems, 64-bit on 64-bit systems), ensuring maximum performance and compatibility.
+	
+	- Whenever you store the value returned by `.size()`, always use `size_t`.
+
+	- And ,using a descriptive name like `size_t count` or `size_t size` immediately tells anyone reading
+    your code that the variable holds a count or a size.
+	
+	-  Also use size_t for loop iterator integer defining for(size_t i = 0; i < condition ; i++){body}
+	
+		- **Never Negative:** Containers can't have negative sizes, so using an unsigned type like `size_t` 
+        prevents bugs with negative loop bounds.
+    
+		- **Architecture Match:** It matches your CPU's native word size for optimal speed.
+    
+		- **No Warnings:** Comparing an `int` loop counter to `.size()` (which returns `size_t`) causes 
+        compiler warnings; matching types eliminates them.
