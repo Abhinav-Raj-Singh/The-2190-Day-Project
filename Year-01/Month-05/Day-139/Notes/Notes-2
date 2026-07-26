@@ -1,0 +1,9 @@
+1. Ternary Operator - Use for creating a small if-else type condition and then storing any result or printing 
+    any result
+
+	-  `string a = (condition ? "string_1" : "string_2");` --> if condition is true then a will get string_1 
+      otherwise string_2
+	-  `int a = (condition ? number1 : number2);` --> if condition is true then a get number 1 otherwise number2
+	- `cout << (condition ? "string_1" : "string_2") << '\n';` --> Direct printing
+
+2. `puts("String"); ` --> Print only string directly with a new line character.
