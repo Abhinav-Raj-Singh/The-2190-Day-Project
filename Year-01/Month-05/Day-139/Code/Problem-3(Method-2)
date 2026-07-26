@@ -1,0 +1,31 @@
+// 1030A method - 2 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+
+    int n;
+    cin >> n; 
+    int ans = 0;
+
+    for(int i = 0 ; i < n ; i++){
+
+        ios_base::sync_with_stdio(0);cin.tie(0);
+        int a;
+        cin >> a;
+        ans = max(ans , a);
+        
+    }
+    puts (ans > 0 ? "HARD" : "EASY"); 
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    
+    solve();
+
+    return 0;
+}
