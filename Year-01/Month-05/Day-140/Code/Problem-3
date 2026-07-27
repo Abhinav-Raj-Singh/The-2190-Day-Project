@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+
+    long long n ;
+    cin >> n ;
+    long long  n_n , p_n;
+    long long pp, np;
+    long long result = 0 ;
+    if(n % 2 != 0){
+        p_n = (n/2);
+        n_n = n - p_n;
+
+    }
+    else if(n%2 == 0){
+        p_n = n/2;
+        n_n = n/2;
+    }
+    pp = (p_n)*(2 + ((p_n-1)*1));
+    // float negative = static_cast<float>(n_n)/2;
+    // cout << fixed << negative;
+    np = (n_n)*(-1 + ((n_n-1)*(-1)));
+    // cout << p_n << " " << n_n << '\n';
+    // cout << negative << '\n';
+
+    // cout << pp << " " << np << '\n';
+    result = pp - (abs(np));
+    cout << result << '\n';
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+
+    return 0;
+}
