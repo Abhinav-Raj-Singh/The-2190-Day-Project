@@ -1,0 +1,35 @@
+1. `a1.insert(a1.begin()+0 , any_number);` --> then any_number will be get inserted in vector of numbers at index 0.
+
+
+2. To insert a string at a specific integer index `0`, you must add the integer to the starting iterator 
+    (`a.begin()`),  we used a.begin() because insert expects first argument as a iterator type.
+
+3. **What is an iterator?**  --> An iterator is essentially a specialized pointer used by C++ containers. 
+   It points to the actual memory address of an element inside the container, allowing functions to access, navigate, or modify the data at that exact location rather than relying on a simple integer index. But internally, it is usually a class (an object) specifically programmed to behave exactly like a pointer for that container.
+
+4. `std::fixed` --> It forces the number to always display as a normal decimal
+
+
+5. `std::setprecision(2)` --> Set number of digits are allowed in a number .
+	-`std::fixed & std::setprecision(2)` for decimal numbers --> if used both then setprecision will calculate numbers 
+      after decimal point but without `std::fixed` setprecision will calculate digits including before and after 
+      decimal part.
+    - Use --> just pass `cout << fixed << setprecision(2); ` statement once in code then after this all decimal 
+      sets will 
+              give desired result having only 2 digits after decimal point .
+              Once you set `std::fixed` and `std::setprecision(2)` on `std::cout`, that formatting state stays 
+              active for all 
+              subsequent floating-point outputs until you change it or reset it (like using `std::defaultfloat` 
+              or a different precision).
+
+
+6. Whenever wanted to do calculations in decimal points , store and print them --> `float` typically gives you 
+   about 6 to 7 digits of total
+   precision, while `double` gives about 15 to 16 digits. If you need precise results or are dealing with numbers
+   having many decimal places,
+   `double` is the standard choice.
+
+
+7. `s.append("a")` adds `a` to the **end** (last position) of the string, not the first position.but remember 
+   `s.append('a')` will throw 
+    overload error but `s.insert(0, "a")` is allowed and will insert a at  position  0 .
