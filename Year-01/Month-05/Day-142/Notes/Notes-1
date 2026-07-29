@@ -1,0 +1,15 @@
+1. `auto maximum = max_element(height.begin()+1 , height.end());` --> by this our 
+    maximum variable(iterator type so used auto keyword) will get  an **iterator**
+    pointing to the maximum element present in height array and i indexed height 
+    from 1 so i used `height.begin()+1` , if we want to get in literal integral 
+    type then we have to dereference it by int value = *maximum.
+    
+2. `auto minimum = min_element(height.begin()+1 , height.end());`  --> same 
+    logic as we did for max_element.
+    
+3. `auto find_max = find(height.begin(), height.end(), maximum);` --> by this we get a 
+    iterator value that will point at the index of maximum number in our height array .
+    If you want the actual value, dereference it (`*find_max`). If you want the index, 
+    subtract `height.begin()` (that is You do `int index = find_max - height.begin();`) 
+    And important thing here `std::find` takes a **value** (an `int`), not an iterator.
+
