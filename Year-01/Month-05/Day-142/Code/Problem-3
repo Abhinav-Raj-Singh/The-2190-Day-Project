@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    string n;
+    cin >> n; 
+    int p_a = 0 ;
+    int p_b = 0 ;
+
+    for(int i = 0 ; i < n.size(); i++ ){
+        if(n[i] == 'A'){
+            p_a += (i+1);
+            i++;
+        }
+        else if(n[i] == 'B'){
+            p_b += (i+1);
+            i++;
+        }
+    }
+    if(p_a > p_b){
+        cout << "A" << '\n';
+    }
+    else if(p_a < p_b){
+        cout << "B" << '\n';
+    }
+
+}
+
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+
+    solve();
+
+
+    return 0;
+}
+
