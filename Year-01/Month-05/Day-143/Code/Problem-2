@@ -1,0 +1,48 @@
+// 996A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    long long n;
+    cin >> n;
+    int bill = 0 ;
+    int run = n;
+    for(int i = 0 ; i < run ; i++){
+        if(n >= 100){
+            bill++;
+            n -= 100;
+        }
+        else if(n >= 20){
+            bill++;
+            n -= 20;
+        }
+        else if(n >= 10){
+            bill++;
+            n -= 10;
+        }
+        else if(n >= 5){
+            bill++;
+            n -= 5;
+        }
+        else if(n >= 1){
+            bill++;
+            n -= 1;
+        }
+        if(n == 0){
+            break;
+        }
+    }
+    cout << bill << '\n';
+    
+    }
+
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+    return 0;
+
+
+}
