@@ -1,0 +1,46 @@
+// 469A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int n ;
+    cin >> n;
+    int a, b;
+    set <int> c;
+    int p;
+    cin >> p;
+    for(int i = 0 ; i < p ; i++){
+        int level;
+        cin >> level;
+        c.insert(level);
+       
+        
+    }
+    int q;
+    cin >> q;
+    for(int i = 0 ; i < q ; i++){
+        int level;
+        cin >> level;
+        c.insert(level);
+       
+        
+    }
+    // cout << c.size() << '\n';
+    if(c.size() == n){
+        cout << "I become the guy." << '\n';
+    }
+    else {
+        cout << "Oh, my keyboard!" << '\n';
+    }
+    }
+
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+    return 0;
+
+
+}
