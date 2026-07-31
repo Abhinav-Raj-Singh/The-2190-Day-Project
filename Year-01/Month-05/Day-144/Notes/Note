@@ -1,0 +1,2 @@
+1. `for(int i : d_c){ cout << i << " " <<'\n'; }` --> to print elements of set d_c . 
+
