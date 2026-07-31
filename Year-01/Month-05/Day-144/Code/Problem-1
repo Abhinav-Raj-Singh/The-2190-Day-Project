@@ -1,0 +1,43 @@
+// 148A
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int k,l,m,n,d;
+    cin >> k >> l >> m >> n >> d;
+    // int z = max({k,l,m,n});
+    // cout << z << '\n';
+    set <int> d_c;
+
+    for(int i = 1 ; i <= d ; i++){
+        if(k*i <= d){
+        d_c.insert(k*i);
+            }
+        
+        if(l*i <= d){
+        d_c.insert(l*i);
+
+        }
+        if(m*i <= d){
+        d_c.insert(m*i);
+
+        }
+        if(n*i <= d){
+        d_c.insert(n*i);
+
+        }
+    }
+    
+    cout << d_c.size() << '\n';
+}
+
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+
+    return 0;
+}
