@@ -1,0 +1,40 @@
+// 785A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int n ; 
+    cin >> n ;
+    int total = 0;
+    
+    for(int i = 0 ; i < n ; i++){
+        string s;
+        cin >> s;
+        if(s[0] == 'I'){
+            total += 20;
+        }
+        else if(s[0] == 'D'){
+            total += 12;
+        }
+        if(s[0] == 'O'){
+            total += 8;
+        }
+        if(s[0] == 'C'){
+            total += 6;
+        }
+        if(s[0] == 'T'){
+            total += 4;
+        }
+    }
+    
+    
+    cout << total << '\n';
+}
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+
+    return 0;
+}
