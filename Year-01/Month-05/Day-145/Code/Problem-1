@@ -1,0 +1,43 @@
+// 144A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+
+    int n ;
+    cin >> n;
+    int maxi_value = 0 , mini_value = 110 ;
+    int maxi = 0 , mini = 0 ;
+    for(int i = 1 ; i <= n ; i++){
+        int a;
+        cin >> a;
+        if(a > maxi_value){
+            maxi_value = a;
+            maxi = i ;
+        }
+        if(a <= mini_value){
+            mini_value = a;
+            mini = i;
+        }
+        
+    }
+    int total_moves = 0 ;
+    if(maxi > mini){
+    total_moves = ((maxi-1) + (n-mini)) - 1 ;
+    }
+    else{
+        total_moves = (maxi-1) + (n-mini);
+    }
+    cout << total_moves << '\n';
+
+}
+
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+
+    return 0;
+}
