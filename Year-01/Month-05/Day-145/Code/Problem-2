@@ -1,0 +1,54 @@
+// 510A
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+
+    int n , m;
+    cin >> n >> m;
+    string odd;
+    string even;
+    string evevn_even;
+    for(int i = 1 ; i <= m ; i++){
+        
+            odd.append("#");
+            if(i == (m)){
+                even.append("#");
+            }
+            else if (!(i == (m))){
+                even.append(".");
+            }
+            if(i == 1){
+                evevn_even.append("#");
+            }
+            else if(i!=1){
+                evevn_even.append(".");
+            }
+
+        
+    }
+        int j = 1;
+
+    for(int i = 1 ; i <= n ; i++){
+    if(i%2 != 0){
+    cout << odd << '\n';
+    }
+    else if((i%2 == 0) && (j%2 != 0)){
+        cout << even <<'\n';
+        j++;
+    }
+    else if((i%2 == 0) && (j%2 ==0)){
+        cout << evevn_even << '\n';
+        j++;
+    }
+    }
+}
+
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+}
