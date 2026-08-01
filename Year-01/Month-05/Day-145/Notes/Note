@@ -1,0 +1,9 @@
+1. `sort(numbers.begin(),numbers.end());` --> by this our mnumbers vector array will get sorted (also rewritten 
+    to sorted vector back to original one ) in ascending order.
+  	- `sort(number.rbegin(), number.rend())` --> to sort vector array in descending order.
+  	- `sort(number.begin() , numbers.end() ,greater<int>())` --> another way to sort vector array in descending order.
+	
+2.	`vector <int > numbers {a,b,c} ;` --> To initialize vector array with specified initializers list.
+	
+3.	`cout << ((a + b == c) || (b + c == a) || (c + a == b)?  "YES\n" : "NO\n"); ` : by this we can take 
+     print onstream things without using if / else for simple condition.
