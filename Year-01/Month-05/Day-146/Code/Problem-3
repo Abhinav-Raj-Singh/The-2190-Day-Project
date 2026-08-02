@@ -1,0 +1,42 @@
+// 1999A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int t;
+    cin >> t;
+    while(t--){
+        int a ;
+        cin >> a;
+        int sum = 0 ;
+
+        for(int i = 0 ; i < 101 ; i++){
+            if(a >= 10){
+                sum += a%10;
+                a = a/10;
+                
+            }
+            else if(a!=0) {
+
+                sum += a;
+                a = a/10;
+            }
+        }
+        cout << sum << '\n';
+       
+        
+}
+    
+}
+
+
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+
+
+    return 0;
+}
