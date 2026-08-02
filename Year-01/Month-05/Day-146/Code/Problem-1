@@ -1,0 +1,31 @@
+// 2248A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int t;
+    cin >> t;
+    while(t--){
+        string s;
+        cin >> s;
+        char remove_0 = '0';
+        char remove_1 = '1';
+        size_t pos_0 = s.find(remove_0);
+        s.erase(pos_0 , 1);
+        size_t pos_1 = s.find(remove_1);
+
+        s.erase(pos_1 , 1);
+        // cout << pos_0 << " " << pos_1 << '\n';
+        
+        cout << s << '\n';
+    }
+    
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+
+}
