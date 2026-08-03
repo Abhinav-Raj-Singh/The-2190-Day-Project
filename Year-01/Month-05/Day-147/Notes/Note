@@ -1,0 +1,14 @@
+1. `vector <int> b(10)` --> It is not required to put size of vector but is a good practice.
+
+2. `While using round function in vector array like ` --> `b.insert(b.begin()+i , n*round(pow(10,digits-1)));`  
+    used round to avoid floating point numbers.
+
+3. `erase(b,0);` --> b is a integer array and you stored numbers in not continuous manner indices then that 
+    uninitliazed indices will automatically get 0 as integer and by this our array will remove all 0's even 
+    if user gave input of 0 and that automatic 0's  and then our array will start from index 0 with our 
+    initialized integers .
+
+4. `vector <int> b;` --> automatically its size gets zero.
+
+5. `b.push_back(10);` --> appends the value `10` to the very end of the vector `b`, increasing its size by 
+    one everytime when we will call this.
