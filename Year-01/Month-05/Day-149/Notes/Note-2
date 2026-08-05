@@ -1,0 +1,22 @@
+    
+10. `auto x = 5;` --> we use auto keyword for letting compiler to deduce data type based on the value we initialized
+    with (and it wont change on assigning vaue) .
+
+11. Using std::bitset drastically reduces memory consumption compared to standard bool
+
+12. **Character** variables represent a single character. They are returned when you access the character at a certain
+    index within a string.Characters are represented using the ASCII standard, which assigns each character to a corresponding
+    integer. This allows us to do arithmetic with them. Like ('f' - 'a');
+    
+13. In some contest systems, files are used for input and output. An easy solution for this is to write the code as usual 
+    using standard streams, but add the following lines to the beginning of the code: freopen("input.txt", "r", stdin); 
+    freopen("output.txt", "w", stdout); After this, the program reads the input from the file ”input.txt” and writes the 
+    output to the file ”output.txt”.
+
+14. If the amount of data is unknown, the following loop is useful:`while (cin >> x) { // code }` --> example - `while(cin >> a)
+    { if (a == 0) break; // stops when user enters 0 b += a; }` --> code when end when user will enter 0 as input.
+    
+    
+15. The Collatz conjecture states that no matter what positive whole number you start with, repeating two simple rules will always
+    eventually reach the number 1.
+     
