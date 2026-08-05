@@ -1,0 +1,47 @@
+1. `data types when they are uninitialized` :-  local variables will be intialized to arbitrary 
+    values(garbage values) & global variables(or static variables) will be initialized to **zero** 
+    (or `null`/`nullptr` for pointers).This is useful when you immediately assign a value input by 
+    the user.
+    
+2.  `Modulo Operator` --> a%b this means give remainder when a is divided by b . 
+	    1. `Use in questions` --> Sometimes when our mathematical expression is so big that 
+	    long long int can't handle then questionnaire tell to give answer in modulo m (%m)
+	    means shorter version of actual answer , depending on the operations we are using 
+	    for that  mathematical expression we can use below formulas:-
+	    
+		    1. `(a+ b) mod m = (a mod m+ b mod m) mod m` 
+		    2. `(a− b) mod m = (a mod m− b mod m) mod m` 
+		    3. `(a· b) mod m = (a mod m· b mod m) mod m`
+		    4. `(a/b) mod m = (a mod m * b inverse mod m) mod m`
+		    
+	    2. `Why mostly we have given 10 ^ 9 + 7 as m` --> 
+		    1. First 10^9 is very close to upper limit of integer so this gives us assurance
+		    to use int as data type.
+		    2. When we calculate (a/b) mod m in this formula we find b inverse for all numbers
+		    when and only if b and numbers from 1 to m-1 are co prime and if m i prime then they 
+		    will be automatically co prime so we used +7 in formula. 
+
+3. `const int FIVE = 5;` --> now after this line we can't modify five as this become constant.
+
+4. To include double quotation marks in strings, they must be escaped using a backslash: "a \"quote\" in 
+    a string".
+
+5. integers between −2 ^ 31 and 2 ^ 31 − 1 {32 bits} can be represented by int while a long long extends
+    this range to −2 ^ 63 to 2 ^ 63 − 1 {64 bits}.
+    
+6. To get \ using string and char then "\\" or ' \\'    for getting \ as a string and character respectively. 
+
+7. `int maximum = INT_MAX; int minimum = INT_MIN;` --> use to get maximum and minimum possible values of integer
+    data type. and `double minimum = numeric_limits<double>::lowest(); // Minimum possible (most negative) value`
+
+8. One of the most common sources for errors in code is trying to store an integer value outside the range of the
+   type. Always make sure your values fit inside the range of an int if you use it. Otherwise, use long longs!
+   One of the reasons for not always using long long all the time is that some operations involving long longs can 
+   be slower using ints under certain conditions. The cost of representing many more integers it that long longs
+   take twice the amount of memory that ints do.
+     
+ 9. Instead, they represent a limited set of numbers – with about 15 significant digits, and about 308 zeroes to
+    the left or right of those digits. Floats have fewer significant digits, and can only represent smaller numbers
+    (they are seldom used in competitive programming).Floating point numbers are used to store decimal values. It is
+    important to know that floating point numbers are not exact, because the binary architecture of computers can only 
+    store decimals to a certain precision.
