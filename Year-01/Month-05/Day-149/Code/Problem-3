@@ -1,0 +1,41 @@
+// Usaco guide bronze level question farmer and cow painting on fence
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int a , b , c , d;
+    cin >> a >> b >> c >> d;
+    set <int> length;
+    while(true){
+        if(a==b && c==d){
+            break;
+        }
+        else{
+            if(a < b){
+                length.insert(a);
+                a++;
+                
+            }
+            if(c < d){
+              length.insert(c);
+               c++;  
+            }
+        }
+        
+    }
+    cout << length.size() << '\n';
+
+}
+
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+
+
+
+    return 0;
+}
