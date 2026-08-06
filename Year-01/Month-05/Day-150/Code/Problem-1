@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int a , b , c ,d ;
+    cin >> a >> b >> c >> d;
+    
+    int direct = abs(a-b);
+    int d_x = ((abs(a-c) + abs(b-d)));
+    int d_y = (abs(a-d) + abs(b-c));
+    int minimum = min({direct,d_x,d_y});
+
+    cout << minimum << '\n';
+}
+
+int main(){
+   
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    freopen("teleport.in","r" , stdin);
+    freopen("teleport.out","w" , stdout);
+    solve();
+
+    return 0;
+
+
+
+
+    
+}
