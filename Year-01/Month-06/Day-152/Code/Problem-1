@@ -1,0 +1,26 @@
+// USACO 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    long long int n ;
+    vector <int> c;
+    for(int i = 0 ; i < 7 ; i++){
+        cin >> n; 
+        c.insert(c.begin()+i , n);
+
+    }
+    sort(c.begin() , c.end());
+    cout << c[0] << " " << c[1] << " " << (c[6] - c[0] - c[1]) << '\n'; 
+}
+
+int main(){
+
+  
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+
+    return 0;
+}
