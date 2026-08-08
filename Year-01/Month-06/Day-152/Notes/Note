@@ -1,0 +1,1 @@
+1. `double result = std::tgamma(n + 1);` --> use to calculate factorial of n in one line .
