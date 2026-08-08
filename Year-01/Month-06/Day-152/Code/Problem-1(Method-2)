@@ -1,0 +1,62 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+
+    vector <int> c;
+    
+    for(int i = 0 ; i < 7 ; i++){
+        long long a;
+        cin >> a;
+        c.insert(c.begin()+i , a);
+    }
+    long long smallest = c[0];
+    long long largest = c[0];
+    int count_smallest = 0 ;
+
+    for(int i = 1 ; i < 7; i++){
+        if(largest < c[i]){
+            largest = c[i];
+        }
+
+        if(smallest == c[i]){
+            smallest = c[i];
+            count_smallest++;
+        }
+        if(smallest > c[i]){
+            smallest = c[i];
+            count_smallest = 0 ;
+        }
+    }
+
+    if(count_smallest > 0){
+       
+        cout << smallest << ' ' << smallest << ' ' << largest - smallest - smallest << '\n';
+    }
+    else{
+        long long smallest_smallest = c[0];
+        if(smallest == smallest_smallest){
+                smallest_smallest = c[1];
+            }
+        for(int i = 0 ; i < 7 ; i ++){
+            
+            if(smallest_smallest > c[i] && c[i] != smallest){
+                smallest_smallest = c[i];
+            }
+           
+        }
+        cout << smallest << ' ' << smallest_smallest << ' ' << (largest - smallest_smallest - smallest) << '\n';
+
+    }
+
+
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+
+    return 0;
+}
