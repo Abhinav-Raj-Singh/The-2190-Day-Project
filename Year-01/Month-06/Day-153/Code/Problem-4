@@ -1,0 +1,23 @@
+// 2065A
+
+#include <bits/stdc++.h>
+using namespace std;
+ 
+void solve(){
+    string s;
+    cin >> s;
+    s[s.size()-2]= 'i';
+    s[s.size()-1] = ' ';
+    cout << s << '\n';
+}
+ 
+int main(){
+ 
+    int t;
+    cin >> t;
+    while(t--){
+        solve();
+    }
+ 
+    return 0;
+}
