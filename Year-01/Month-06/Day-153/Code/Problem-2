@@ -1,0 +1,52 @@
+// USACO GUIDE
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int n,k ;
+    cin >> n >> k;
+    cin.ignore();
+    string s;
+    getline(cin , s);
+
+    int check = 0;
+  
+    int count = 0 ;
+    stringstream a(s);
+    vector <string> word;
+    while(a >> s){
+
+        word.push_back(s);
+    }
+    
+    for(int i = 0 ; i < word.size() ; i++){
+        if(count + word[i].size() <= k){
+            cout << word[i];
+            count += word[i].size();
+             if(word.size()-1 != i && count + word[i+1].size() <= k){
+            cout << ' ';
+        }
+        }
+       
+        if(i+1 < word.size() && count + word[i+1].size() > k){
+            cout << '\n';
+            count = 0;
+        }
+        
+    }
+    cout << '\n';
+  
+    }
+
+
+
+int main(){
+
+    ios_base::sync_with_stdio();cin.tie(0);
+    freopen("word.in" , "r" , stdin);
+    freopen("word.out" , "w" , stdout);
+    solve();
+
+    return 0;
+}
