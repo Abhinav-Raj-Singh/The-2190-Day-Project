@@ -1,0 +1,45 @@
+Basic debugging
+
+1. `Basic Print Statements` --> Add print statements to check what is unexpected going.
+
+2. `-ggdb -fsanitize=address,undefined ` --> **When to use it:** :
+	1.  During active development and testing.
+	2. Whenever your program crashes mysteriously (e.g., a "Segmentation fault").
+	3. **Never** use it in your final, released version (it slows down the program 
+	and uses extra memory).
+	4. **How to use it:** :-
+		1. **Open VS Code Terminal:** Press `` Ctrl + ` `` (backtick) or go to **Terminal > 
+		New Terminal** in the top menu. Ensure the terminal path matches the folder where your
+		C++ file is saved.
+		2. Type the following command and press Enter: 
+			 `g++ -ggdb -fsanitize=address,undefined your_file.cpp -o my_program`
+		3. *(Replace `your_file.cpp` with the actual name of your file).* 
+
+3. `Possible Pitfall: Rewriting the Program` --> Rewriting the program is sometimes a good idea, 
+    but remember to keep track of time! It is very easy to get carried away rewriting even parts
+    of a program that are bug-free in obsessive hope that something might come through. Do not
+    delete your program. Make a new file!
+    
+4. `Debugging tactic 
+	1. `#1: Commenting out your code` -->  Let’s start with an easy one. If your program is exhibiting 
+	erroneous behavior, one way to reduce the amount of code you have to search through is to comment
+	some code out and see if the issue persists. If the issue remains unchanged, the commented out code 
+	probably wasn’t responsible.
+		1. `Warning` --> Don’t forget which functions you’ve commented out so you can uncomment them 
+		later! After making many debugging-related changes, it’s very easy to miss undoing one or two. 
+		If that happens, you’ll end up fixing one bug but introducing others! Having a good version control 
+		system is extremely useful here, as you can diff your code against the main branch to see all the 
+		debugging-related changes you’ve made (and ensure that they are reverted before you commit your change).
+		
+5. `If string consists of multiple chunks and wanted to do certain operation on different chunks` -->  
+    `std::stringstream ss(s); while (ss >> s) {ans += s[0];}` if string s has "Hello world" we converted 
+    this  for taking chunks and then stored first character of each chunk .and inside this while loop you write
+    `cout << s.size()` then you will get size of current chunk of string.Means any operation inside the while loop
+    while be done specifically on that particular current chunk only
+    
+6. `cin.ignore()` --> Use `cin.ignore()` whenever you use `getline()` **immediately after** `cin >>`
+    (this cin is before getline).
+    
+7.  `vector <string> words;` --> by this you created a vector of string and this will be useful when 
+    you need indices of chunks of words in a long string and without spaces as:
+	1.  `stringstream a(s); vector <string> word; while(a >> s){ word.push_back(s);}`
