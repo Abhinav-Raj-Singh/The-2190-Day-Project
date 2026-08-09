@@ -1,0 +1,58 @@
+// USACO GUIDE
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int barn_i = 0;
+    int barn_j = 0;
+    int rock_i = 0;
+    int rock_j = 0;
+    int lake_i = 0;
+    int lake_j = 0;
+    char d [10][10];
+    for(int i = 0 ; i <10 ; i++){
+        for(int j = 0 ; j < 10 ; j++){
+            cin >> d[i][j];
+            if(d[i][j] == 'B'){
+                barn_i = i;
+                barn_j = j;
+                
+            }
+            else if(d[i][j] == 'R'){
+               
+
+                rock_i = i;
+                rock_j = j; 
+            }
+
+            else if(d[i][j] == 'L'){
+               
+
+                lake_i = i;
+                lake_j = j; 
+            }
+        }
+    }
+   int dist_br = abs(barn_i - rock_i) + abs(barn_j - rock_j);
+  int dist_bl = abs(barn_i - lake_i) + abs(barn_j - lake_j);
+  int dist_rl = abs(rock_i - lake_i) + abs(rock_j - lake_j);
+    
+    if((barn_i==lake_i || barn_j==lake_j) && dist_bl == dist_br + dist_rl){
+        cout << (dist_bl + 1) << '\n';
+    }
+    else{
+        cout << (dist_bl-1) << '\n';
+    }
+
+}
+
+int main(){
+
+    freopen("buckets.in","r",stdin);
+    freopen("buckets.out","w",stdout);
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+
+    return 0;
+}
