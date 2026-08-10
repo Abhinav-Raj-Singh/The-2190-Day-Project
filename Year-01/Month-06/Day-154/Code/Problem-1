@@ -1,0 +1,31 @@
+// USACO 2016 January Contest, Bronze
+// Problem 1. Promotion Counting
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int silver_count = 0;
+    int gold_count = 0;
+    int platinium_count = 0;
+
+    int b_b,b_a,s_b,s_a,g_b,g_a,p_b,p_a;
+    cin >> b_b >> b_a >> s_b >> s_a >> g_b >> g_a >> p_b >> p_a;
+
+
+    platinium_count = p_a - p_b;
+    gold_count = (p_a - p_b) + (g_a - g_b);
+    silver_count = (p_a - p_b) + (g_a - g_b) + (s_a - s_b);
+
+    cout << silver_count << '\n' << gold_count << '\n' << platinium_count <<'\n';
+
+}
+
+
+int main(){
+    freopen("promote.in","r",stdin);
+    freopen("promote.out","w",stdout);
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+    return 0;
+}
