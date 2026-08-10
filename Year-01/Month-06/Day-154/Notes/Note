@@ -1,0 +1,30 @@
+1. An alternate approach to repeatedly adding/removing or uncommenting/commenting debug statements is to use a 
+   3rd party library that will let you leave debug statements in your code but compile them out in release mode 
+   via a preprocessor macro. dbg is one such header-only library that exists to help facilitate this (via the 
+   DBG_MACRO_DISABLE preprocessor macro).
+   
+2. `Debugging tactic #2: Validating your code flow`  : Another problem common in more complex programs is that 
+    the program is calling a function too many or too few times (including not at all). In such cases, it can 
+    be helpful to place statements at the top of your functions to print the function’s name. That way, when
+    the program runs, you can see which functions are getting called.
+    
+3. 	`Tip` : When printing information for debugging purposes, use `std::cerr` instead of `std::cout`. One reason 
+    for this is that `std::cout` may be buffered, which means a bit of time may pass between when you ask 
+    `std::cout`to output text and when it actually does. If you output using `std::cout` and then your program 
+    crashes immediately afterward, `std::cout` may or may not have actually output yet. This can mislead you about
+    where the issue is. On the other hand, `std::cerr` is unbuffered, which means anything you send to it will 
+    output immediately. This helps ensure all debug output appears as soon as possible (at the cost of some 
+    performance, which we usually don’t care about when debugging). Using `std::cerr` also helps make 
+    clear that the information being output is for an error case rather than a normal case.`
+    
+4. 	`Tip` :When adding temporary debug statements, it can be helpful to not indent them. This makes them easier 
+    to find for removal later.If you are using clang-format to format your code, it will try to auto-indent 
+    these lines. You can suppress the automatic formatting like this:
+    
+5.  `Why using printing statements to debug isn’t great` :While adding debug statements to programs for diagnostic purposes 
+    is a common rudimentary technique, and a functional one (especially when a debugger is not available for some reason),
+    it’s not that great for a number of reasons:
+		1. Debug statements clutter your code.
+		2. Debug statements clutter the output of your program.
+		3. Debug statements require modification of your code to both add and to remove, which can introduce new bugs.
+		4. Debug statements must be removed after you’re done with them, which makes them non-reusable.
