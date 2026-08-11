@@ -1,0 +1,69 @@
+1. This is sometimes known as the “bouncer pattern”, as you are bounced out of the 
+    function immediately when an error is detected.
+	  The bouncer pattern has two major benefits:
+		1. All your test cases are up-front, and the test case and code handling 
+		the error are together.
+		2. You end up with less nesting.
+		
+2. 	a **postcondition** is something that must be true after the execution of some section
+    of code.
+    
+3. An invariant is a condition that must be true while some section of code is executing. 
+   This is often used with loops, where the loop body will only execute so long as the 
+   invariant is true.
+   
+4. `Assertions` :Using a conditional statement to detect an invalid parameter (or to 
+    validate some other kind of assumption), along with printing an error message and 
+    terminating the program, is such a common method of detecting problems that C++ provides
+    a shortcut method for doing this.
+		An **assertion** is an expression that will be true unless there is a bug in the
+		program. If the expression evaluates to `true`, the assertion statement does nothing. 
+		If the conditional expression evaluates to `false`, an error message is displayed and 
+		the program is terminated (via `std::abort`). This error message typically contains 
+		the expression that failed as text, along with the name of the code file and the line
+		number of the assertion. This makes it very easy to tell not only what the problem was,
+		but where in the code the problem occurred. This can help with debugging efforts immensely.
+		1. `Key insight` :Asserts are used to detect errors while developing and debugging.
+			When an assertion evaluates to false, your program is immediately stopped. This gives
+			you an opportunity to use debugging tools to examine the state of your program 
+			and determine why the assertion failed. Working backwards, you can then find and 
+			fix the issue quickly.
+			Without an assertion to detect an error and fail, such an error would likely 
+			cause your program to malfunction later. In such cases, it can be very difficult
+			to determine where things are going wrong, or what the root cause of the issue actually is.
+		2. `Use` : 
+			1. In C++, runtime assertions are implemented via the **assert** preprocessor macro,
+			which lives in the `<cassert> header.`
+			2. `#include <cassert> // for assert()  assert(gravity > 0.0);` // The object won't
+			reach the ground unless there is positive gravity.
+			3. The actual message varies depending on which compiler you use.Although asserts are
+			most often used to validate function parameters, they can be used anywhere you would 
+			like to validate that something is true.
+			4. Although we told you previously to avoid preprocessor macros, asserts are one of the
+			few preprocessor macros that are considered acceptable to use. We encourage you to use
+			assert statements liberally throughout your code.
+		3. `Key insight` :Asserts are better than comments because they have both document and
+		enforce a condition. Comments can become stale when the code changes and the comment isn’t
+		updated. An assert that has become out of date is a code correctness issue, so developers 
+		are less likely to let them languish.
+			1.  `Use a string literal for more descriptive assert` : `assert(found && "Car could
+			not be found in database");`
+		4. `Using assertions for unimplemented features` : Assertions are also sometimes used to 
+		document cases that were not implemented because they were not needed at the time the 
+		programmer wrote the code . `assert(moved && "Need to handle case where student was just 
+		moved to another classroom");`That way, if a developer encounters a situation where this
+		case is needed, the code will fail with a useful error message, and the programmer can 
+		then determine how to implement that case.
+		
+		
+5. `NDEBUG` : if the preprocessor macro `NDEBUG` is defined, the assert macro gets disabled. 
+    As we don't want to trigger assert in production code and also this the `assert` macro comes 
+    with a small performance cost that is incurred each time the assert condition is checked.Most
+    IDEs set `NDEBUG` by default as part of the project settings for release configurations.For 
+    example, in Visual Studio, the following preprocessor definitions are set at the project level: 
+    `WIN32;NDEBUG;_CONSOLE`. If you’re using Visual Studio and want your asserts to trigger in release 
+    builds, you’ll need to remove `NDEBUG` from this setting.
+		1. `Tip` : For testing purposes, you can enable or disable asserts within a given translation
+		unit. To do so, place one of the following on its own line **before** any #includes: `#define NDEBUG` 
+		(to disable asserts) or `#undef NDEBUG` (to enable asserts). Make sure that you do not end the line 
+		in a semicolon.
