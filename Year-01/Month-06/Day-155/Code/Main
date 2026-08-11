@@ -1,0 +1,33 @@
+// #define NDEBUG // Disable
+// #undef NDEBUG // Enable
+#include <bits/stdc++.h>
+// #include <cassert> // Header for assert()
+using namespace std;
+
+#ifndef ONLINE_JUDGE
+#define debug(x) cerr << #x << " "<< x << '\n'
+#else 
+#define debug(x)
+#endif
+
+
+int main(){
+
+    double x;
+    cin >> x;// If x = 0 ;
+    // constexpr double d = -1;
+    int y ;
+    cin >> y;
+    #ifndef ONLINE_JUDGE
+        freopen("error.txt", "w" , stderr);
+    #endif    
+    
+    // assert((x>0) && "x is less than or equal to 0 ");
+    // static_assert(d >= 0 , "d is either equal to zero or less than zero check value of d carefully");
+    cout << (y/x) << '\n'; // Assertion `x>0' failed. on terminal as output
+    debug(x);
+    debug(y);
+
+    return 0;
+
+}
