@@ -1,0 +1,41 @@
+1. When you use `freopen("Error.txt", "w", stderr);`, it redirects the standard error stream 
+    (`stderr`) for the **entire program**.
+    
+2.  `Macro for debuggin a array` : 
+		 1. ``` cpp 
+		    void _print(vector <int> v1){
+		    cerr << '[';
+		    for(int i : v1){
+		        cerr << i << ' ' ;
+		    }
+		    cerr << ']' << '\n';}
+		   ```
+		  2. ``` cpp 
+			     #ifndef ONLINE_JUDGE
+				#define debug(x) cerr << #x << " "; _print(x); cerr << '\n';
+				#define debugv(y) cerr << #y << " " << x << '\n';
+				#else
+				#define debug(x)
+			#endif
+			```
+			
+		 3. ```cpp
+		    #ifndef ONLINE_JUDGE
+			freopen("Error.txt" , "w" , stderr);
+			#endif
+		    ```
+		4. In step one we created a function for printing our arrays and in step two 
+		we attached that with our macro and after #ifndef ONLINE_JUDGE and before #else
+		we can define multiple macros and that will not work on online judge and in step 
+		3rd we attached that with a outside file .
+		
+3. We can use any defined function with macro. As Macros are just a "find and replace" 
+   tool. The C++ preprocessor simply copies and pastes whatever text you write inside
+   the macro before the actual code compiles.
+
+
+4. `Function Overloading` : You can create multiple functions with same name but different
+    parameters as input and even different body when you will that function you compiler
+    will handle and match correct function automatically by seeing parameter.
+    
+    
