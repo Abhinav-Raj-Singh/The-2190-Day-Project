@@ -1,0 +1,41 @@
+// Codeforces 1873A
+
+#include <bits/stdc++.h> 
+using namespace std;
+
+
+#ifndef ONLINE_JUDGE
+#define debug(x) cerr << #x << " " << x << '\n'
+#else 
+#define debug(x)
+#endif
+
+void solve(){
+    string a;
+    cin >> a;
+    if(a == "abc" || a == "acb" ||a == "bac" || a == "cba" ){
+        cout << "YES" << '\n';
+    }
+    else {
+        cout << "NO" << '\n';
+    }
+
+}
+
+int main(){
+	#ifndef ONLINE_JUDGE
+		freopen("Error.txt" , "w" , stderr);
+	#endif
+
+ios_base::sync_with_stdio(0);cin.tie(0);
+	
+	
+int t; 
+cin >> t;
+while(t--){
+solve();
+}
+
+return 0;
+
+}
