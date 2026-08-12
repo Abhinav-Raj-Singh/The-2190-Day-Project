@@ -1,0 +1,42 @@
+// Codeforces 1850A
+
+#include <bits/stdc++.h> 
+using namespace std;
+
+
+#ifndef ONLINE_JUDGE
+#define debug(x) cerr << #x << " " << x << '\n'
+#else 
+#define debug(x)
+#endif
+
+void solve(){
+    int a , b , c;
+    cin >> a >> b >> c;
+    
+    unsigned int medium = (a+b+c) - max({a,b,c}) -min({a,b,c});
+    debug(a);
+    debug(b);
+    debug(c);
+    int d = max({a,b,c});
+    debug(d);
+    cout << (((max({a,b,c}) + medium) >= 10)? "YES" : "NO") << '\n';
+}
+
+int main(){
+	#ifndef ONLINE_JUDGE
+		freopen("Error.txt" , "w" , stderr);
+	#endif
+
+ios_base::sync_with_stdio(0);cin.tie(0);
+	
+	
+int t; 
+cin >> t;
+while(t--){
+solve();
+}
+
+return 0;
+
+}
