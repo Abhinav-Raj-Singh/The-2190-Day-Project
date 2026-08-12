@@ -1,0 +1,43 @@
+// Codeforces 1676A
+
+#include <bits/stdc++.h> 
+using namespace std;
+
+
+#ifndef ONLINE_JUDGE
+#define debug(x) cerr << #x << " " << x << '\n'
+#else 
+#define debug(x)
+#endif
+
+void solve(){
+    string ticket;
+    cin >> ticket;
+    int f = static_cast<int>(ticket[0]);
+    f += static_cast<int>(ticket[1]);
+    f += static_cast<int>(ticket[2]);
+    int l = static_cast<int>(ticket[3]);
+    l += static_cast<int>(ticket[4]);
+    l += static_cast<int>(ticket[5]);
+    cout << ((f == l)? "YES" : "NO") << '\n';
+
+
+}
+
+int main(){
+	#ifndef ONLINE_JUDGE
+		freopen("Error.txt" , "w" , stderr);
+	#endif
+
+ios_base::sync_with_stdio(0);cin.tie(0);
+	
+	
+int t; 
+cin >> t;
+while(t--){
+solve();
+}
+
+return 0;
+
+}
