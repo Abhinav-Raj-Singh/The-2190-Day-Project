@@ -1,0 +1,78 @@
+
+5. `Need` : In C++, the template system was designed to simplify the process of creating
+    functions (or classes) that are able to work with different data types.In a template we
+    can use one or more placeholder types. A placeholder type represents some type that is 
+    not known at the time the template is defined, but that will be provided later (when the 
+    template is used).
+    
+	1. `Key insight` : The compiler can use a single template to generate a family of related
+	functions or classes, each using a different set of actual types.Because the actual types
+	aren’t determined until the template is used in a program (not when the template is written)
+	, the author of the template doesn’t have to try to anticipate all of the actual types that 
+	might be used.
+	2. Templates can work with types that didn’t even exist when the template was written. 
+	This helps make template code both flexible and future proof!
+	
+	
+2. `Function templates` :
+	1. `What it is` : A **function template** is a function-like definition that is used 
+	to generate one or more overloaded functions, each with a different set of actual types. 
+	2. `Template parameter` :C++ supports 3 different kinds of template parameters:
+		1. Type template parameters (where the template parameter represents a type , this 
+		is most common).
+		2. Non-type template parameters (where the template parameter represents a constexpr value).
+		3. Template template parameters (where the template parameter represents a template).
+	3. `Example` : ``` cpp 
+	template <typename T> // this is the template parameter declaration defining T as a 
+	type template parameter
+	T max(T x, T y) // this is the function template definition for max<T>
+	{
+    return (x < y) ? y : x;
+	}```
+		1. `Parameters` : we use the keyword `typename` (preferred) or `class`, 
+		followed by the name of the type template parameter (e.g. `T`).
+		2. `As an asid` : There is no difference between the `typename` and `class` keywords in this
+		context. You will often see people use the `class` keyword since it was introduced into the 
+		language earlier. However, we prefer the newer `typename` keyword, because it makes it clearer
+		that the type template parameter can be replaced by any type (such as a fundamental type), 
+		not just class types.
+		3. `Placeholder` : it’s conventional to use a single capital letter (starting with `T`) when
+		the template parameter is used in a trivial or obvious way.If a type template parameter has 
+		a non-obvious usage or specific requirements that must be met, there are two common conventions
+		for such names:
+			1. Starting with a capital letter (e.g. `Allocator`). The standard library uses this naming
+			convention.
+			2.  Prefixed with a `T`, then starting with a capital letter (e.g. `TAllocator`). This makes 
+			it easier to see that the type is a type template parameter.
+	4. `Template overloading` : we can even create a template with same name but 
+	different parameter and our compiler will manage this in background as per the
+	input of parameter given by the user. 
+	
+
+3. `Chain of comparison` : C++ doesn't support a < b < c , instead you have to do a < b && b < c.
+
+4. `Chaining ternary operators (``? :)works exactly like an if-else if-else ladder.` : cout << 
+    ((a<b && b < c)? "STAIR" : ((a<b && b>c)? "PEAK": "NONE" )) << '\n';  by this we paired 
+    multiple ternary operators similar to if-else ladder and we can use this at place where
+    we need if else ladder for simple yes no like tasks .
+    
+    
+5. `count` : This is builtin function of algorithm header and this is used to count occurence of 
+    a given element in a defined range of a certain data type.
+	1. `counting character in a string` : string s; count(s.begin() , s.end() , 'A'); will return
+	number of occurnece and use auto to store its returned value .
+	
+	
+6. `XOR '^'` : This will return unique element among the comparings  only if among comparings 
+    elements are forming group of two .
+	1. `Use` : cout << (a^b^c) << '\n';  a , b , c are integers and we will get unique integer
+	as output . Considering among these two will be equal . Yes, a ^ b ^ c ^ d ^ e will return 
+	e. Since a == b and c == d, those pairs cancel each other out to 0. The remaining element is 
+	e (0 ^ 0 ^ e = e).
+	
+7. In cp use shortest possible condition as if and rest leave for else.
+
+8. `max(a,b) ; max({a,b,c,....}) ; max({a+b,a+c,a+d,...})` --> This max() is used to return maximum 
+    among the given arguments and first one is for two integers , second for multiple integers , third
+    for multiple integral expressions, similarly we can use min() for getting minimum and we can use all 
+    three formats of max just use min at max's position. 
