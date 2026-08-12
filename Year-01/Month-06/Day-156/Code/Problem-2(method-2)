@@ -1,0 +1,36 @@
+#include <bits/stdc++.h> 
+using namespace std;
+
+
+#ifndef ONLINE_JUDGE
+#define debug(x) cerr << #x << " " << x << '\n'
+#else 
+#define debug(x)
+#endif
+
+void solve(){
+    string ticket;
+    cin >> ticket;
+    
+    cout << (((ticket[0] + ticket[1] + ticket[2]) == (ticket[3] + ticket[4] + ticket[5]))? "YES" : "NO") << '\n';
+
+
+}
+
+int main(){
+	#ifndef ONLINE_JUDGE
+		freopen("Error.txt" , "w" , stderr);
+	#endif
+
+ios_base::sync_with_stdio(0);cin.tie(0);
+	
+	
+int t; 
+cin >> t;
+while(t--){
+solve();
+}
+
+return 0;
+
+}
