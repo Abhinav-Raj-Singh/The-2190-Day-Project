@@ -1,0 +1,11 @@
+1. `Best practice` : Use a single capital letter starting with `T` (e.g. `T`, `U`, `V`, etc…) to
+    name type template parameters that are used in trivial or obvious ways and represent “any reasonable 
+    type”.If the type template parameter has a non-obvious usage or specific requirements that must be met,
+    then a more descriptive name is warranted (e.g. `Allocator` or `TAllocator`).
+    
+2. `Sum of all elements of a integral vector array` --> int sum = accumulate(d.begin() , d.end() ,0) --> 
+    sum of all elements of integral vector d will be stored in sum whose intial value is 0 .
+    
+
+3. `Swapping elements using swap()` : `swap(d[0], d[1]);` to swap elements at different indices in a C++ 
+    vector or array.
