@@ -1,0 +1,6 @@
+1. `Structure of for loop` :for (1. Initialization; 2. Condition; 4. Update) {
+    3. Loop Body} --> means after running loop body our update runs and then condition .
+    
+    
+2. `a.erase(i,1)` --> removes exactly 1 character at index `i`, and the remaining
+    characters automatically shift left by 1 index to fill the gap.
