@@ -1,0 +1,20 @@
+1. `reverse(a.begin(),a.end())` --> from <algorithm> header this will
+    words like pallindrome means first letter will become last , second will second last .
+    
+2. `string of integers` : this will sorts strings **lexicographically** (by ASCII value) 
+    and not reverse the order and for reversing order use reverse in place of sort .
+    
+3. `s.find('a')` : this will give  index of a in the s string .
+	1. `vector of string` : s[0].find('a') this will give index of a in the string
+	at 0th index of the vector of string .
+	
+	
+4. `smart conditional statement` :for (int i = n-1 ; i >= 0 ; i--)
+    { cout << r[i].find('#') + 1 << "  \n" [i= =0];} --> this seems to be a normal 
+    loop but as by " \n"[i= = 0] we made a if/else condition means if i = = 0 then we 
+    will get \n otherwise " ".
+    
+    
+5. `getting unnecessary 0's` --> if you created an vector array with a size as vector 
+    <int> d(n); and used d.pushback(any number) then you will get n 0's + number you 
+    pushedback because this pushback created extra space for that particular number.
