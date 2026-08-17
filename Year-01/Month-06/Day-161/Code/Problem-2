@@ -1,0 +1,93 @@
+// Codeforces 1703B
+
+#include <bits/stdc++.h> 
+using namespace std;
+
+
+#ifndef ONLINE_JUDGE
+#define debugva(x) cerr << #x << " "; _print(x); cerr << '\n';
+#define debugv(y) cerr << #y << " " << y  << '\n';
+#else 
+#define debug(x)
+#endif
+
+void _print(int a){
+    cerr << a ;
+}
+
+void _print(long long a){
+    cerr << a ;
+}
+
+void _print(char a){
+    cerr << a ;
+}
+
+void _print(string a){
+    cerr << a ;
+}
+
+void _print(bool a){
+    cerr << a ;
+}
+
+
+template<typename T> void _print(vector<T> v1){
+    cerr << "[ ";
+    for(T i : v1){
+        
+        _print(i);
+        cerr << " " ;
+    } 
+    cerr << " ]" << '\n';
+}
+
+template<typename T> void _print(set<T> s1){
+    cerr << "[ ";
+    for(T i : s1){
+        
+        _print(i);
+        cerr << " " ;
+    } 
+    cerr << " ]" << '\n';
+}
+
+void solve(){
+    int n; 
+    cin >> n; 
+    set <char> d;
+    string a;
+    cin >> a;
+    int ballons = 0;
+    for(int i = 0 ; i < n ;i++){
+        if(d.contains(a[i])){
+            ballons++;
+        }
+        else{
+            d.insert(a[i]);
+        }
+    }
+    // debugva(d);
+    // debugv(ballons);
+    cout << ((d.size()*2) + ballons) << '\n';
+}
+
+
+
+int main(){
+	#ifndef ONLINE_JUDGE
+		freopen("Error.txt" , "w" , stderr);
+	#endif
+
+ios_base::sync_with_stdio(0);cin.tie(0);
+	
+	
+int t; 
+cin >> t;
+while(t--){
+solve();
+}
+
+return 0;
+
+}
