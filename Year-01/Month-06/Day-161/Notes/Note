@@ -1,0 +1,4 @@
+1. `set<char> unique_chars(s.begin(), s.end());` : This will give you a 
+   set of all the unique characters from string `s`, automatically sorted
+   in ascending order.
+   
