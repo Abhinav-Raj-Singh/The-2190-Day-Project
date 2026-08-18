@@ -1,0 +1,11 @@
+1. `Passing by reference` : for(auto &x : s1){if(x == 'G'){x = 'B';}} --> here our &x 
+    will work as a alias and which will take value of s1 one by one and this take value 
+    by reference and modify directly value if satisfy's our condition.
+    
+2. `return And break inside for loop` --> 
+	1. **`break`**: Exits **only the loop**. Execution continues with the very next
+	line of code immediately following the loop block.
+	2. **`return`**: Exits the **entire function**. Both the loop and the function
+	stop immediately, and control goes back to wherever the function was called. 
+	3. And whenever using any of these make sure to use braces with if statement 
+	other wise they will run in unwanted manner.
