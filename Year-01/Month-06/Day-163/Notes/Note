@@ -1,0 +1,13 @@
+1. `s.substr(0,s.size()-2)` : taking substring of a string s from 0 to 
+    leaving its last 2 characters .
+    
+    
+2. `concatenating string` : s + 'i'  this will add 'i' character at 
+    last of the string s.
+    
+    
+3. `std::find` --> to find any number as if( std::find(s.begin(),s.end() ,target) != s.end()) 
+    condition will  get true only if number if found in the s vector . != s.end() as if the target 
+    is not found then our find will point at ending and if found then it will point on that
+    particular position so != end().
+    
