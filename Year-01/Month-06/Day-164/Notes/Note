@@ -1,0 +1,14 @@
+1. `A hidden secret of stl algorithms` : Many STL algorithms 
+    (like `std::rotate`, `std::sort`, and `std::reverse`) modify your container
+    **in-place**. You cannot output them directly (e.g., `cout << std::rotate(...)`) 
+    because:
+	1. They do not return the modified container.
+	2. `std::rotate` returns an **iterator** (pointing to the new first element),
+	not the data itself. Other algorithms, like `std::sort`, return `void`.
+	3. **The correct approach:** Modify the container first, then print it.
+	
+
+2. `rotate(s.begin(),s.begin()+1,s.end())` : this will rotate your s string from 
+    begin to end shifting characters left one by one and new first character of s 
+    string will be s.begin()+1 that is character at index 1st will be very first 
+    means get index 0 after this operation .
