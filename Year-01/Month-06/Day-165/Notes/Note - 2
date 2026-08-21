@@ -1,0 +1,41 @@
+5. `any_of` : this is a builtin function it works on :
+	1. **Iterators** pointing to the beginning and end of any container 
+	(like `std::vector`, `std::array`, or lists).
+	2. & it takes a **Predicate** (a condition or lambda function) that
+	evaluates the elements. It that particular element sastifies the condition 
+	then it returns true otherwise false and it return boolean type output .
+	3. `Ex` : bool has = any_of(a[i].begin(),a[i].end(),[] (char c){
+		   return c == '1'
+	      });
+	      this is the structure  any_of(starting of range , ending of range , 
+	      labda expression means [] this brackets are compulsary (data type and
+	      variable we will use) then in {} body what value of c or condition 
+	      c should have to has to be true and then at end ;).
+
+
+6. `conversion` : cout << (char)('A' + i) << '\n'; The `(char)` part is called a
+    **type cast**. By putting `(char)` in front of the math, you are explicitly 
+    telling C++: "Take the integer result of this math and force it back into a 
+    character before printing it."
+    
+
+7. `XOR '^'` : If same elements are xored it return 0 , otherwise 1 this works 
+    works for binary and for characters this return 3 means a totally different
+    thing.
+	1. `ex:` char ans = 'A' ^ 'B' ^ 'C' ^ '?';
+		    for(int i = 0 ; i < 9 ; i++){
+		        char c;
+		        cin >> c;
+		        ans ^= c;
+		    } 
+	Here we made a variable ans of character type and we xored 4 characters but as
+	they are different they will not cancel each other but we have a 9 user input 
+	charactero 'A' , 'B' , 'C' ,'?' where '?' will be only 1 time and we xored our
+	ans variable with the c character and by this duplicate will get removed from 
+	the ans array ? and ? will cancel each other and when this will be empty then empty 
+	^ char c then that particular char c will become our answer .
+	
+	
+8. `if there is a vector arrary of string then we can manipulate that as characters in
+    a 2d array manner` : vector <string> n(3) suppose each string has 3 characters then 
+    we will have a 3 by 3 matrix so we can simply use n[i][j] concept.
