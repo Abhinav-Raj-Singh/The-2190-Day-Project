@@ -1,0 +1,25 @@
+1. `round(i/2.0)` : round off as per actuall mathematics rules.
+    and for negative numbers like round(-2.5) round down to -3.0.
+    
+    
+2. In C++ make sure that when you want any operational answer in 
+   floating point number and one operand is integer then use other
+   operand floating point number strictly because immediately during
+   the operation number's decimal part will be chopped off . 
+	1. 'round(1/2)' : expecting 1 but it will give round(0) that is 0.
+	so for getting 1 use round(1/2.0).
+	
+	
+3. `modulo %` : use for taking remainder generally but you can use this
+    only with integers .
+    
+    
+4. `Checking a expression or a number is odd or not` : use '&' this is 
+    binary and so this will comapre our number of expression on the basis 
+    of its binary form . for even check number or expression with '1' and 
+    for odd with '1'. As ((expression & 1) ==  1 ) if this evaluates to true
+    then expression is odd , ((expression & 1) ==  0 ) if this evaluates to 
+    true then expression is even.  These paranthesis are must with expression
+    & 1 because == opeators is more powerful so this give buggy output.This
+    expression will compare last digit only and for even numbers in binary 
+    form their last digit end with 0 and for odd numbers they end with 1.
