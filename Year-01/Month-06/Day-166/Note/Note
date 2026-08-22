@@ -1,0 +1,56 @@
+1. `rand() % n + 1` : use this to generate random whole numbers and this n will 
+    decide upper limit and here upper limit is (n-1) and then this + 1 will decide 
+    lower limit if n is 5 then lower limit is (0+1) and upper limit is (5-1+1) i.e. 5.
+    
+    
+2. `Now how we can use this to find the test case where our code is stucking ` : first 
+    write a brute force for that solution or pickup someone's accepted solution and then 
+    for both make a function like correctanswer for that brute force(assuming your brute 
+    force approach is correct) or someone accepted solution then general format :
+		 1. `Ex` : constraints : 1 <= T <= 10; 1 <= N <= 100000; 1 <= a[i] <= 1000000; 
+			srand(time(NULL));
+			int cnt = 1;
+			while(cnt <= 1000){
+			int n = rand() % 5 +1;
+			for(int i = 0 ; i < n; i++){
+			a[i] = rand() % 7 + 1;
+			int correct_ans = function_of_correct_ans(a,n);
+			int my_solution= my_solution_function(a,n);
+			}
+			if(correct_ans != my_solution){
+			for(int i =0 ; i < n; i++){
+			cout << a[i] << ' ' ;}
+			cout << '\n';
+			break;
+			}
+			cnt++;
+			}
+			we take small sample of 1000 test cases and all sample of small array if you
+			want big size of array you can do % 10 or any number you want to check our answe
+			r and at whatever my answer with differ with correct answer i will just output that
+			test case and then i can debug my solution accordingly . Smaller test case is better 
+			to debug our code easier and in a faster way.This big cp players do because writing 
+			brute force solution is easier than writing optimised solution. And by this they find 
+			the edge case .
+			
+			
+3. 	`Conditional increment/decrement` : x += ((a%2 == 0 ) ? a : -a); 
+
+
+4.  `max_element(s.begin(),s.end())` : use to find maximum element from
+    the given list and we used this on a string s but this will refer or point 
+    at that position so get actuall value we have to deference that as auto
+    d = max_element(s.begin() , s.end()); int r = *d.
+    
+    
+5. `find` : we use this to find any element from a list like 
+	  1. `using in a set ` : if(d.find(a[i]) != d.end()){
+								cout << "FOUND" << '\n';
+								   }
+						 else{
+						 cout << "NOT FOUND" << '\n';
+						 }
+						how this works if in the set d ith element of array 
+						a found then this will found that position expect end
+						position of set d if not found then this will point at
+						end position of set d .
