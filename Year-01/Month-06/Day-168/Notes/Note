@@ -1,0 +1,16 @@
+1. `Numbers in c++ also acts are booleans` :when our integer is 0 
+    then our program evaluates it as a false and all non zero for
+    true : 
+	1. `Ex` : for(int i = 0 ; i < k; i++){
+			cout << (i ? 2 : (n-((k-1)*2))) << " \n"[i == k-1];
+			}
+        in this particular code our code will print false statement 
+        first and also we paired " \n"[i= =k-1] new line with condition .
+        
+        
+2. `npos` : we can use to find whether a particular character is present in string or 
+not & npos  is a special constant value that basically means **"no position."** It 
+is the maximum possible value for the size type (`size_t`), and the `find()` function 
+uses it as a failure signal.
+	1. `Ex` : if (text.find("apple") != std::string::npos) is apple not found in 
+    text string then it will return npos . 
