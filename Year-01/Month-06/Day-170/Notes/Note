@@ -1,0 +1,3 @@
+1. `Not present` : if find can't find any element in a vector array
+    then this will point at one step ahead of last position of that 
+    vector array for suppose (d.end()) for a d vector .
