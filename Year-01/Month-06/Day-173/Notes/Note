@@ -1,0 +1,26 @@
+1. `Slicing indices of a string` : whenever we slice a char of a string as 
+    char r = s[0] then r can't be string r has to be char& means this returns
+    us character by reference beause bydefault slicing of a string through this 
+    way returns char& but if our string is const then will return const char&.
+    
+    
+2. `Adding a char at starting or at end of a string` : By concatenation as s is 
+    the original string then b+s for adding b in front of s or s+b for adding b 
+    in back of the string s. 
+    
+    
+3. 	`Inserting a char in front of a string and shifting string to a char back` : 
+    insert(0,1,"a") will insert a at 0th position and shift rest of character one 
+    by one index backward.
+    
+    
+4. `append vs pusback` : push_back whenever want to add any char at last of a 
+    string by indexing (ex: b.push_back(d[i])) wherease append for direct knowing 
+    the character for adding that at last of a string as (b.append("r")).
+    
+    
+5. `max_element` : by *max_element(s.begin(),s.end()) will give us the maximum number 
+    (if string is of numbers) or maximum character (if string is of characaters by
+    ascii table) . 
+	1. `min_element` : same as per max_element but will get minimum element . 
+    
