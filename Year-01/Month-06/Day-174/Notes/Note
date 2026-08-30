@@ -1,0 +1,38 @@
+1. `checking a vector array empty or not` : d.empty() will return true otherwise false . 
+
+
+2. `taking element from back of a vector array` : int a = d.back(); d is a vector of integer 
+    elements . 
+    
+    
+3. `removing last element from a vector array` : d.pop_back();
+
+
+4. `erase any element of a vector array as per index` : d.erase(d.begin()+i); will erase 
+    the element at ith position .
+    
+    
+    
+5. as we know that xoring with 0 will return that number and xoring that number with that number
+   will return 0 so by this we can confirm whether a particular element is occuring for odd number
+   of times or not.
+   
+   
+6. `cout << ranges::fold_left(d,0,plus{}) << '\n';` : `std::ranges::fold_left` is a C++23 standard 
+    library algorithm (found in the `<algorithm>` header) that "reduces" or "folds" a collection of
+    items into a single result by processing them strictly from left to right. It is the modern, 
+    safer equivalent of the older `std::accumulate` function.
+	  1. `Ex:` ranges::fold_left(d, 0, plus{}) --> d = {5,10,15} then first time 0+5,then 5+10 , 
+	  then 15 + 15 return 30 .
+	  
+	  
+7. `ranges` : this is modern approach for finding maximum and minimum .
+	  1. `How to use` : int a = ranges::max(d) d is a vector array of integers and this ranges is the
+	  modern way of finding maximum element as it will pass d.begin() and d.end() automatically
+	  and also dereference the iterator also. and int a = ranges::min(d) for minimum . 
+	  
+	  
+8. `Wrapping number in single quote` : as you wrapped any number in single quotes then we 
+    convert that number in ascii code as '1' == 1 false because '1'  will be converted as per 
+    ascii number . Wherease You cannot compare a string pointer directly to an integer like 
+    `"1" == 1` (it will cause a compilation error or compare a memory address to `1`). 
