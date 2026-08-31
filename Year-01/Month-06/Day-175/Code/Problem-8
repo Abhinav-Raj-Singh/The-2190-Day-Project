@@ -1,0 +1,81 @@
+// Problem-8
+// Codeforces - 2072 A
+
+#include <bits/stdc++.h> 
+using namespace std;
+
+
+#ifndef ONLINE_JUDGE
+#define debugva(x) cerr << #x << " "; _print(x); cerr << '\n';
+#define debugv(y) cerr << #y << " " << y  << '\n';
+#else 
+#define debug(x)
+#endif
+
+void _print(int a){
+    cerr << a ;
+}
+
+void _print(long long a){
+    cerr << a ;
+}
+
+void _print(char a){
+    cerr << a ;
+}
+
+void _print(string a){
+    cerr << a ;
+}
+
+void _print(bool a){
+    cerr << a ;
+}
+
+
+template<typename T> void _print(vector<T> v1){
+    cerr << "[ ";
+    for(T i : v1){
+        
+        _print(i);
+        cerr << " " ;
+    } 
+    cerr << " ]" << '\n';
+}
+
+template<typename T> void _print(set<T> s1){
+    cerr << "[ ";
+    for(T i : s1){
+        
+        _print(i);
+        cerr << " " ;
+    } 
+    cerr << " ]" << '\n';
+}
+
+void solve(){
+    int a , b , c;
+    cin >> a >> b >> c;
+    int r = ceil((abs(b)*1.0) / (c*1.0));
+    cout << ((a*c >= abs(b))? r  : -1 ) << '\n';
+}
+
+
+
+int main(){
+	#ifndef ONLINE_JUDGE
+		freopen("Error.txt" , "w" , stderr);
+	#endif
+
+ios_base::sync_with_stdio(0);cin.tie(0);
+	
+	
+int t; 
+cin >> t;
+while(t--){
+solve();
+}
+
+return 0;
+
+}
