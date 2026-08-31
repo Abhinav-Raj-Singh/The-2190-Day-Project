@@ -1,0 +1,79 @@
+2. `Debugging C++ : ` 
+	1. `Checking for Out of Bounds : ` Writing to an out of bounds array index is known as buffer 
+	overflow. C++ may or may not produce a runtime error upon buffer overflow.To ensure that an error 
+	is raised when accessing an out of bounds index, you can use vector::at instead of vector::operator[] like so: 
+		invalid_vec.at(i) = i; // throws std::out_of_range
+		1. `Unspecified Evaluation Order` : This can happen when you are trying to use any feature 
+		that your c++ compiler's version not supported you are trying any c++23 feature in c++17 
+		wouldn't work and will give such unspecifid unspecified evaluation order.
+		
+		
+3. `What it is ` : Each block defines its own scope region. So what happens when we have a
+    variable inside a nested block that has the same name as a variable in an outer block? 
+    When this happens, the nested variable “hides” the outer variable in areas where they are
+    both in scope. This is called **name hiding** or **shadowing**.
+    
+    
+4. Suppose there is a variable name int apples = 5 and then if we printed this in nested block 
+    will give 5 but after printing when defined this to 10 and again printed apple in that nested 
+    block then this will give 10 because till the variable is not defined again in the block will 
+    use the outer scope value and if we printed apple's value after this nested block we will get
+    5 because the nested block ended . Note that if the nested block `apples` had not been defined,
+    the name `apples` in the nested block would still refer to the outer block `apples`, so the 
+    assignment of value `10` to `apples` would have applied to the outer block `apples` and if we 
+    assigned a new value inside the nested blocka and did not redefined a new variable with that 
+    name then that value will affect the main variable.
+    
+    
+5. `Shadowing of global variables` : If we created any variable globally and then immediately 
+    redefined in main function then that main function will persist expect if we created any 
+    function in global space and used that global space variable However, because global variables
+    are part of the global namespace, we can use the scope operator (::) with no prefix to tell
+    the compiler we mean the global variable instead of the local variable.std::cout << "global
+    variable value: " << ::value << '\n';
+    
+    
+6. `Avoid variable shadowing` : Shadowing of local variables should generally be avoided, as
+    it can lead to inadvertent errors where the wrong variable is used or modified. Some compilers
+    will issue a warning when a variable is shadowed.For the same reason that we recommend avoiding
+    shadowing local variables, we recommend avoiding shadowing global variables as well. This is
+    trivially avoidable if all of your global names use a “g_” prefix.
+    
+    
+7. `Best practice` : Avoid variable shadowing.
+
+
+8. `Templates` : A **template** consists of code that is assumed to be in every file.Some contest
+    allow prewritten template and some like usaco etc don't so use that level of template only till
+    you can remember that template .
+    
+    
+9. `Shortening code ` : To type fastly they use smart tricks 
+	1. `Type names` : Using the command typedef it is possible to give a shorter name to a datatype.
+	For example, the name long long is long, so we can define a shorter name ll:The command typedef 
+	can also be used with more complex types. For example, the following code gives the name vi for 
+	a vector of integers typedef vector vi;
+	2. `Macros ` : Another way to shorten code is to define macros. A macro means that certain strings
+	in the code will be changed before the compilation. In C++, macros are defined using the #define 
+	keyword.#define PB push_back then we can just use a.PB(); 
+		1. A macro can also have parameters which makes it possible to shorten loops and other structures.
+		For example, we can define the following macro:
+		 #define REP(i,a,b) for (int i = a; i <= b; i++)
+		2. Sometimes macros cause bugs that may be difficult to detect. For example, consider the following 
+		macro that calculates the square of a number: #define SQ(a) a * a This macro does not always work as 
+		expected. For example, the code cout << SQ(3+3) << "\n";corresponds to the codecout << 3+3*3+3 << "\n";
+		// 15 A better version of the macro is as follows: #define SQ(a) (a)*(a)
+		
+		
+10. `sqrt` : sqrt(n) will give square root of n and to check perfect square int root = sqrt(n); if((root * root) == n)
+    yes if return true .
+    
+    
+11. `absolute value ` : abs(-2) this will give 2 . That is use abs to get magnitude only.
+
+
+12. `ceil(2.1)` : this will round off our number to next whole number .
+
+
+13. `making integer to decimal number`  : just multiply that number by 1.0 like 2 * 1.0 
+    will give 2.0.
