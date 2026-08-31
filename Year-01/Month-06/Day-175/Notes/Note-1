@@ -1,0 +1,123 @@
+1. `Basic debugging by a debugger` : debugger is a computer program that helps to know 
+    and examine your flow of program at each step of execution and help you to figure 
+    out your mistake in a fast and in a efficient manner. There are two types of debugger
+    integrated and commandline and integrated debugger is recommended for the beginners .
+    Before using debugger make sure you project is build with debug build configuration. 
+    If you’re compiling your project using a release configuration instead, the functionality
+    of the debugger may not work correctly (e.g. when you try to step into your program, it 
+    will just run the program instead). 
+	1. `Configuring your compiler: Build configurations` : A **build configuration** 
+	(also called a **build target**) is a collection of project settings that determines
+	how your IDE will build your project.
+		1. When you create a new project in your IDE, most IDEs will set up two different
+		build configurations for you: a release configuration, and a debug configuration. 
+		So whenever you use IDE to create a project there are two types of version for that 
+		project are created one is with debug configuration(this is slow and larger verions
+		of the project in terms of size as it includes the debuggin information ) wherease 
+		release version(this is small , optimised version) . Usually by default debug 
+		configuration is selected in most of the IDE's  
+		2. `Best practice ` : Use the _debug_ build configuration when developing your 
+		programs. When you’re ready to release your executable to others, or want to test 
+		performance, use the _release_ build configuration.
+		3. `Switching between build configurations ` For VS Code users :  
+			1. Click on terminal then configure default build tasks and then select compiler. 
+			2. When you first ran your program as per this way (step1), a new file called 
+			_tasks.json_ was created under the _.vscode_ folder in the explorer pane. Open 
+			the _tasks.json_ file, find _“args”_, and then locate the line _“${file}”_ within
+			that section.
+			3. Above the _“${file}”_ line, add a new line containing the following command 
+			(one per line) when debugging:  `"-ggdb",`
+			4. Above the _“${file}”_ line, add new lines containing the following commands 
+			(one per line) for release builds:  `"-O2",`  
+				`"-DNDEBUG",`
+			5. `Tip` : Whenever you update your project settings, make the change for all 
+			build configurations (unless it’s not appropriate for some reason).
+	2. `Steps after setting your program as debug build configuration` : For VS Code users 
+	To set up debugging, press _Ctrl+Shift+P_ and select “C/C++: Add Debug Configuration”, followed
+	by “C/C++: g++ build and debug active file”. This should create and open the `launch.json` 
+	configuration file. Change the “stopAtEntry” to true:  `"stopAtEntry": true,` Then open _main.cpp_ 
+	and start debugging by pressing _F5_ or by pressing _Ctrl+Shift+P_ and selecting “Debug: Start 
+	Debugging and Stop on Entry”.We’re going to start our exploration of the debugger by first 
+	examining some of the debugging tools that allow us to control the way a program executes : 
+		1. `Stepping` : Allows our code to check statement by statement.
+		2. `Step into` : The step into command executes the next statement in the normal execution
+		path of the program, and then pauses execution of the program so we can examine the 
+		program’s state using the debugger. If the statement being executed contains a function 
+		call, step into causes the program to jump to the top of the function being called, where
+		it will pause.First, locate and then execute the step into debug command once.In VS Code,
+		the _step into_ command can be accessed via _Run > Step Into_.
+		3. When your program isn’t running and you execute the first debug command, you may see 
+		quite a few things happen:
+			1. The program will recompile if needed.
+			2. The program will begin to run. Because our application is a console program, a 
+			console output window should open. It will be empty because we haven’t output 
+			anything yet.
+			3. Your IDE may open some diagnostic windows, which may have names such as 
+			“Diagnostic Tools”, “Call Stack”, and “Watch”.
+		4. Because we did a _step into_, you should now see some kind of marker appear to 
+		the left of the opening brace of function.This arrow marker indicates that the line 
+		being pointed to will be executed next.Choose _step into_to execute the opening brace, 
+		and the arrow will move to the next statement. if there is a function in the main body 
+		at next line then This means the next line that will be executed is the call to 
+		function _printValue_.Choose _step into_ again. Because this statement contains a 
+		function call to _printValue_, we step into the function, and the arrow will move to 
+		the top of the body of _printValue_ .Choose _step into_ again to execute the opening 
+		brace of function _printValue_, which will advance the arrow to line 5.
+		5. `Warning` : The version of operator<< used for output is implemented as a function. 
+		As a result, your IDE may step into the implementation of the operator<< function 
+		instead. If this happens, you’ll see your IDE open a new code file, and the arrow marker 
+		will move to the top of a function named operator<< (this is part of the standard library). 
+		Close the code file that just opened, then find and execute step out debug command. Now 
+		because std::cout << value << '\n' has executed, we should see the value 5 appear in the 
+		console window.
+		6. `Tip` : In a prior lesson, we mentioned that std::cout is buffered, which means there may 
+		be a delay between when you ask std::cout to print a value, and when it actually does. 
+		Because of this, you may not see the value 5 appear at this point. To ensure that all output 
+		from std::cout is output immediately, you can temporarily add the following statement to the 
+		top of your main() function:std::cout << std::unitbuf; // enable automatic flushing for 
+		std::cout (for debugging)For performance reasons, this statement should be removed or commented 
+		out after debugging.```cpp #ifdef DEBUG std::cout << std::unitbuf; // enable automatic flushing 
+		for std::cout (for debugging) #endif``` You’ll need to make sure the DEBUG preprocessor macro 
+		is defined, either somewhere above this statement, or as part of your compiler settings. 
+		Choose _step into_ again to execute the closing brace of function _printValue_. At this point, 
+		_printValue_ has finished executing and control is returned to _main_. You will note that the 
+		arrow is again pointing to _printValue_!While you might think that the debugger intends to call 
+		_printValue_ again, in actuality the debugger is just letting you know that it is returning from 
+		the function call.Note that _Stop Debugging_ can be used at any point in the debugging process 
+		to end the debugging session.After debugging line by line some compilers stop debuggin own their 
+		own some you have to do . 
+		7. `Step over` : Like _step into_, The **step over** command executes the next statement in the 
+		normal execution path of the program. However, whereas _step into_ will enter function calls and 
+		execute them line by line, _step over_ will execute an entire function without stopping and return
+		control to you after the function has been executed.
+			1. `For VS Code users` : In VS Code, the step over command can be accessed via Run > Step Over,
+			or by pressing the F10 shortcut key.
+			2. The _step over_ command provides a convenient way to skip functions when you are sure they
+			already work or are not interested in debugging them right now.
+		8. `Step out` : Unlike the other two stepping commands, **Step out** does not just execute the 
+		next line of code. Instead, it executes all remaining code in the function currently being 
+		executed, and then returns control to you when the function has returned.
+			1. `For VS Code users` : In VS Code, the _step out_ command can be accessed via _Run > 
+			Step Out_, or by pressing the _shift+F11_ shortcut combo.
+			2. When you accidentally entered in the function's body and wanted to skip executing 
+			function then step out this will move directly from starting parenthesis of the function 
+			to after call of function . 
+		9. `A step too far` : step carefully if you passed you intended destination then you have to 
+		stop and restart debugging , so step carefully. 
+		10. `Step back` : Only selected IDE's has this option to go step back when you mistakenly had 
+		overstep . 
+	3. `Pros of using a debugger:` 
+		1. No need to write print statements so you save time.
+		2. You can step through the code in real time.
+		3. C++: Print the line where a runtime error was triggered.
+	4. `Cons of using a debugger:`
+		1. It is not much different from just printing the values out at various points in your program.
+		2. Most competitive programmers do not use debuggers.
+		3. You cannot see the overall "output" of your program at each stage. For example, if you 
+		wanted to see every single value of `i` in the program, you could not using a debugger.
+	5. `Breakpoints :`  A debugger allows you to pause a code in its execution and see the values 
+	as a given point in the debugger. To do this, set a "breakpoint" at a certain line of code. When 
+	the code runs to that breakpoint, it will pause and you will be able to inspect all the different 
+	variables at that certain instance.
+	
+	
