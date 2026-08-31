@@ -56,7 +56,7 @@ template<typename T> void _print(set<T> s1){
 void solve(){
     int n;
     cin >> n;
-    vector <int> d(n+1);
+    vector <int> d(10);
     int ans = 0;
     for(int i = 1 ; i < (n+1) ; i++){
         int a;
