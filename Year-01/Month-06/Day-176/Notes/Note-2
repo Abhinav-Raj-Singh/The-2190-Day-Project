@@ -1,0 +1,61 @@
+11. Many functions in the C++ standard library operate with iterators. An iterator is a variable
+    that points to an element in a data structure.The often used iterators begin and end define
+    a range that contains all elements in a data structure. The iterator begin points to the first 
+    element in the data structure, and the iterator end points to the position after the last element.
+    
+    
+12. `Sorting and reversing normal array ` : Ex: int a[n];
+	1. `sort(a, a+n); ` : first parameter is the name of the array and second parameter is name 
+	of a + n(number of elements of array a you wanted to operate on).
+	2. `reverse(a, a+n);` : first parameter is the name of the array and second parameter is name of 
+	a + n(number of elements of array a you wanted to operate on).
+	
+	
+13. `Fibonacciness of the array` : this means every element should be sum of last 2 elements means 
+    this will start from 3rd element . If 3rd element satisfy's this conditions that is (a3 = a2 + a1)
+    then one fibonacciness and if a4 also satisfies then 2 fabonacciness (a4 = a3 + a2).
+    
+    
+14. 1. `functions` : if we wanted to do repetitive tasks in our program to make our program clean we use 
+    functions we pack that particular code which we wanted to use repetitively in a function .
+	1. `format of making function` : data_type_return_wanted(parameters along with data type ){ body what
+	wanted to perform then return , usually return any variable if you want or return 0 if wanted to change
+	any preexisting parameters value to change and for changing any pre existing or passed parameters value
+	to be change use & with that as int &variable by this you passed that variable by reference and this allow
+	direct changes to that particular variable instead of creating a temporary copy for the function}.
+		1. `Ex :` `int checker(int a, int b , int c, int &ans1){if(c == a+b){ans1++;}return 0;}` i made a int
+		checker function int is the data type in which i want return and checker is the name then passed a 
+		, b, c integral types with their original value but in ans1 passed by reference and then incremented
+		original value of ans1 if satisfying our condition and then return 0 because we just wanted to change
+		our parameters value . 
+	2. `calling function` : we can call any function only after creating that function and then `checker(a,b,c)`
+	name of the function with the parameters we asisnged at time of creation of function on which that function
+	will work . 
+	3. `Don't want return from a fucntion` : Then for this special case we have a void function which doesn't
+	return any value and this is created for this purpose only . 
+		1. `format` : void name_of_function(parameters wanted to use and use & if wanted to change original
+		value ){body } that is it
+			1. `Ex :` `void checker(int a, int b , int c, int &ans1){if(c == a+b){ans1++;}}`
+		2. `calling function` : as we do normal function , name_of_func(parameters assigned) and call only
+		after creating that particular function.
+		
+		
+15. 	`The function find(x)` : The function find(x) returns an iterator that points to an element whose value
+    is x. However, if the set does not contain x, the iterator will be end `auto it = s.find(x); if 
+    (it == s.end()) { // x is not found }` and if that is present we can even print that as `if(it != s.end())
+    {cout << "YES" << ' ' << *it << '\n';`.
+    
+    
+16. we can print these elements of a set as `for(int it : s){cout << it << ' ' << '\n';}` then this will manage
+    whole range from s.begin() to s.end() automatically .
+    
+    
+17. `empty string` : `std::string a = {};` .
+
+
+18. `putting number in string` : `std::string a = {"45"};` this will behave as characters and not numbers so
+    we can perform any mathematical operations on string a .
+    
+    
+19. `ws` : for a safter side on cp whenever using getline pair with ws to remove any unexpected or unintended
+    output `getline(cin>>ws,string_name);`.
