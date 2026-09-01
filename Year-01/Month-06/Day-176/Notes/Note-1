@@ -1,0 +1,58 @@
+1. `Iterators` : An iterator allows you to traverse(examines) a container by 
+    providing a pointer.For example, vector.begin() returns an iterator pointing
+    to the first element of the vector. Apart from the standard way of traversing
+    a vector (by treating it as an array), you can also use iterators: ex : 
+    `for (vector<int>::iterator it = myvector.begin(); it != myvector.end(); ++it)
+    { cout << *it; //prints the values in the vector using the pointer } `However,
+    a more generic way to do this is with a for-each loop and auto (C++11 and later
+    versions) that automatically infers the type of an object:`for(auto element : v)
+    { cout << element; //prints the values in the vector }` .
+    
+    
+2. `Vector array` : This is also known as dynamic array , this supports functions which
+    normal array don't . This can resize itself to accomdate more elements . we can also
+    add and delete elements at the end in O(1) time.insertion and deletion in the middle
+    of the vector is O(n).
+	1. `push_back` : v.push_back(2); this will insert 2 at end of the v vector.
+	2. `erase` : v.erase(v.begin() + 1); will erase element at index 1. v.erase(v.end()-1); 
+	this will erase  v vector's last element . v.erase(v.begin(), v.begin()+3); will erase 
+	elements at 0,1,2 indices. 
+	3. `sorting` : sort(v.begin(), v.end()); will sort dynamic array whereas static arrays 
+	require sort(arr, arr + N) where N is the number of elements to be sorted.The default
+	sort function sorts the array in ascending order.In array-based contest problems, we’ll
+	use one-, two-, and three-dimensional static arrays most of the time. However, we can
+	also have static arrays of dynamic arrays, dynamic arrays of static arrays, and so on.
+	Usually, the choice between a static array and a dynamic array is just personal preference.
+	
+	
+3. `What is data structures` : A data structure is a way to store data in the memory of a computer.
+    It is important to choose an appropriate data structure for a problem, because each data
+    structure has its own advantages and disadvantages. The crucial question is: which
+    operations are efficient in the chosen data structure?
+    
+    
+4. `size` : v.size() will return size of vector v.
+
+
+5. `Vector array with known elements` : `vector v = {2,4,2,5,1};` 
+
+
+6. `creating vector array with 0's as elements` : `// size 10, initial value 0 vector v(10);`
+
+
+7. 	`With a initial value ` : `// size 10, initial value 5 vector v(10, 5);`
+
+
+8. The string structure is also a dynamic array that can be used almost like a **vector** . 
+    In addition, there is special syntax for strings that is not available in other data 
+    structures. Strings can be combined using the + symbol. The function substr(k, x) returns
+    the substring that begins at position k and has length x, and the function find(t) finds
+    the position of the first occurrence of a substring t.
+    
+    
+9. ` C++17’s CTAD (class template argument deduction)` :`vector vowels {'a','b','c','d'}`
+    because CTAD compiler will deduce the type of the vector vowels automatically.
+    
+    
+10. 	`difference between () and {}` : `vector <int> d(10);` this will create a vector of
+    size 10 wherease `vector <int> d{10}` this will create a vector of size 1 with element 10 .
