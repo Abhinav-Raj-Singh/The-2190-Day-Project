@@ -1,0 +1,38 @@
+1. `Pairs` : We can pair only two data types of any kind  in c++ use pair 
+	1. `Different ways to create a pair and initialize values` : 
+		1. `With a initializer list` : pair <int , string> p3 (3,"APPLE"); or pair<int , 
+		string> p3 = {3,"APPLE"}; both are correct ways.
+		2. `Without initializer list` : pair <int, string> p3; then we can fill values as 
+		pair.first = 4 , pair.second = "APPLE"; 
+		3. `without defining data types` : auto p2 = make_pair (2,"banana"); or pair 
+		p2 = {2,true};
+		4. `creating pair from pre initialized and defined variables` : int a = 2 ; 
+		string b = "AB"; make_pair(a,b);
+		5. `Initializing more elements than 2` : for this purpose we have tuples but using
+		pairs we can do `pair<int,pair<int,string>> p2 = {1,{2,"HELLO"}};` and `cout << 
+		p2.first << '\n';cout << p2.second.first << '\n';cout << p2.second.second << '\n'; 
+		` by this way we can take output from this and we can extend this to n types also.
+		6. `changing values after creating a pair` : p2.first = value_to_assign. 
+        7. `Warning ` : Never use loop on a pair for taking output from a touple instead use a constant 
+        number to access. 
+		
+		
+2. `Tuples` : We usually use this when we wanted to pair N types of things together.
+	1. `Ways to define a tuple` : 
+		1. `tuple<int,int,string,bool,char> p2 = {1,2,"HEY",true,'H'};`  making tuple we can make
+		tuple of N types . 
+		2. `Creating a tuple out of predefined variables` : `auto p2 = make_tuple (a,b,c,d,e,f) ;`
+		a,b,c,d,e,f variables are already defined and initialized.
+	2. `Accessing values from a tuple` : `cout << get<i>(p2) << '\'n` this will return ith position's 
+	element from p2 and i starts from 0 and goes to (n-1) if p2 has n elements.
+	3. `changing values after creating a tuple` : `get<i>(p2) = value_to_assign` this way we can change
+	our ith position's value of p2 tuple .
+	4. `Warning ` : Generally prefer not to use loop on a tuple for taking output from a touple instead
+	use a constant number to access. 
+	5. `Hardcoded values are only allowed` : whenever you are trying to excess any element from a tuple
+	it is recommended to use hardcoded values only in the angular bracket. or if using variable than that
+	should be consexpr because compile time constants are only allowed.
+	6. `tie` : we use tie for deconstructing our existing tuple to accessible direct variables like 
+	`int a = 1 ; int b = 2 ; tuple<int,int> a2{a,b}; int c ; int d ; tie(c,d) = a2;` then our 
+	`a == c & b == d` but make sure you tieing exist number of elements that are present in the tuple you 
+	are trying to deconstruct.
