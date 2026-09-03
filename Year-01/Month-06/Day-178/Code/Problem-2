@@ -1,0 +1,36 @@
+// Problem-2
+// Codechef Starters 254 Div 4 - B
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    int n;
+    cin >> n;
+    if(n == 1){
+        cout << 20 << '\n';
+    }
+    else if(n % 2 == 0){
+        cout << ((n/2)*30) << '\n';
+    }
+    else if(n % 2 != 0 && n != 1){
+        cout << (20 + (((n-1)/2)*30)) << '\n';
+    }
+
+}
+
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+
+
+    return 0;
+}
