@@ -1,0 +1,38 @@
+// Problem-3
+// Codeforces 96 A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+
+    string s;
+    cin >> s;
+    char ef = s[0];
+    int count = 0;
+    for(int i = 1 ; i < s.size() ; i++){
+        if(s[i] == ef){
+            count +=  (count == 0 ? 2 : 1);
+            
+        }
+        else{
+            count = 0 ;
+            ef = s[i];
+        }
+        if(count == 7){
+            cout << "YES"  << '\n';
+            return;
+        }
+    }
+    cout << "NO" << '\n';
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+
+    solve();
+
+    return 0;
+}
