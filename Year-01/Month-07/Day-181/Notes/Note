@@ -1,0 +1,8 @@
+1. `To lowercase all letters of a string ` : `transform(s.begin(),s.end(),s.begin(),[] 
+    ( unsigned char c){ return tolower(c)});` we used unsigned char to prevent unintended 
+    behaviour from our program which may be caused if we used only char because it may take
+    negative ascii values also .
+    
+    
+2. `returns character data type` : whenever we try to extract or check any particular index 
+    of a string using indexing as s[i] then ith will be character and ith will not be string of s. 
