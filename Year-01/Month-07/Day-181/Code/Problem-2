@@ -1,0 +1,89 @@
+// Problem-2
+// Codeforces 69 A
+
+#include <bits/stdc++.h> 
+using namespace std;
+
+
+#ifndef ONLINE_JUDGE
+#define debugva(x) cerr << #x << " "; _print(x); cerr << '\n';
+#define debugv(y) cerr << #y << " " << y  << '\n';
+#else 
+#define debug(x)
+#endif
+
+void _print(int a){
+    cerr << a ;
+}
+
+void _print(long long a){
+    cerr << a ;
+}
+
+void _print(char a){
+    cerr << a ;
+}
+
+void _print(string a){
+    cerr << a ;
+}
+
+void _print(bool a){
+    cerr << a ;
+}
+
+
+template<typename T> void _print(vector<T> v1){
+    cerr << "[ ";
+    for(T i : v1){
+        
+        _print(i);
+        cerr << " " ;
+    } 
+    cerr << " ]" << '\n';
+}
+
+template<typename T> void _print(set<T> s1){
+    cerr << "[ ";
+    for(T i : s1){
+        
+        _print(i);
+        cerr << " " ;
+    } 
+    cerr << " ]" << '\n';
+}
+
+void solve(){
+    int n;
+    cin >> n;
+    vector <int> d(n);
+    vector <int> e(n);
+    vector <int> f(n);
+
+    for(int i = 0 ; i < n ; i++){
+        cin >> d[i] >> e[i] >> f[i];
+    }
+    int a = accumulate(d.begin(),d.end(),0);
+    int b = accumulate(e.begin(),e.end(),0);
+    int c = accumulate(f.begin(),f.end(),0);
+    
+    cout << ((a==b && b==c && c == 0) ? "YES" : "NO" ) << '\n';
+}
+
+
+
+int main(){
+	#ifndef ONLINE_JUDGE
+		freopen("Error.txt" , "w" , stderr);
+	#endif
+
+ios_base::sync_with_stdio(0);cin.tie(0);
+	
+	
+
+solve();
+
+
+return 0;
+
+}
