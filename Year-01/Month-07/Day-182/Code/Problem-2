@@ -1,0 +1,56 @@
+// Problem-2
+// Codeforces 122 A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int n;
+    cin >> n;
+    int r = n;
+    
+    if((n%4 == 0 || n % 7 == 0 || n%47 == 0)){
+        cout << "YES" << '\n';
+    }
+    else{
+        int cnt4 = 0;
+        int cnt7 = 0;
+        while(n > 0){
+            if(n%10 == 4){
+                cnt4++;
+                n = n/10;
+            }
+            else if(n%10 == 7){
+                cnt7++;
+                n = n/10;
+            }
+            else{
+                n = n/10;
+            }
+        }
+        int cnt = 0 ;
+        while(r > 0){
+            r = r/10;
+            cnt++;
+        }
+        // cout << cnt << '\n';
+        // cout << cnt4 << '\n';
+        // cout << cnt7 << '\n';
+        if(cnt == cnt4 + cnt7){
+            cout << "YES" << '\n';
+            // cout << cnt << '\n';
+            
+            return;
+        }
+        else{
+            cout << "NO" << '\n';
+            return;
+        }
+    }
+}
+
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+
+    solve();
+}
