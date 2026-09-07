@@ -1,0 +1,75 @@
+1. `Common mistake which causes unintended errors` : A common mistake when using the type long 
+    long is that the type int is still used somewhere in the code. `Ex` : `int a = 123456789; 
+    long long b = a*a;` Even though b is of type long long but a is type of int so ans will get
+    in int and so b will have a wrong answer . Either use long long a or (long long)a*a;
+    
+    
+2. `sizeof(a)` : will give size of variable a.
+
+
+3.  `__int128_t big_integer` : big_integer is of 128 bits long or 16 bytes usually long long 
+    is enough but g++ provides this also , but many contests doesn't have this . `with a value
+    range of −2^127 . . . 2^127 − 1 (about −10^38 . . . 10^38 )`
+    
+    
+4. `std::boolalpha` : bool data type return in 0 and 1 , 0 for false and 1 for true and if want 
+    in true false then use std::boolalpha above taking output of that boolean . `std::noboolalpha`
+    to stop stream manipulator boolalpha 's effect.
+    
+    
+5. `Sizes` : usually c++ standard doesn't define the sizes and bounds of number types as that depends 
+    on the compiler and the platform but usually we have a rough range for that . 
+    
+    
+6. `Making sure remainder is positive or 0` : n%m we expects 0 to (m-1) `x = x%m; if(x < 0 ) x += m;`
+    This usually needs only when there are subtractions involved or remainder may get negative .
+
+
+7. `floating point numbers` : double is usually enough as of size 64 bits or 8 byte but we have a 
+    another type that is long double which is of 128 bits that is 16 byte but it has precision only
+    of 80 bits .
+    
+    
+8. `floating point numbers` : double is usually enough as of size 64 bits or 8 byte but we have a another
+    type that is long double which is of 128 bits that is 16 byte but it has precision only of 80 bits . 
+    And in most of the cases double will be enough . 
+	1. And precision for answer is mentioned in the question itself easy way to print answer with that precision
+	is using printf as 
+		1. ` Ex: double x = 1.123456789;printf("%.9f\n",x)`  this will print our double variable x with 9 
+		places after decimal point . But if you want only 4 digits that is 1.1234 and you used `printf("%.9f\n",x);`
+		this will give 1.1235 as printf works as it will look at 5th digit for giving output of 4 decimal places and
+		if 5th digit is 5 or greater than it then round up 4th digit and if less than then 4th digit as it . To get
+		exact 4 digits use type casting and chopping `double chopped = ((int)(x * 10000))/10000.0 ; printf("%.9f\n",
+  chopped);
+		` this will give ouput as 1.1234
+		2. `Synchronization between cin , cout & scanf , printf` : If we used `ios_base::sync_with_stdio(0);cin.tie(0);`
+		then either use cin , cout or scanf , printf because we used this line to stop synchronization between these
+		c's I/O streams with c++'s I/O stream so this may give unintended issues in answer . 
+	2. `comparing floating point numbers with equal to is risky` : as they may be equal but because of precision 
+	issue they may differ slightly by some value but that will give wrong answer . A better way to compare floating
+	point numbers is to assume that two numbers are equal if the difference between them is less than ε, where ε is
+	a small number. For example, in the following code ε = 10^−9 : `if (abs(a-b) < 1e-9) {// a and b are equal}` 
+	Note that while floating point numbers are inaccurate, integers up to a certain limit can still be represented
+	accurately. For example, using double, it is possible to accurately represent all integers whose absolute value
+	is at most 253
+		
+		
+9. `Using ceil and wanted answer in integer` : Either of your operand should be decimal type otherwise int will .
+    direclty chop as `int a = 3 ;` then a/2 will give 1 not 1.5 `a/2.0` will give 1.5 or ((a* 1.0)/2) will 1.5 , 
+    `long long b = very large number; cout << ((long long)ceil(b/2.0)) << '\n';` we wanted answer in normal form
+    because otherwise decimal will give in 1e form so we did long long inplace of int because int may give 
+    overflow. 
+    
+    
+10. `combinations of combinatorials` : This is the mathematics tool which we can use to find out possible number of 
+    pairs or numbers we can get for the following condition .
+	1.  `If n positions to be filled with 2 numbers and numbers can repeat` : `2 raise to n ` we will get 2 ^ n 
+    combinations . `Ex:` 1<=n <= 1000 if a number have 4 and 7 as its digits only then that number will be 
+    considered
+    lucky otherwise not then we can make list of such numbers 1. one place and two numbers then 2 raise to 1 
+    (4,7) then
+    for 2 place and two numbers then 2 raise to 2 (44,77,47,74) and then 3 places that is maximum possible 
+    because constraint
+    is maximum 1000 , 3 places and 2 numbers to repeat 2 raise to 3 (444,477,474,447,777,747,744,774) means 
+    total we have
+    14 numbers for this condition .
