@@ -1,0 +1,28 @@
+// Problem-2(method-2)
+// Codeforces 122 A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    int n;
+    cin >> n;
+    vector <int> lucky {4,7,44,77,47,74,444,777,474,447,747,774,477,744};
+    for(int i = 0 ; i < lucky.size() ; i++){
+        if(n%lucky[i] == 0){
+            cout << "YES"  << '\n';
+            return;
+        }
+        
+     }
+     cout << "NO"  << '\n';
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    solve();
+}
