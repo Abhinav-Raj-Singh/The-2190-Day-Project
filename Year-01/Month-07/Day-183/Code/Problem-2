@@ -1,0 +1,33 @@
+// Problem-2
+// Codeforces - 405 A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    int n;
+    cin >> n;
+    vector<int> d(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> d[i];
+    }
+    sort(d.begin(), d.end());
+    for (auto s : d)
+    {
+        cout << s << ' ';
+    }
+    cout << '\n';
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    solve();
+
+    return 0;
+}
