@@ -1,0 +1,1 @@
+1. `finding any element in vector` : using count if(count(d.begin(),d.end(),element)>0){//found};
