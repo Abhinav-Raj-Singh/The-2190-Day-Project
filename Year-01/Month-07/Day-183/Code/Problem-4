@@ -1,0 +1,76 @@
+// Problem-4
+// Codeforces - 479 A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    int a, b, c;
+    cin >> a >> b >> c;
+    int ans = 0;
+
+    if (a == 1 && b != 1 && c != 1)
+    {
+        ans = (a + b) * c;
+    }
+    else if (a != 1 && b == 1 && c != 1)
+    {
+        if (a > c)
+        {
+            ans = a * (b + c);
+        }
+        else
+        {
+            ans = (a + b) * c;
+        }
+    }
+    else if (a != 1 && b != 1 && c == 1)
+    {
+        ans = a * (b + c);
+    }
+    else if (a != 1 && b == 1 && c != 1)
+    {
+        if (a > c)
+        {
+            ans = (a + b) * c;
+        }
+        else
+        {
+            ans = a * (b + c);
+        }
+    }
+    else if (a == 1 && b != 1 && c == 1)
+    {
+        ans = a + b + c;
+    }
+    else if (a == 1 && b == 1 && c != 1)
+    {
+        ans = (a + b) * c;
+    }
+    else if (a == 1 && b == 1 && c == 1)
+    {
+        ans = 3;
+    }
+    else if (a != 1 && b == 1 && c == 1)
+    {
+        ans = a*(b+c);
+    }
+    else
+    {
+        ans = a * b * c;
+    }
+
+    cout << ans << '\n';
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    solve();
+
+    return 0;
+}
