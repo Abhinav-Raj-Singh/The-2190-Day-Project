@@ -1,0 +1,38 @@
+// Problem-2
+// Codeforces - 580 A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+
+    string s;
+    cin >> s;
+    vector <string> res;
+    for(int i = 0 ; i < s.size(); i+=3){
+        string p;
+        while(i < s.size() && s.substr(i,3) != "WUB"){
+            p += s[i];
+            i++;
+        }
+        if(p.size() > 0){
+            res.push_back(p);
+        }
+    }
+    for(auto a : res){
+        cout << a << ' ';
+    }
+    cout << '\n';
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    solve();
+
+    return 0;
+}
