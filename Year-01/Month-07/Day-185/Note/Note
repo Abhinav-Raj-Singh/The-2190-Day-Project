@@ -1,0 +1,71 @@
+1. `Steps to solve a problem` : 
+	1. Understand the problem
+	2. Input given
+	3. Solution(on paper in form of flowchart and pseudocode) as after getting solution on paper 
+	it will be easy to write code for that solution.
+	4. code of solution figured out on paper in step 3 . 
+	
+	
+2. `Flowchart` : Diagram of the solution 
+	1. Components of a flowchart : start , exit , input/output, process , arrows,
+	2. And for each steps we use these components accordingly as our flow of programs goes. And 
+	for connecting each steps and showing flow of our program we use arrows. And for decision 
+	component we whenever we are using any conditional statement that will give yes or no if give
+	yes then usually we bring a arrow from left hand side of decision block to downside facing
+	and for no from right hand side to downward facing.
+	
+	
+3. `Pseudo code` : General logic of solution , we write in english , and this is pre step of code .
+    And we can directly write this from our flowchart for that problem.
+	1. `How to write` : We write this in step by wise manner in simple english language and
+    there are no strict rules for pseudo code , just how our program will go and work written in
+    english language in step wise manner . 
+	2. `how to write decision block in pseudo code` : `Ex:` 
+		1. input a & b
+		2. is a < b
+			  print a
+			else
+				print b
+		3. exit 
+			we can even use if at place of is for checking conditions.
+	3. `how to write loop in pseudo code`: `ex :`
+		1. input n
+		2. count = 1 , sum = 0 
+		3. while count <= n
+			1. sum += count
+			2. count += 1
+		4. print sum
+		5. exit
+		
+		
+4. Generally when we approach problem we never write flowchart we write some pseudo code and not
+    necessary to write for all problems.
+    
+    
+5. `Dry running code` : dry running means checking our code with any example and checking whether
+    working fine or not.
+    
+    
+6. `Way to create a standard empty array of size 2` : `int cnt[2] {};` --> a has 2 indices 0 and 1 both are
+    0 initialized.
+    
+    
+7. `changing case of first character or any specific of a string` : `p[0] = toupper(p[0]);` this will uppercase
+    first character `p[0] = tolower(p[0]);` this will lowercase first character of the string . 
+    
+    
+8. `changing case of whole string ` : `transform(s.begin(),s.end(),s.begin(),[](unsigned char c){ return tolower(c) ;)};`
+    this will lowercase all characters and to uppercase all characters just replace tolower with toupper . And this will
+    change your original string . If you want to leave any starting characters unchanged then just do +1 with begin()
+    `transform(s.begin()+1,s.end(),s.begin()+1,[](unsigned char c){ return tolower(c) ;)};` like this will lowercase all
+    characters of string s but leave first character of s unchanged . 
+    
+    
+9. `creating a vector of pair` : we can basically create a vector of pair means assign certain data type values with 
+    another and this is especially useful when we wanted to check any parameter in sorted order and use another parameter . 
+	1. `creation syntax` : `vector <pair<int,int>> d; ` created a d vector of pairs and then for taking input `for(int i = 0 ;
+	i < n ; i++){ int a , b ; cin >> a >> b; d.push_back({a,b});` and how we can accesss values for comparision as `for(int i = 0 ; i < n ; i ++ )
+ {if(d[i].first > variable){ variable += d[i].second;}} ` or you can use `d.emplace_back(a, b)` at place of `d.push_back({a,b})` 
+ this emplace is specifically used It works for any data type you put into a vector (like custom classes, strings, or vectors of
+ vectors ,pairs) and this avoids copying and then pasting trying put the value and this is much faster . 
+ 
