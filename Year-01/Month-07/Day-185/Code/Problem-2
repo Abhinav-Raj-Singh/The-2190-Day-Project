@@ -1,0 +1,48 @@
+// Problem-2
+// Codeforces - 131A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    string s;
+    cin >> s;
+    string p = s;
+    string r = s;
+    string q = s;
+    string w = s;
+    string ans = s ;
+    transform(p.begin()+1,p.end(),p.begin()+1, [](unsigned char c){
+        return toupper(c);
+    });
+    p[0] = tolower(p[0]);
+    transform(r.begin()+1,r.end(),r.begin()+1, [](unsigned char c){
+        return tolower(c);
+    });
+    r[0] = toupper(r[0]);
+
+    transform(q.begin(),q.end(),q.begin(), [](unsigned char c){
+        return toupper(c);
+    });
+    transform(w.begin(),w.end(),w.begin(), [](unsigned char c){
+        return tolower(c);
+    });
+
+
+
+    if(s == p){
+        ans = r;
+    }
+    else if(s == q){
+        ans = w;
+    }
+    cout << ans << '\n';
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+    return 0;
+}
