@@ -1,0 +1,51 @@
+// Problem-4
+// Codeforces - 155A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    int n;
+    cin >> n;
+    vector<int> d(n);
+
+    for (int i = 0; i < n; i++)
+    {
+        cin >> d[i];
+    }
+    int minimum = d[0];
+    int maximum = d[0];
+    int cnt = 0;
+    if(n == 1){
+        cout << 0 << '\n';
+        return ;
+    }
+    for(int i = 0 ; i < n; i ++){
+        if(minimum > min(minimum,d[i])) 
+        {
+            cnt++;
+            minimum = min(minimum,d[i]);
+        
+        }
+        if(maximum < max(maximum,d[i]))
+        {
+            cnt++;
+            maximum = max(maximum,d[i]);
+        
+        }
+    }
+    cout << cnt << '\n';
+    
+ 
+
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    solve();
+    return 0;
+}
