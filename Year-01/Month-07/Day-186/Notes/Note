@@ -1,0 +1,73 @@
+1. `Maps` : maps is a data structure . maps are of four types maps , unordered maps,  multimaps, unordered multimaps. 
+    maps are used to create different data types key value pairs . Maps store that key value pairs in sorted order 
+    wherease unordered maps don't maintain that sorted order. Maps is not of continuous nature like arrays has , means
+    its elements are exist in pair and they pair can be exist anywhere in the memory but they will be linked with each
+    other we can't use i++ iterator logically but we have to still use this as c++ internally manage this . 
+	1. `Syntax to declare a map` : we have to give two data types as input one for key(first) and for corresponding
+	value(second) . `map <int,string> m;` this is the map of int keys corresponding string values .
+		1. `Inserting values in map` : there are 2 to 3 ways to insert values in map.
+			1. `first way` : `m[5] = "ARC";` now for 5 as key ARC as corresponding value is stored.
+			2. `second way` : `m.insert({5,"ARC"});` 
+			3. `third way` : `m.insert(make_pair(5,"ARC"));` and if we inserted any value for the existing key-value pair
+			then for that key value will be overwrite.
+		2. `accessing values from a map` : 
+			1. `first through key` : if you know key and wanted to access corresponding value then `cout << m[5] << '\n';` .
+			2. `second to print whole map key corresponding values ` : then create a iterator for map and then run from
+			begin to end in loop and then print that `map<int,string> :: iterator it; for(it = m.begin() ; it != m.end()
+			; it++){cout << (*it).first << ' ' << (*it).second << '\n';} ` 
+			3. `third way modern iterator way` : `for(auto &pair : m){cout << pair.first << ' ' << pair.second << '\n';}`
+			and in whatever order will will enter our key value pairs but map will automatically manage to sort our keys
+			along with their respective pair. And for strings that will be in lexographical order.
+		3. `m.size()` : this will return the size of our map the number of elements(key - value pair means key with
+		corresponding value will be counted as one) present in m map will give .
+		4. `time complexity ` : time complexity of calling `m[1];` is O(log(n)) means even if are not inserting the value
+		this to be calling will consume O(log(n)) time complexity so call every key value pair carefully and also if we
+		didn't inserted any value with corresponding key then our that value will be bare minimum means if int is the type
+		of value then for leaving empty will store 0 by default and for string that will store a empty string . Means that
+		if we run m[5] and didn't insert any value then 5 as key will be inserted in our map. Also keys of map are unique
+		we don't insert duplicate keys in the map and if we tried to do this then our existing key's value will be replaced 
+		with new value . And even time complexity of accessing any key - value pair will be O(log(n)) even if we just accessed
+		key or even key-value pair O(log(n)) and so for accessing values using loop then time complexity of that loop will
+		be n times O(n) that is `* O(n)` as we will access n key-value pairs . And for inserting n values time complexity
+		will be `n * O(log(n))` . And time complexity even depends on the data type we are inserting suppose if our key
+		is of string then our time complexity will be s.size()* O(log(n)) here s will be size of the string we are inserting
+		as a key and n is the size of our map . Reason behind this is maps uses a self balancing tree red black tree and
+		in this our map will internally first check whether that key exist or not if exist then at which place this will
+		be placed because map sort key-value pairs also and for string this has to check lexographical order also which
+		will take little more time and this size won't matter for small strings but for bigger this will matter a lot  .
+		
+	2. `Some useful functions of maps` : 
+		1. `m.find(5)` : we can use this find on keys only and this is iterator type this will return iterator if found
+		5 key in map then this will point on that otherwise this will point to m.end() and we can't use this on values .
+		This `auto it = m.find(5); ` time complexity is O(log(n)). As generally whichever self balance trees we are using
+		like maps use red black self balancing trees then its time complexity for accessing , insertion and finding etc
+		basic function is O(log(n)). And even if there is no value attached to that key then our find will point to m.end().
+			1. `ex` : `auto it = m.find(5); if(it == m.end()){cout << "NOT FOUND!" << '\n'; else{cout << (*it).first << ' '
+			<< (*it).second << '\n';` 
+		2. `m.erase()` : this can used for both types of input like direct value or iterator pointing on that place 
+			1. `putting direct values` : `m.erase(5);`  then this will erase key-value pair which having 5 as a key. But
+			if we gave any key which doesn't exist in our map then this won't throw error.
+			2. `putting iterator as input` : `auto it = m.find(5); m.erase(it);`  then this will erase both key-value pairs
+			.But if we gave any key which doesn't exist in our map then this will throw a segmentation fault error. So to
+			avoid such errors we can first check whether that key - value pair exist in our map or not and then use `ex:` `
+			auto it = m.find(5) ; if(it != m.end()){m.erase(it);}`
+		3. `clearing map` : `m.clear();` this will clear our map m means make our m map as empty .
+		
+		
+2. `.clear()` : this is standard function and this clears almost any data type , container or even datastructure empty 
+    means , even string or map . `ex: s.clear();` then our s string will get empty string. 
+    
+    
+3. `.size()` : this is standard function and this gives the size of  data type , number of elements of a  container or
+    even number of elements present in  datastructure  means , even string or map . `ex: m.size()` then this would return
+    number of key-value pairs present in m map . 
+    
+    
+4. `.empty()` : this is standard functions and this works on all data types , containers , data structures and check
+    whether that they are empty or not and this works on boolean `ex: if(s.empty() == true){cout << "YES" << '\n';} 
+    else{cout << "NO" << '\n';} ` .
+    
+    
+5. `clarification on why .clear , .size and .empty wont work on whom` : Just like `.clear()` and `.size()`, 
+    **`empty()` does not work on primitive data types** (like `int`, `float`, `char`, or raw arrays like 
+    `int arr[]`). You cannot write `int x; x.empty();` because primitive types do not have member functions.
