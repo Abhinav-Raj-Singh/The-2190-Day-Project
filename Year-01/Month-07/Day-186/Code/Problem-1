@@ -1,0 +1,35 @@
+// Problem-1
+// Codeforces 750 A
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int n,k;
+    cin >> n >> k;
+    int sum =0;
+    int solve = 0;
+    for(int i = 1 ; i <= n ; i++){
+            sum += i*5;
+        if(k+sum < 240){
+            solve++;
+        }
+        else if(k+sum == 240){
+            solve++;
+            break;
+        }
+        else if(k+sum > 240){
+            break;
+        }
+    }
+            cout << solve <<'\n';
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+
+    solve();
+
+    return 0;
+}
