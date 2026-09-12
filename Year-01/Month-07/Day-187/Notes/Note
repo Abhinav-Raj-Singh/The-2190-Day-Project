@@ -1,0 +1,48 @@
+1. `unordered maps` : unordered maps has all same functions(expect the function which we 
+    can use for maps to do tasks related to sorting they are in maps but no in unordered_maps)
+    which we used in maps and also the way to access and insert any key-value pair . 
+	1. `syntax ` :` unordered_map<int,string> n;` n is unordered map of int-string type.
+	2. `Order` : They are neither the order in which we inserted value nor they are sorted(neither
+	ascending or descending order) basically whenever we enter any key-value pair in it this use 
+	internally hash table and then convert that key to a hash number and then insert accordingly.
+	3. `time complexity` : average time complexity of insertion and access is O(1) for one time. 
+	4. `Chosing between` : whenever order doesn't matter in answer then use unordered maps because 
+	they take less time and hence more efficient whenever order doesn't matter. Also make sure when 
+	it comes to complex data types like pair or something then you can use unordered maps only that 
+	has their inbuilt hash function to calculate their hash values otherwise you can't use unordered 
+	maps for them(like for pairs you can't use undered maps) but maps are valid for almost all data 
+	types because they take insertion on the basis of comparison and alsmost all data types can be 
+	compared. Basically basic data types have their own built in hash functions to calculate internally
+	like long long , int , strings , etc but sets, vectors , pairs , etc don't have so we can't use 
+	unordered maps for them. Means whenever we are wanted to use key as a primitive data only when use 
+	unordered maps and if key is complex data type then maps . 
+	
+	
+2. `multi maps` : These are almost never used in competitive programming the key difference is that you can 
+    insert unique keys only in maps but you can even insert duplicate keys in multi maps and even if you wanted
+    to store multi values corresponding to any key then we can create vector of that like `map<int,vector<string>> n;`
+    now we can store multiples values for a key . 
+    
+    
+3. `even ∗ even = even;even ∗ odd = even;odd ∗ even = even;odd ∗ odd = odd.` : any number can be formed in which condtition .
+
+
+4. `bitwise operators` : these are the operations we can do on any integers or character data types only because characters 
+    has a ascii table which bitwise operator can internally refer to do operations . We can use & , | , ^ , >> , << .
+	1. `bitwise and (&)` : whenever use this on any two operands(whether they are integers or character) our compiler first 
+	convert them in form of 0 and 1 and equal their size for the shortest one it will add 0's in the prefix to make digits 
+	equal to bigger operand then this will compare bit by bit and if both bits are 1 then return 1 and if both bits are 
+	different (or both bits are 0) then this will return 0 and we consider 1 or any positive integer as true and 0 as false. 
+	2. `bitwise or (|)` : our compiler will convert integer or char type in binary form and then compare bit by bit if either
+	one from them is 1 then it will return 1 . 
+	3. `bitwise xor` : First convert in binary form and then compare each bit by bit and if bits are same then this will return
+	0 otherwise 1.
+	4. `bitwise right shift >> `: this is used in cp for division of any number by powers of 2 as 10 >> 1 this divide 10 by 
+	1 by shifting each bit to right side and this is much faster then standard 10/2 and after >> write the power for that 
+	power's you want as exponent and 2 as a base.  Like 10 >> 1 is (10/ 2 raise to 1) generalisation is n >> k then (n/ 2 
+	raise to k)
+	5. `bitwise left shift << ` : this is used in cp for fast multiplication of any number with 2 as base and power k as 
+	`n << k ` this is n* (2 raise to k) and this is faster then n * (pow(2,k)) 
+	6. `Some useful mathematical implementations for cp ` : 
+		1. `checking whether a number is built of only 2 and its powers means like 8 is 2 raise to 3` : (n& (n-1)) and 
+		if this return 0 then our number is built solely from 2 and its powers . 
