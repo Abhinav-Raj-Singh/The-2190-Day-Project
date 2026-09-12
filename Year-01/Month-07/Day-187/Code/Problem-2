@@ -1,0 +1,57 @@
+// Problem-2
+// Codeforces 381 A
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int n;
+    cin >> n;
+    vector <int> d(n);
+    for(int i = 0 ; i < n ; i++){
+        cin >> d[i];
+    }
+    int left = 0 ;
+    int right = n-1;
+
+    int s = 0;
+    int di = 0;
+    for(int i = 0 ; i < n ; i++){
+        if(i % 2 == 0){
+            if(d[left] > d[right]){
+                s+= d[left];
+                left++;
+            }
+            else{
+                s+= d[right];
+                right--;
+            }
+        }
+        else if(i % 2 != 0){
+            if(d[left] > d[right]){
+                di+= d[left];
+                left++;
+            }
+            else{
+                di+= d[right];
+                right--;
+            }
+        }
+        if(left == n-1 && right == 0){
+            break;
+        }
+    }
+    cout << s << ' ' << di << '\n';
+
+}
+
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+
+    solve();
+
+    return 0;
+}
