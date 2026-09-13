@@ -1,0 +1,36 @@
+// Problem-2(method-2)
+// Codeforces 525 A
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    int ans = 0;
+    vector <int> c (256,0);
+    for(int i = 0 ; i < ((n-1)*2) ; i+=2){
+        c[(int)s[i]]++;
+        int door = s[i+1];
+        if(c[tolower(door)] > 0){
+            c[tolower(door)]--;
+        }
+        else{
+            ans++;
+        }
+    }
+    cout << ans << '\n';
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+
+    solve();
+
+
+    return 0;
+}
