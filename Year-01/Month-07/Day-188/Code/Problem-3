@@ -1,0 +1,40 @@
+// Problem-3
+// Hacker Rank Maps-STL
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+
+    int t; 
+    cin >> t;
+    map <string,int> d;
+    while(t--){
+        int n ;
+        cin >> n;
+        string s;
+        cin >> s;
+        
+        if(n == 1){
+        int m ;
+        cin >> m;
+        d[s] += m;
+        }
+        else if(n == 2){
+            d[s] = 0;
+        }
+        else if(n==3){
+            cout << d[s] << '\n';
+        }
+    }
+    
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+
+    solve();
+
+
+    return 0;
+}
