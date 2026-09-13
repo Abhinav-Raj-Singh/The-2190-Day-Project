@@ -1,0 +1,25 @@
+// Problem-4
+// Codeforces 732 A
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+
+   int n , r;
+   cin >> n >> r;
+
+   int rl = 1;
+   while((n*rl) % 10 != 0 &&  (n*rl)%10 != r) rl++;
+
+   cout << rl << '\n';
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+
+    solve();
+
+
+    return 0;
+}
