@@ -1,0 +1,42 @@
+// Problem-2
+// Codeforces 525 A
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    int k = 0;
+
+    unordered_map<char , int> r;
+
+   for(int i = 0 ; i < s.size() ; i+=2){
+    char current_key = s[i];
+    char current_door = s[i+1];
+    r[current_key]++;   
+
+    char needed_key = tolower(current_door);
+    if(r[needed_key]>0){
+        r[needed_key]--;
+    }
+    else{
+        k++;
+    }
+
+   }
+    cout << k << '\n';
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+
+    solve();
+
+
+    return 0;
+}
