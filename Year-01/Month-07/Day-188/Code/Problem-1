@@ -1,0 +1,29 @@
+// Problem-1
+// Greek For Greeks 4236/1
+class Solution {
+  public:
+    int countWords(vector<string> &list) {
+            
+
+            
+            sort(list.begin(),list.end());
+            
+            int re = 0;
+            for(int i = 0 ; i < list.size() ; i++){
+                int r = count(list.begin(),list.end() ,list[i]);
+                if(r == 2){
+                    re++;
+                    i++;
+                }
+                else {
+                    i += (r-1);
+                    
+                }
+            }
+            return re;
+
+
+        
+
+    }
+};
