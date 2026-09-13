@@ -1,0 +1,14 @@
+1. `Hashing characters in c++` : `vector <char> d(256,0);` why 256 because characters will convert as per 
+    ascii number and so we have to do 256 to unable almost all possible characters and then we can check 
+    any character and increment that character's corresponding index. 
+    
+    
+2. `is_sorted(d.begin(),d.end()` : by this we are checking whether are d vector is sorted in non descending 
+    order or not,  if array is sorted in non descending order  then this will return true otherwise false . 
+    
+    
+3.  `upper_bound` : by using upper_bound we can find a element which is exactly bigger than the element we 
+    gave as a input. And we have to create a iterator data type to store its answer `auto k = upper_bound(d.begin(),d.end(),m); `
+    then this will point on the exact position on the element which is strictly greater than m and then we
+    can find index of that position using distance as `cout << distance(d.begin(),k);` this distance takes
+    iterator but returns in integer . 
