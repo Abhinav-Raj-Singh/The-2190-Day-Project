@@ -1,0 +1,36 @@
+// Problem-6
+// Codeforces 706 B
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    int n;
+    cin >> n;
+    vector <int> d(n);
+    for(int i = 0 ; i < n; i++){
+        cin >> d[i];
+    }
+    int q ;
+    cin >> q;
+    sort(d.begin(),d.end());
+    
+    for(int i = 0 ; i < q ;i++){
+        int r ;
+        cin >> r;
+        auto k = upper_bound(d.begin(),d.end(),r);
+        cout << distance(d.begin(),k) << '\n';
+    }
+    
+    
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    solve();
+
+    return 0;
+}
