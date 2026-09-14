@@ -1,0 +1,69 @@
+1. `conversion of any char to ascii value` : `int x = 'a';` then this won't throw error this will smartly
+    typecase our char a into its corresponding ascii value and that is 97 in the variable x , and even when
+    subtraction char from char of char from number `'a' - 'a' or 5- 'a'` both will return us a integer.
+    
+    
+2. `What hashing actually is and why we use hashing` : Whenever we have asked any element's appearance a lots and lots
+    of time from a array or list and then we can use builtin count functions and then return that value that this won't
+    efficient for big and big array or list for that then another approach we can use that for that given array or lists 
+    counting elements we will create a array(size equal to that given list and initialize all indices to 0) and that array
+    indicies will act as that element and that indicies value will act as the number of times that element appear and
+    then we can print . And then as per condition we can increment or decrement the indices value as per the condition
+    and we can manipulate as per requirement .
+    
+    
+3. `What we will do then` : hashing is basically prestoring and fetching . We will create a another array that will be hash
+    array of frequency array then we will initialize all indices of array with 0 and then we will alot all indices from 1 to
+    size -1 of this hash array with that corresponding arrays frequency means whenever my original question given array will
+    have an element suppose 1 then i will increase index 1 in my hash array and in this way i calculate all frequencies and
+    then at last i can print this array from 1 to n-1. And make sure to create hash array of required size + 1 as will start
+    fetcthing from index 1. 
+    
+    
+4. `Some limits of hashing array` : for integral hashing array we can declare size upto 10^6   inside main function and in global
+    you can declare upto 10^7 + 1 means around 10^7 and for booleans inside main 10^7 and in global 10^8 . make sure whenever
+    you are initializing any array globally that will be initialized to 0(for integers) and not with garbage values.
+    
+    
+5. `integral hashing` : create a hashing array the maximum size you want to hash + 1 and then hash as per the inputs you get
+    from the original array and then after get hashed array do the asked computation with that hash array.
+    
+    
+6. `character hashing` : if we wanted to know how many times a particular asked character in a array is present then we
+    can create a hash or frequency array of characters. And suppose all characters in the string are lowercase letter
+    only and we know that there will be 26 possible letters and so i can create a vector array of size 26(0 to 25) and
+    then in my mind i will asume a will corresponds to 0 , b to 1 , ... z to 25 this won't be written anywhere we considered
+    our hash arrays indices in this manner . Then for this purpose we have to use ascii (as when we write ` int x = 'a';`
+    this will store the ascii value of a and that is 97 means this will typecase instead of throwing error) . And by char-'a'
+    (this will do subraction between ascii key and return a integer value) and that value can be used to hash that char in
+    the hash array .          `e[d[i]-'a']++;` e is our hash array and d is the array whose characters we wanted to hash
+    then we can hash in this way and `char a;cin >> a; e[a-'a'] ` this way we can access frequency of char a from our hashing
+    array(e). Otherwise you can create hash array to size 256(0 to 255) and initialize with 0 and now you can cover all
+    uppercase and lower case characters directly and no need for subtraction just direct conversion through ascii values would
+    be enough. And we are not subtracting then we can put values in hash array as `e[d[i]]++;` this will auto convert because
+    program will take as we are operating on a index of e that is d[i] and d[i] is a character then to make sense compiler
+    will auto convert our char to its corresponding ascii value  and we can access using `e[a];`.
+    
+    
+7. `how map work for hashing` : using maps over direct array hashing sometimes more smarter decision . as `map<int,int> d;` 
+    then this first int will act as the element(key) and other int will act as the frequency(corresponding value to the key).
+    As when we will look in `d[1]++;` if 1 doesn't exist then compiler will automatically assign 0 as value and we operated
+    on that value and incremented then we will get 1 and now whenever again 1 repeats its value will get 2,3,.... basically
+    number of times the 1 repeating.  So from array to hashing our frequency directly using maps then we can use `m[a[i]]++;`
+    then this will access our ith element of array a then thsi will has its frequency in our m map `map<int,int> m;` this one . 
+    
+    
+8. `Chosing between hashing array or map` : when there are only limited element's whose frequency we wanted to find then use map
+    because suppose we have integers 1, 2, 13 then instead of creating a array of 14 size i will use map that will take only 3
+    elements as input and for this scenario our maps will be more optimised solution.
+    
+    
+9. `how to use map` : when doing hashing for integer then your key is integer and for character your key is character like 
+    `map<int,int> m; map<char,int> n;` here m is the hashing map for integers and n for characters. And in map `n[d[i]]++` 
+    then our map won't change ith character from d vector into integer because we already declared our key of the map as 
+    character so here we stopped auto conversion and instead provided the required type already. 
+    
+    
+10. `Which map to use for fetching` : if order doesn't matter then unordered map because average time complexity of unordered map for
+      inserting and accessing any element average is O(1) and worst is O(N) that is total number of elements in the unordered map
+      wherease for map both average and worst complexity if O(log(n)) and is the n of elements in the map.
