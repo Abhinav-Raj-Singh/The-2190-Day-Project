@@ -1,0 +1,22 @@
+// Problem-2
+// Codeforces 581 A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int a , b ;
+    cin >> a >> b;
+    int p = min(a,b);
+    int q = max(a,b);
+    cout << p << ' ' <<  ((q-p)/2) << '\n';
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+    return 0;
+
+}
