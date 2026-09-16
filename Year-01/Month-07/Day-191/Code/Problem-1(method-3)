@@ -1,0 +1,30 @@
+// Problem-1(method-3)
+// Codeforces 339 B
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int n , m;
+    cin >> n >> m;
+    vector<int> d(m+1);
+    d[0] = 1;
+    for(int i = 1 ; i <= m ; i++){
+        cin >> d[i];
+    }
+    long long ans = 0;
+
+    for(int i = 1 ; i <= m ; i++){
+       ans += (d[i] - d[i-1]+n) % n; 
+    }
+    cout << ans << '\n';
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+
+    return 0;
+}
