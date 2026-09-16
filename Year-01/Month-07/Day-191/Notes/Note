@@ -1,0 +1,115 @@
+1.`C++ Structures` :  A structure is a collection of variables of different data types and member functions 
+  under a single name. This collection of all related information under a single name Person is a structure.
+	1. `Syntax to declare` : The struct keyword defines a structure type followed by an identifier (name of 
+  the structure). Then, inside the curly braces, you can declare one or more members (declare variables
+  inside curly braces) of that structure. For example:Here, the structure Person is defined which has 
+  four members: first_name, last_name, age, and salary.When a structure is defined, no memory is allocated.
+  The structure definition is only the blueprint for the creation of variables. You can imagine it as a data
+  type.Similarly, structure definition only specifies what property a structure variable holds when it is 
+  defined.**Note:** Remember to end the declaration with a semicolon **(;)**. 
+		1. ```cpp
+		   struct Person
+{
+    string first_name;
+    string last_name;
+    int age;
+    float salary;
+};
+		   ```
+	   2. `How to Define a Structure Variable?` : Once you declare a structure Person as above, you can define a 
+          structure variable as:Here, a structure variable bill is defined, which is of type structure Person.
+          Only when the structure variable is declared is the required memory allocated by the compiler.
+	   3. `How to access members of a structure` : The members of a structure variable are accessed using a 
+          **dot (.)** operator. Suppose you want to access the age of the structure variable bill and assign 
+          **50** to it. You can perform this task by using the following code:`bill.age = 50;` . we can even 
+          put values for any struct variable of all types as `bill = {"bill_name","bill_last",80,800} ; ` 
+          then this will also initialize all four member of struct for variable bill . 
+	   4. Means after defining struct and its member we can define structure variable and that are the 
+        variables which will have that all structures member defined and we can access and input them 
+        as `cin >> structure_variable_name.structure_member;` and output `cout << 
+        structure_variable.structure_member << '\n';`Example : Here the structure Person is declared 
+        which has four members: first_name, last_name, age and salary.
+		   1. ```cpp
+		      // Program to assign data to members of a structure variable
+
+#include <iostream>
+using namespace std;
+
+struct Person
+{
+    string first_name;
+    string last_name;
+    int age;
+    float salary;
+};
+
+int main()
+{
+    Person p1;
+    
+    cout << "Enter first name: ";
+    cin >> p1.first_name;
+    cout << "Enter last name: ";
+    cin >> p1.last_name;
+    cout << "Enter age: ";
+    cin >> p1.age;
+    cout << "Enter salary: ";
+    cin >> p1.salary;
+
+    cout << "\nDisplaying Information." << endl;
+    cout << "First Name: " << p1.first_name << endl;
+    cout << "Last Name: " << p1.last_name << endl;
+    cout << "Age: " << p1.age << endl;
+    cout << "Salary: " << p1.salary;
+
+    return 0;
+}
+		      ```
+	  5. `Member Functions in C++ Structures`  : In C++, structures can also have member functions.
+        These member functions are similar to regular functions but are defined within the scope of a structure. 
+        They can access and manipulate the data members of the structure directly.We can declare a member 
+        function by defining the function within the structure definition. means we can create a function 
+        for particular tasks in a structure and then we can call that function with the name of that variable 
+        we declared then all respective information will be given. 
+		  1. Ex:
+		  ```cpp
+		  #include <iostream>
+using namespace std;
+
+struct Person {
+    string first_name;
+    string last_name;
+    int age;
+    float salary;
+
+    // member function to display information about the person
+    void display_info() {
+        cout << "First Name: " << first_name << endl;
+        cout << "Last Name: " << last_name << endl;
+        cout << "Age: " << age << endl;
+        cout << "Salary: " << salary << endl;
+    }
+};
+
+int main() {
+    Person p1;
+    
+    cout << "Enter first name: ";
+    cin >> p1.first_name;
+    cout << "Enter last name: ";
+    cin >> p1.last_name;
+    cout << "Enter age: ";
+    cin >> p1.age;
+    cout << "Enter salary: ";
+    cin >> p1.salary;
+
+    // display information using member function
+    cout << "\nDisplaying Information." << endl;
+    p1.display_info();
+
+    return 0;
+}
+		  ```
+		      
+		   
+	
