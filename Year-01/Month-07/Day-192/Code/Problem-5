@@ -1,0 +1,30 @@
+// Problem-5
+// Codechef - Starters 256 Div 4 - Problem - 3
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int a, b;
+    cin >> a >> b;
+    if(b == a-1){
+        cout << "No" << '\n';
+    
+    }
+    else{
+    cout << "Yes" << '\n';
+    }
+
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+        solve();
+    }
+    return 0;
+}
