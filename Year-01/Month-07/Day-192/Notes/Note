@@ -1,0 +1,154 @@
+1. `Passing Structure to Function in C++` : A structure variable can be passed to a function just like any other variable.
+		  1. `Ex` : 
+		  ```cpp
+		  #include <bits/stdc++.h>
+using namespace std;
+struct person
+
+{
+
+string first_name;
+string last_name;
+int age;
+int salary;
+
+};
+
+person p1;
+
+void display_information(const person &p1)
+{
+cout << "first_name: " << p1.first_name << '\n';
+cout << "last_name: " << p1.last_name << '\n';
+cout << "age: " << p1.age << '\n';
+cout << "salary: " << p1.salary << '\n';
+}
+
+  
+
+void solve()
+
+{
+p1 = {"Radha", "Raman", 5, 10};
+display_information(p1);
+}
+int main()
+
+{
+ios_base::sync_with_stdio(0);
+cin.tie(0);
+solve();
+return 0;
+
+}
+		  ```
+		  
+		     
+2. `Return Structure From Function in C++` : We can also return a structure variable from a function.
+		  1. `Ex` :
+		  ```cpp
+		  #include <bits/stdc++.h>
+using namespace std;
+struct person
+{
+
+string first_name;
+string last_name;
+int age;
+int salary;
+
+};
+
+person p1;
+void display_information(const person &p1)
+
+{
+cout << "first_name: " << p1.first_name << '\n';
+cout << "last_name: " << p1.last_name << '\n';
+cout << "age: " << p1.age << '\n';
+cout << "salary: " << p1.salary << '\n';
+
+}
+
+person get_data(){
+person p1;
+string first_name;
+string last_name;
+int age;
+int salary;
+
+cout << "first_name: " << first_name <<'\n';
+cin >> first_name;
+cout << "last_name: " << last_name <<'\n';
+cin >> last_name;
+cout << "age: " << age <<'\n';
+cin >> age;
+cout << "salary: " << salary <<'\n';
+cin >> salary ;
+
+return p1 = {first_name,last_name,age,salary};
+
+}
+
+void solve()
+{
+
+p1 = get_data();
+display_information(p1);
+}
+int main()
+{
+// ios_base::sync_with_stdio(0);
+// cin.tie(0);
+solve();
+return 0;
+
+}
+		  ```
+3. `Things to take care in mind while using structs in c++` :
+	1. Don't use fast input output that is `cin.tie(0) and ios_base::sync_with_stdio(0);`  as 
+	this will prevent flushing and we can't display line to ask for input . either do `flush 
+	manually or use endl` if you still wanted to use the fast I/O.
+	2. Best practice is to create struct in global variable especially in cp to make things organised.
+	3. you can't pass function into functions{if we put lambda functions and pointer functions apart} i
+	n c++ and it is best practice to create all functions in global space in cp to make functions organised 
+	and make code cleaner for any future debugging. 
+	
+	
+4. `Important note` : Reverse function reverses the exact order of our array and not in descending order , 
+    to get array in descending order first sort array and then reverse that array. 
+    
+    
+5. `How to create a 2d static array` : this is the example to create a 2d array and now first square bracket 
+    will decide number of rows and another one number of columns and then this will act as exactly mathematics
+    matrix means the very first element will be 0,0 and then next one is 0,1 and so on. 
+	 ```cpp
+	 int score[10][10] {
+        {1,1,1,1,1,1,1,1,1,1},
+        {1,2,2,2,2,2,2,2,2,1},
+        {1,2,3,3,3,3,3,3,2,1},
+        {1,2,3,4,4,4,4,3,2,1},
+        {1,2,3,4,5,5,4,3,2,1},
+        {1,2,3,4,5,5,4,3,2,1},
+        {1,2,3,4,4,4,4,3,2,1},
+        {1,2,3,3,3,3,3,3,2,1},
+        {1,2,2,2,2,2,2,2,2,1},
+        {1,1,1,1,1,1,1,1,1,1}
+
+    };
+	 ```
+	 1. `accessing elements from a 2d array` : here first loop work as index of row and another one will act as the
+	 number of column. 
+	 ```cpp
+	  for(int i = 0 ; i < 10 ; i++){
+        for(int j = 0 ; j < 10 ; j++){
+            cout << score[i][j];
+            }
+        }
+    }
+	 ```
+	 
+	 
+6. `permutation of a array or list ` : this means the possible ways we can create a unique array from the given 
+    elements by arranging them differently.And for a array or list of N elements the unique arrays or lists from
+    it can be (N)! .
