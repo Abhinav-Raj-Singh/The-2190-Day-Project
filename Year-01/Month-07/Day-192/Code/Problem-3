@@ -1,0 +1,50 @@
+// Problem-3
+// Hacker Rank - c-tutorial-struct
+
+#include <bits/stdc++.h>
+using namespace std;
+struct Student{
+    int age;
+    string first_name;
+    string last_name;
+    int standard;
+};
+Student s1;
+Student get_data(){
+    Student s1;
+    int age;
+    string first_name;
+    string last_name;
+    int standard;
+
+    // cout << "Enter age: " << '\n';
+    cin >> age;
+    // cout << "Enter First Name: " << '\n';
+    cin >> first_name;
+    // cout << "Enter Last Name: " << '\n';
+    cin >> last_name;
+    // cout << "Enter Standard: " << '\n';
+    cin >> standard;
+    
+    return s1 = {age,first_name,last_name,standard};
+}
+void display_data(const Student& s1){
+    cout << s1.age << ' ';
+    cout << s1.first_name << ' ';
+    cout << s1.last_name << ' ';
+    cout << s1.standard << ' ';
+}
+
+void solve(){
+    s1 = get_data();
+    display_data(s1);
+
+}
+
+
+int main(){
+
+    solve();
+    return 0;
+    
+}
