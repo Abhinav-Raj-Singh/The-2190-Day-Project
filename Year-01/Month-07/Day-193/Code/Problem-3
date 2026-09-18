@@ -1,0 +1,59 @@
+// Problem-3
+// Codeforces 313/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    long long n;
+    cin >> n;
+    if (n > 0)
+    {
+        cout << n << '\n';
+    }
+    else
+    {
+        
+
+        if ((abs(n) % 10) > (((abs(n)) / 10) % 10))
+        {
+
+            cout << n / 10 << '\n';
+        }
+        else
+        {
+
+            if ((n / 100) == 0)
+            {
+                if ((abs(n) % 10) > (((abs(n)) / 10) % 10))
+                {
+
+                    cout << n / 10 << '\n';
+                    return;
+                }
+                else{
+                    cout << (n%10) << '\n';
+                }
+                return;
+            }
+            int r = abs(n) % 10;
+            cout << n / 100 << r << '\n';
+        }
+       
+    }
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    // int t;
+    // cin >> t;
+    // while(t--){
+    solve();
+    // }
+
+    return 0;
+}
