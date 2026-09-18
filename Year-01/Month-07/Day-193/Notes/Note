@@ -1,0 +1,36 @@
+1. `To access second digit of any number N` : from right hand side  `(n/10)%10` and if third then again
+    divide ((n/10))/10 and then take modulo and if want first digit then direct take modulo . 
+    
+    
+2. `To remove 2nd last of a number N` : `(N%10) + (N/100)*10`
+
+
+3. `Bitwise operators working` : sometimes for some bitwise operators despite they are of same in decimal
+    system but represented in differnt number of bits in binary system then they may give different or 
+    unexpected answers. 
+    
+    
+4. `10 bitwise operators trick for cp` : bitwise operators are really fast .
+		1. `Number is odd or even` : `n & 1 ` if this is true then the number is odd otherwise even . this will
+	        check least significant bit with 1 and if that is 1 then number will 1 otherwise 0 .  And this is much 
+	        much faster than `x % 2` . 
+		2. `To check wether any number's prime factors are only and only 2` :then use `x & (x-1)` return 0 (means 
+		    false) then yes otherwise no. (but make sure this give bug on 0 and 1).
+		3. `playing with kth bit` : First kth bit refering to kth bit from right hand side . 
+			1. `check if kth bit is set` : A bit is "set" when its value at that specific binary position is `1` `x & (1 << k)` 
+			2. `toggle the kth bit` : `x ^ (1<<k)` means reversing the bit if 1 then 0 if 0 then 1. 
+			3. `set the kth bit` : `x | (1<<k)` we can set the kth bit.
+			4. `unset the kth bit` : `x & ~(1 << k)` . 
+		4. `multiply or divide any number by 2 raise to k` : `a >> k` then this a will get divided by 2 raise to k . `a*(1 << k)`
+		    then a will get multipled by 2 raise to k .
+		5. `finding out x modulo 2 raise to k` : `x & ((1<<k)-1)`.
+		6. `Swapping numbers without creating a temporary variable` : `a = a^b;b = a^b;a = a^b;` after writing these 3 
+		    lines a and b will get swapped. 
+		7. `a important propery of bitwise operators` : number of set bits in A = X , number of set bits in B = y number of
+		    set bitgs in (A ^ B) = Z . then Z is even if X+Y is even , Z is odd if X+Y is odd . 
+		8. `Having condition` : if there is any variable and only two possible values are only possible suppose there is X
+		    and if X is 10 then make it 5 and if 5 then make 10 then `X = 10 ^ 5 ^ X;` this line this do the exact condition. 
+		9. `2 important identities` : `((a^b) + (2*(a&b)))` use this to get a+b or `((a|b) + (a&b))` both will give a+b. 
+		10. `To find out number of set bits in a number in c++` : 
+			1. `if X is int` : `__builtin_popcount(x);` this will give the numbe of set bits in integer x.
+			2. `if X is long long` : `__builtin_popcountll(X)` this will tell set bits for long long X.
