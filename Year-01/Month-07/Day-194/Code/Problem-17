@@ -1,0 +1,25 @@
+// Problem-17
+// Codeforces 219158/problem/E
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{   
+    double a;
+    cin >> a;
+    double pi = 3.141592653;
+    cout << fixed <<  setprecision(9) << '\n';
+    cout << ((a*a)*pi) << '\n'; 
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    solve();
+
+    return 0;
+}
