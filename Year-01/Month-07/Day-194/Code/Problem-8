@@ -1,0 +1,37 @@
+// Problem-8
+// Codeforces 219158/problem/M
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    char a;
+    cin >> a;
+    if (a >= 65 && a <= 90)
+    {
+        cout << "ALPHA" << '\n';
+        cout << "IS CAPITAL" << '\n';
+    }
+    else if (a >= 97 && a <= 122)
+    {
+        cout << "ALPHA" << '\n';
+
+        cout << "IS SMALL" << '\n';
+    }
+    else
+    {
+        cout << "IS DIGIT" << '\n';
+    }
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    solve();
+
+    return 0;
+}
