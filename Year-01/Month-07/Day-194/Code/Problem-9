@@ -1,0 +1,28 @@
+// Problem-9
+// Codeforces 219158/problem/N
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    char a;
+    cin >> a;
+    if(islower(a)){
+        cout << char(toupper(a)) << '\n';
+    }
+    else{
+        cout << char(tolower(a)) << '\n';
+    }
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    solve();
+
+    return 0;
+}
