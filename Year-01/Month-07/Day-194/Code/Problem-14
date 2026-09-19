@@ -1,0 +1,77 @@
+// Problem-14
+// Codeforces 219158/problem/Q
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    double a, b;
+    cin >> a >> b;
+
+    if (a >= 0 and b >= 0)
+    {
+        if (a == 0 && b == 0)
+        {
+            cout << "Origem" << '\n';
+        }
+        else if (a == 0 && b > 0)
+        {
+            cout << "Eixo Y" << '\n';
+        }
+        else if (a > 0 && b == 0)
+        {
+            cout << "Eixo X" << '\n';
+        }
+        else
+        {
+            cout << "Q1" << '\n';
+        }
+    }
+    else if (a <= 0 and b <= 0)
+    {   if(a < 0 && b < 0){
+        cout << "Q3" << '\n';}
+        else if(a == 0 && b < 0){
+            cout << "Eixo Y" << '\n';
+        }
+        else if(a < 0 && b == 0){
+            cout << "Eixo X" << '\n';
+            
+        }
+    }
+    else if (a <= 0 && b >= 0)
+    {
+        if(a < 0 && b > 0){
+        cout << "Q2" << '\n';}
+        else if(a == 0 && b > 0){
+            cout << "Eixo Y" << '\n';
+        }
+        else if(a < 0 && b == 0){
+            cout << "Eixo X" << '\n';
+            
+        }
+    }
+    else
+    {
+        if(a > 0 && b < 0){
+        cout << "Q4" << '\n';}
+        else if(a == 0 && b < 0){
+            cout << "Eixo Y" << '\n';
+        }
+        else if(a > 0 && b == 0){
+            cout << "Eixo X" << '\n';
+            
+        }
+    }
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    solve();
+
+    return 0;
+}
