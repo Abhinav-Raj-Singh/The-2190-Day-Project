@@ -1,0 +1,30 @@
+// Problem-11
+// Codeforces 219158/problem/U
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    double n;
+    cin >> n;
+    int a = n;
+    if(n-a == 0){
+        cout << "int " << a << '\n';
+    }
+    else{
+        cout << "float " << a << ' ' << (n-a) << '\n';
+    }
+    
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    solve();
+
+    return 0;
+}
