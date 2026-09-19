@@ -1,0 +1,42 @@
+// Problem-12
+// Codeforces 219158/problem/V
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    int a , b ;
+    char s;
+    cin >> a >> s >> b;
+    string ans = "Wrong";
+    if(s == '>'){
+        if(a > b){
+            ans = "Right";
+        }
+    }
+    else if(s == '<'){
+        if(a < b){
+            ans = "Right";
+        }
+    }
+    else if(s == '='){
+        if(a == b){
+            ans = "Right";
+        }
+    }
+    
+    cout << ans << '\n';
+    
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    solve();
+
+    return 0;
+}
