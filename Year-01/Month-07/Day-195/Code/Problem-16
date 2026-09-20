@@ -6,9 +6,12 @@ using namespace std;
 
 void solve()
 {
-   int n;
+   long long n;
    cin >> n;
-
+    if(n == 0){
+        cout << 0 << '\n';
+        return ;
+    }
    while(n >= 1){
         cout << (n%10) << ' ';
         n /= 10;
