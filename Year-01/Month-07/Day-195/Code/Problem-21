@@ -1,0 +1,27 @@
+// Problem-21
+// Codeforces - 223205/problem/E
+#include <bits/stdc++.h>
+using namespace std;
+void swapping(int a, int b){
+    a = a^b;
+    b = a^b;
+    a = a^b;
+    cout << a << ' ' << b << '\n';
+}
+
+void solve()
+{
+    int x,y;
+    cin >> x >> y;
+    swapping(x,y);
+   
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    solve();
+    return 0;
+}
