@@ -1,0 +1,33 @@
+// Problem-16
+// Codeforces - 219432/problem/Q
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+   int n;
+   cin >> n;
+
+   while(n >= 1){
+        cout << (n%10) << ' ';
+        n /= 10;
+   }
+   cout << '\n';
+
+
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+        int t;
+        cin >> t;
+        while(t--){
+        solve();
+        }
+    
+
+    return 0;
+}
