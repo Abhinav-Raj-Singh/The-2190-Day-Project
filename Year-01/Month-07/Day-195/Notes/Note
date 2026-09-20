@@ -1,0 +1,100 @@
+1. `If we asked year , months , days ` : then we can code like , provided year is given as 365 , number 
+    of days in month as 30 days . 
+    int n;
+    cin >> n;
+    int year = 0;
+    int month = 0;
+    int days = 0;
+    year = n/365;
+    n = n%365;
+    month = n/30;
+    n = n%30;
+    days = n;
+    days = n;
+    cout << year << " years" << '\n';
+    cout << month << " months" << '\n';
+    cout << days<< " days" << '\n';
+    
+    
+2. `Two find last two digits of a number ` : `n%100` this will give last two digits and want 3 then `n%1000` we 
+    can find n numbers using this modulo trick , provided our number consist of atleast n digits. 
+    
+    
+3. `If asked find last two digits after multiply four variables` : obviously this will exceed even long long variable
+    and to get this i can do below approach . Logic behind this is that last two digits will decide the last two digits
+    only and doing modulo with 100 this will shortern our number . 
+    	 
+	 int a, b, c,d;
+    cin >> a >> b >> c >> d;
+    a %= 100;
+    b %= 100;
+    c %= 100;
+    d %= 100;
+
+    int ans = a*b*c*d;
+    int l_t_d = ans %100;
+    if(l_t_d <= 9){
+        cout << 0 << l_t_d << '\n';
+    }
+    else {
+        cout <<  l_t_d << '\n';
+
+    }
+    
+    
+4. `When we don't know the number of inputs in competitive programming` : In such types of conditions we have to
+    loop over the inputs until our condition for terminating the program doesn't matches . 
+	1. `Ex` : In below example we terminated our program as it matches to 1999 as password.
+	```cpp
+	int x;
+  while(cin >> x){
+    if(x == 1999){
+        cout << "Correct" << '\n';
+        return;
+    } 
+    else{
+        cout << "Wrong" << '\n';
+    }
+  }
+	```
+	
+	
+5. `To add any char or substring backside of a string ` :
+	1. `First way` : `s += a;` if a is a variable of char or string type in which either we initialized or 
+	    usually taken input from user.
+	2. `Second way` : `s.push_back(a);` if a is a variable of char type this pushback method only accepts 
+	    a single char and to send a substring to back use method 1.
+	3. `Third way` : `s.push_back('a');`  to add a as a  character at end of string and this  pushback only
+	    takes character and not substring . 
+	    
+    
+6. `whenever you wanted to print something using function then use void function` :
+        void sum(int a, int b){
+        int sum = a+b;
+       cout << sum << '\n';
+    }
+
+    void solve()
+    {
+        int x,y;
+        cin >> x >> y;
+        sum(x,y);
+       
+    }
+    
+    
+7. `floor` : Is a mathematical function that takes a real number X and its output is the greatest integer less than or equal to X .
+
+
+8. `ceil` : Is a mathematical function that takes a real number X and its output is the smallest integer larger than or equal to X.
+
+
+9. `round` :  Is a mathematical function that takes a real number X and its output is the closest integer to that number X.
+
+
+10. `swap()` : very very powerful function when you wanted to swap any two same data types , map or any complex structure but
+    all things are same means if you are swapping 2 data types then they should of same type , if using map then all credential
+    means key-value pair should be of same type . then `swap(a,b);` now b will become a and a will become b. 
+    
+    
+11. `gcd(a,b);` use this to calculate greatest common divisor of two non zero numbers a and b. And this comes under numeric header. 
