@@ -1,0 +1,25 @@
+// Problem-19
+// Codeforces - 223205/problem/A
+#include <bits/stdc++.h>
+using namespace std;
+void sum(int a, int b){
+    int sum = a+b;
+   cout << sum << '\n';
+}
+
+void solve()
+{
+    int x,y;
+    cin >> x >> y;
+    sum(x,y);
+   
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    solve();
+    return 0;
+}
