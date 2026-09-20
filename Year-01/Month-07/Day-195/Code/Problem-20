@@ -1,0 +1,29 @@
+// Problem-20
+// Codeforces - 219158/problem/H
+#include <bits/stdc++.h>
+using namespace std;
+void tos(int a, int b){
+    int c = floor(a/(b*1.0));
+    int d = ceil(a/(b*1.0));
+    int e = round(a/(b*1.0));
+    cout << "floor " << a << " / " << b << " = " << c << '\n';
+    cout << "ceil " << a << " / " << b << " = " << d << '\n';
+    cout << "round " << a << " / " << b << " = " << e << '\n';
+}
+
+void solve()
+{
+    int x,y;
+    cin >> x >> y;
+    tos(x,y);
+   
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    solve();
+    return 0;
+}
