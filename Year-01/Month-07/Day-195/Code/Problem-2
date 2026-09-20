@@ -1,0 +1,20 @@
+// Problem-2
+// Codeforces - 219158/problem/G
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    long long n;
+    cin >> n;
+    cout << ((n*(n+1))/2) << '\n';
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+
+    return 0;
+}
