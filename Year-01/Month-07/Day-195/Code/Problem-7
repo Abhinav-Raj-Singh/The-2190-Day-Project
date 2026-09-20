@@ -1,0 +1,27 @@
+// Problem-7
+// Codeforces - 219432/problem/D
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+  int x;
+  while(cin >> x){
+    if(x == 1999){
+        cout << "Correct" << '\n';
+        return;
+    } 
+    else{
+        cout << "Wrong" << '\n';
+    }
+  }
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+
+    return 0;
+}
