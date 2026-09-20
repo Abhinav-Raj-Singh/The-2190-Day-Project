@@ -1,0 +1,35 @@
+// Problem-1
+// Codeforces - 219158/problem/R
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    int n;
+    cin >> n;
+    int year = 0;
+    int month = 0;
+    int days = 0;
+    while(n >= 365){
+        year++;
+        n -= 365;
+    }
+    while(n >= 30){
+        month++;
+        n -= 30;
+    }
+    days = n;
+    cout << year << " years" << '\n';
+    cout << month << " months" << '\n';
+    cout << days<< " days" << '\n';
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+
+    return 0;
+}
