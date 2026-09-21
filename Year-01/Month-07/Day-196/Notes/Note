@@ -1,1 +1,25 @@
-
+1. `How to store significant bits of a number(in binary form) in a string` : first using `bitset<64>(n).to_string();`
+    we converted our 64 binary digits of a number n and then using `variable f` we found first occurence of 1 and then
+    we created a substr from `f ` till end . This works for any number greater than 0 . 
+     string number = bitset<64>(n).to_string();
+        size_t f = number.find('1');
+        number = number.substr(f);
+        
+        
+2.  `When we have to compare two big numbers raise to any big number ` : Comparing two numbers raise to some exponents. means 
+    obviously this will even overflow our long long . So `A raise to B > C Raise to D` for this expression suppose we can 
+    take log on both sides of equality because on a equality we can do equal things and after taking log we will get `B*log(A) > D*log(C)`
+    and then we can easily put conditional operations and check because of log this will decrease our number in very
+    minute and also make sure to use long double because log will return in decimal point and using integer type make
+    give unintended output. And in below code we used long double inplace of double because precision of long double is
+    better then double . 
+     long double a,b,c,d;
+    cin >> a >> b >> c >> d;
+    if((double(b*log(a)))>double((d*log(c)))){
+        cout << "YES" << '\n';
+    }
+    else{
+        cout << "NO" << '\n';
+    
+    
+3. `converting integer to string` : `int a; string s = to_string(a);` this will convert our integer a to string s.
