@@ -1,0 +1,48 @@
+// Problem-5
+// Codeforces - 219432/problem/M
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    int a , b;
+    cin >> a >> b;
+    int cnt = 0;
+    for(int i = a ; i <= b ;i++){
+        bool check = false;
+        int c = i;
+        while(c > 0){
+            if((c % 10 == 4) || (c % 10 == 7)){
+                check = true;
+                
+            }
+            else{
+                check = false;
+                break;
+            }
+            c /= 10;
+            
+        }
+        if(check == true){
+            cout << i << ' ';
+            cnt ++;
+        }
+        
+    }
+    
+    if(cnt == 0){
+        cout << -1 << '\n';
+    }
+    else{
+        cout << '\n' ;
+    }
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    solve();
+    return 0;
+}
