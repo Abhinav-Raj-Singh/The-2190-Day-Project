@@ -1,0 +1,34 @@
+// Problem-6
+// Codeforces - 219432/problem/U
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    int N, a,b;
+    cin >> N >> a >> b;
+    int Sum = 0;
+    for(int i = 1; i <= N ;i++){
+       
+        int sum = 0;
+        int r = i;
+        while(r>0){
+            sum += (r%10);
+            r /= 10;
+        }
+       
+        if(sum >= a && sum <= b){
+            Sum += i;
+        }
+    }
+    cout << Sum << '\n';
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    solve();
+    return 0;
+}
