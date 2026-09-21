@@ -1,0 +1,33 @@
+// Problem-3
+// Codeforces - 223205/problem/C
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    long long n;
+    cin >> n;
+    if(n % 2 == 0){
+        cout << "NO" << '\n';
+    }
+    else{
+        string number = bitset<64>(n).to_string();
+        size_t f = number.find('1');
+        number = number.substr(f);
+        string numberr = number;
+        reverse(numberr.begin(),numberr.end());
+        if(number == numberr){
+            cout << "YES" << '\n';
+        }
+        else {
+            cout << "NO" << '\n';
+
+        }
+    }
+}
+
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+    return 0;
+}
