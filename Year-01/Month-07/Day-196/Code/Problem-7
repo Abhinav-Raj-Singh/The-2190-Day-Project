@@ -1,0 +1,26 @@
+// Problem-7
+// Codeforces - 219158/problem/Z
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    long double a,b,c,d;
+    cin >> a >> b >> c >> d;
+    if((double(b*log(a)))>double((d*log(c)))){
+        cout << "YES" << '\n';
+    }
+    else{
+        cout << "NO" << '\n';
+
+    }
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    solve();
+    return 0;
+}
