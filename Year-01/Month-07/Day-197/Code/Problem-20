@@ -1,0 +1,28 @@
+// Problem-20
+// Codeforces - 219856/problem/D
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+  string a,b;
+  cin >> a >> b;
+  
+   
+  cout << a.size() << ' ' << b.size() << '\n';
+  cout << (a+b) << '\n';
+  swap(a[0],b[0]);
+  cout << a << ' ' << b << '\n';
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    solve();
+
+    return 0;
+}
