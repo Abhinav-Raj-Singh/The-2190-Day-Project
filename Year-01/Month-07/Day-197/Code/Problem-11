@@ -1,0 +1,27 @@
+// Problem-11
+// Codeforces - 219856/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+   string s,r;
+   cin >> s >> r;
+   cout << s.size() << ' ' << r.size()<< '\n';
+   string neww = s + " " + r ;
+   cout << neww<< '\n';
+   
+    
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    
+    solve();
+    
+    return 0;
+}
