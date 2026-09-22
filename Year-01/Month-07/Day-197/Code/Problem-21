@@ -1,0 +1,33 @@
+// Problem-21
+// Codeforces - 219856/problem/H
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+  string s;
+  cin >> s;
+  if(s.find("101") != string::npos || s.find("010") != string::npos){
+    cout << "Good" << '\n';
+  }
+  
+else{
+      cout << "Bad" << '\n';
+
+  }
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+
+    return 0;
+}
