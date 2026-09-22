@@ -1,0 +1,29 @@
+// Problem-18
+// Codeforces - 219856/problem/G
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+   string s;
+   getline(cin,s);
+   replace(s.begin(),s.end(),',',' ');
+   transform(s.begin(),s.end(),s.begin(),[](unsigned char c){
+    if(isupper(c)) return (unsigned char)tolower(c);
+    if(islower(c)) return (unsigned char)toupper(c);
+    return c;
+   });
+   cout << s << '\n';
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    solve();
+
+    return 0;
+}
