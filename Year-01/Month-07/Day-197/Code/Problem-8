@@ -1,0 +1,48 @@
+// Problem-8
+// Codeforces - 219774/problem/H
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    int n;
+    cin >> n;
+    vector<int> d(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> d[i];
+    }
+    bool swapped;
+    for (int i = 0; i < n - 1; i++)
+    {
+        swapped = false;
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (d[j] > d[j + 1])
+            {
+                swap(d[j], d[j + 1]);
+                swapped = true;
+            }
+        }
+        if (swapped != true)
+        {
+            break;
+        }
+    }
+    for (auto &c : d)
+    {
+        cout << c << ' ';
+    }
+    cout << '\n';
+    
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    solve();
+    return 0;
+}
