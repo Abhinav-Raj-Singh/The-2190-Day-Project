@@ -1,0 +1,29 @@
+// Problem-14
+// Codeforces - 219856/problem/F
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+  string s;
+  cin >> s;
+  string r = s[0]+to_string(s.size()-2)+s.back();
+  cout << ((s.size()>10)? (r) : (s)) << '\n';
+   
+    
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+    
+    return 0;
+}
