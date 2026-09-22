@@ -1,0 +1,25 @@
+// Problem-13
+// Codeforces - 219158/problem/L
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+  string a, b,c,d;
+  cin >> a >> b >> c >> d ;
+  cout << ((b == d)? "ARE Brothers" : "NOT") << '\n';
+   
+    
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    
+    solve();
+    
+    return 0;
+}
