@@ -1,0 +1,185 @@
+1. `How to find a number x in the array if it exist` : create iterator `it` and assign where `find` 
+    pointing in the array for x , it will either point on very first occurrence of x or point at end
+    then put condition if != d.end() then use `distance` this will return index using our iterator it.
+    
+    int x;
+    cin >> x;
+    auto it = find(d.begin(),d.end(),x);
+    if(it != d.end()){
+        cout << distance(d.begin(),it) << '\n'; 
+    }
+    else{
+        cout << -1 << '\n'; 
+
+    }
+    
+    
+2. `Printing all elements of a array in shorter way` : this auto & will create c as iterator which will go from
+    d.begin() to all way d.end() and print all elements which are present in the array d , this auto will manage
+    all things own its own . 
+    	for(auto & c :d){
+    cout << c << ' ';
+   }
+   
+   
+3. `Finding smallest number in the array along with its index` : there are two ways to do this 
+
+    	1. `First way` : `mn` is the variable which store the smallest number and `mni` will store index of number assigned
+    	to mn , first initialize mn to the maximum possible valuable as per the constraints given and then in the loop when
+    	you are taking inputs check if `mn > d[i]` then assign d[i] to mn and mni to i. 
+    
+    		int mn = 100000000;
+   int mni = 0;
+   for(int i = 0 ; i < n ;i++){
+        cin >> d[i];
+        if(d[i] < mn){
+            mn = d[i];
+            mni = i;
+        }
+   }
+   
+   	2.  `Second Way` : In this we created a iterator it and then used `min_element` builtin function and then this will point to 
+   	the very first smallest element from the array and then we used `distance` this takes iterator and return int , this will 
+   	find index of that number . Both approaches are efficient just this second one is little shorter . 
+   	
+   		auto it = min_element(d.begin(),d.end());
+   int mini = distance(d.begin(),it);
+
+
+4. `Printing N numbers of Fibonacci Sequence` : Fibonacci sequence is a such sequence whose first element is always 0 and second 
+    element is always 1 and then from third elements all elements will be sum of precedding 2 elements sum like 3rd element 
+    (2nd element + 1st element) . First create a empty array vector and then for i == 0 and i == 1 pushback 0 and 1 respectively
+    and then `d[i-1]+d[i-1]` . 
+    
+    vector <int> d;
+   for(int i = 0 ; i < n ;i++){
+        if(i == 0){
+            d.push_back(0);
+        }
+        else if(i == 1){
+            d.push_back(1);
+
+        }
+        else{
+            d.push_back(d[i-1]+ d[i-2]);
+        }
+   }
+   
+   
+5. `reversing a vector array` : reversing will reverse array and not make array in descending order , use `reverse` this is builtin
+    function will reverse our vector array . 
+        reverse(d.begin(), d.end());
+        
+        
+6. `Making copy of a vector array` : make sure if you taking input in a array and then wanted to copy that array then write `vector<int> 
+    di = d` only after d's elements are initialized with the required input also make sure both vectors data type inside `<>` is same. 
+    
+    vector<int> d(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> d[i];
+    }
+    vector<int> di = d;
+    
+    
+7. `Bubble sort` : this is a algorithm which is used to sort a list of elements like array of numbers , but in modern versions of c++ 
+    this is not preferable first its time complexity will very high high for more numbers and we have builtin `sort` function
+    for.
+    `Explaination` : We will swap any number only and only if it is greater than its adjacent element and we made a bool swapped that means
+    if that is not greater than any adjacent then just break . 
+    
+    bool swapped;
+    for (int i = 0; i < n - 1; i++)
+    {
+        swapped = false;
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (d[j] > d[j + 1])
+            {
+                swap(d[j], d[j + 1]);
+                swapped = true;
+            }
+        }
+        if (swapped != true)
+        {
+            break;
+        }
+    }
+    
+    
+8. `Print the string _S_ from the beginning to the first '\'` : In this case we will use `getline` function to take complete input
+    of the string  and then we will use `s.find('\\')` used double backslash to indicate one backslash and then we will create a
+    substring from 0 to p , why not `p-1` because p is the number of characters we have to include in our substring starting from
+    0 and we said p and numbering of the characters is always from 1 .
+    
+        string s;
+  getline(cin,s);
+  int p = s.find('\\');
+    string r = s.substr(0,p);
+    cout << r << '\n';
+    
+    
+9. `Adding integer with string` : make sure first you converted integer to string and this total output would be a string like 
+    `s+to_string(a);` this will give us a string  and we used `to_string` to convert integer to string.
+    
+    
+10. `to_string()` : this will convert our integer or possible other numerical type like long long , int , double , float etc. 
+
+
+11. `Take string in place of int for numbers ` : Whenever you are dealing with specific digits of a number like we have to 
+    operate on 1st digit then try to take that  number in string and if our number taking back then we have to just subtract 
+    s[0] - '0 to re convert it to integer and  operate on it.
+    
+    
+12. `replace(s.begin(),s.end(),'a','b')` : replace is used to replace all occurrences of a particular character in a string 
+    with any another character and in this example all occurrences of a will be replaced  with b.
+    
+    
+13. `If wanted to switch case of the characters of a string` : Means if the particular character in a string is lowercase then
+    convert to upper , then we will use `transform` and make sure to use `unsigned char` before `tolower` and to `toupper` 
+    because toupper and tolower return in int but we want char. 
+    
+        transform(s.begin(),s.end(),s.begin(),[](unsigned char c){
+    if(isupper(c)) return (unsigned char)tolower(c);
+    if(islower(c)) return (unsigned char)toupper(c);
+    return c;
+   });
+   
+   
+14. `Lexographical comparison between two strings` : First what lexogrpahical order is , this is the order which dictionairy
+    use to sort things , like ab , ac then ab will come first comparing individual characters .  In c++ using lexographical
+    comparsion could be done directly by using comparison operators consider a , b both as strings `a>b` if this is true then
+    b will come lexographically first or we can say lexogrpahically small.
+    
+    
+15. `swapping first character of two strings` : `swap(a[0],b[0])` this can be used to swap first character of two strings. 
+
+
+16. `checking whether a string is pallindrome or not` : make a copy of original string and then reverse that copied string and 
+    if `reversed of copied string == original string` then yes otherwise no
+    
+        string s;
+  cin >> s;
+  string r = s;
+  reverse(r.begin(),r.end());
+  cout << (s == r ? "YES" : "NO") << '\n';
+  
+  
+17. `To count frequency of all letters present in a string ` : for this we will use hashing first create a array of 26 size 
+    initialize all to 0 and then `d[i-'a']++` this will hash the frequency and then loop over d from 0 to 26 and if d[i] > 0 
+    then print `i+'a'` this will give original character and `d[i]` this will give frequency , refer below example 
+    
+        
+    string s;
+  cin >> s;
+  vector <int> d(26,0);
+  for(auto &c :s){
+    d[c - 'a']++;
+  }
+  
+  for(int i = 0 ; i < 26 ; i++){
+    if(d[i] > 0){
+        cout << (char)(i+'a') << " : " << d[i] << '\n';
+    }
+  }
+    
