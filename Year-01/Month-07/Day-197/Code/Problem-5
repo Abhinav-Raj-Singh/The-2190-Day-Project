@@ -1,0 +1,35 @@
+// Problem-5
+// Codeforces - 219432/problem/Y
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+   int n;
+   cin >> n;
+   vector <int> d;
+   for(int i = 0 ; i < n ;i++){
+        if(i == 0){
+            d.push_back(0);
+        }
+        else if(i == 1){
+            d.push_back(1);
+
+        }
+        else{
+            d.push_back(d[i-1]+ d[i-2]);
+        }
+   }
+   for(auto &c :d){
+    cout << c << ' ' ;
+   }
+   cout << '\n';
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+    return 0;
+}
