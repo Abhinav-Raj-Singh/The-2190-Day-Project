@@ -1,0 +1,27 @@
+// Problem-12
+// Codeforces - 219856/problem/B
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+  string s;
+  getline(cin,s);
+  int p = s.find('\\');
+    string r = s.substr(0,p);
+    cout << r << '\n';
+   
+    
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    
+    solve();
+    
+    return 0;
+}
