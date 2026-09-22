@@ -1,0 +1,26 @@
+// Problem-22
+// Codeforces - 219856/problem/H
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+  string s;
+  cin >> s;
+  string r = s;
+  reverse(r.begin(),r.end());
+  cout << (s == r ? "YES" : "NO") << '\n';
+}
+
+int main()
+{
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    
+    solve();
+    
+
+    return 0;
+}
