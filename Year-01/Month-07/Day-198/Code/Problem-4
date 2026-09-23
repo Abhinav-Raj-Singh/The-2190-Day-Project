@@ -1,0 +1,29 @@
+// Problem-4
+// Codeforces - 1560/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+   int k;
+   cin >> k;
+   vector <int> d;
+   int r = 0 ;
+   for(int i = 1 ; i < 15000 ; i++){
+    if(i % 3 != 0 && i%10 != 3){
+        d.push_back(i);
+    }
+   }
+   cout << d[k-1] << '\n';
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+    return 0;
+}
