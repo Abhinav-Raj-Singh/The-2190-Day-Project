@@ -1,0 +1,56 @@
+1. `isdigit(s[0]);` : we can use isdigit to check whether a particular character 
+    in a string is a digit or not , like `cout << (isdigit(check[1])) << '\n';` and 
+    this will output non-zero positive number if that index a digit is present otherwise
+    this will return 0 . 
+    
+    
+2. `multiset` : 
+	1. multiset is different from set because this allow storing multiple same values also , 
+	wherease set allows only unique values , and this also sort all elements in ascending order
+	2. `initializing a multiset`: `multiset <int> d;` in this way we can initialize it
+	3. `Inserting elements in multiset`:  `d.insert(a);` this way we can insert a value in set 
+	or even `multiset <int> d {1,2,3};` this is also valid 
+	4. `printing elements of a multiset` :below method we can print all elements of multiset.
+	5. ```cpp
+	    for(auto &c :d){
+	        cout << c << ' ';
+	    }
+	    ```
+	6. `d.erase(x);` : this will erase all occurrences of x in multiset d , `d.erase(d.find(x));` 
+	but this will erase only one x and keep other occurrences as it is.
+	7. `d.count(x);` : This will give frequency of x in d. 
+	8. `multiset<int,greater<int>> d;` : by default multiset sorts elements in ascending order 
+	and if you want to sort elements in descending order then use this . 
+	9. `d.size()` : this will give us the size of the multiset d . 
+	
+	
+3. `long long sum = accumulate(d.begin(),d.end(),0ll);` : for doing sum of a vector array we can use
+    accumulate function but make sure to use `0ll` . To avoid any overflow.
+    
+    
+4. `upper bound and lower bound` : 
+	  1. `on which data structure works` : any data structure which provides forward pointer like array , 
+	  set , maps ,etc . It is recommended to sort that data structure first so we can get better time 
+	  complexity . Data structures which has pointer they return pointer , and which has iterator 
+	  it return iterator
+	  2. `upper_bound` : If gave x to upper_bound then this will find x+1 means even if x is present 
+	  in that data structure this will point to just greater possible element in that data structure 
+	  and if that is not possible then it will points to last possible accessible position + 1 that 
+	  is where any element doesn't exist.
+	  3. `lower_bound` : If gave x then this will return x if x is present otherwise this wil return 
+	  x+1 just greater possible element that is present in that data structure and  if that is not 
+	  possible then it will points to last possible accessible position + 1 that is where any element 
+	  doesn't exist.
+	  
+	  
+5. 	`wanted to access the very first key-value pair without knowing key or value just wanted to take first key-value
+    pair after map get sorted either in ascending order by default or we did in descending order` : first create a iterator
+    it by `auto it = m.begin();` then `it-> first ` printing this will giving key of the very first key-value pair `it->second`
+    this will giving corresponding value of first key-value pair and then if we wanted to access second element then instead 
+    of doing `it += 1` do `advance(it,i-1)`.
+    	   auto it = m.begin();
+        advance(it,i-1);
+        cout << (it->first) << (it->second) << '\n';
+        
+        
+6. `Making a string by repeating a particular character ` : `string result (k,'1');` result string will contain 1 k times.
