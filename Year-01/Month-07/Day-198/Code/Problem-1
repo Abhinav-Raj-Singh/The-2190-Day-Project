@@ -1,0 +1,36 @@
+// Problem-1
+// Codeforces - 2259/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+   int n , k;
+   cin >> n >> k;
+   string s;
+   cin >> s;
+   string result (k,'1');
+//    cout << result << '\n';
+   int cnt = 0;
+   for(int i = 0 ; i < n; i += k){
+        string r = s.substr(i,k);
+        // cout << i << ' ' << r << '\n';
+        if(r == result){
+            cnt++;
+        }
+        
+   }
+   cout << cnt << '\n';
+   
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+    return 0;
+}
