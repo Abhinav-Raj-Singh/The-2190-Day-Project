@@ -1,0 +1,82 @@
+1. `lower bound` : array should be sorted for efficient usage and then creater a pointer `*ptr` and then 
+    assign lower_bound this will take three parameters first from where to apply second till where to apply + 1
+    th position and then third on which number we have to apply lower bound . and then dereference the pointer. 
+    And then before printing pointer  , we made a contain that if pointer equal to a+n the last position + 1 th 
+    index then no lowerbound for that number is possible . 
+    
+    		   int n;
+    cin >> n;
+
+    int a[5];
+    for(int i = 0 ; i < n ;i++){
+        cin >> a[i];
+    }
+    sort(a,a+n);
+    int *ptr = lower_bound(a,a+n,5);
+    if(ptr == (a+n)){
+        cout << "NOT found!" << '\n';
+        return ;
+    }
+    cout << *ptr << '\n';
+    
+    
+2. `upper_bound` : Upper bound will work same as lower_bound but that will find exactly next greater than number possible. 
+
+
+3. `time complexity` : lower bound as well as upper bound both works on `O(log(N))` that N is the number of elements in the array. 
+
+
+4. `Using specific range` : we can even give specific range it is not necessary to give full range always `int *ptr = lower_bount(a+3,a+n,5);`
+    this will work from 3rd index to n-1th index . 
+    
+    
+5. `Upper bound and lower bound for vector array` : this will work exactly same to same as they did in static array , that 
+    is core logic and backend working would be same just different syntax that is we will create a vector array instead of a 
+    static , use iterator instead of pointer and then we check d.end().
+    	   vector <int> d(n);
+    for(int i = 0 ; i < n ;i++){
+        cin >> d[i];
+    }
+    sort(d.begin(),d.end());
+    auto it = upper_bound(d.begin(),d.end(),5);
+    if(it == d.end()) {
+        cout << "NOT! Found" << '\n';
+        return ;
+    }
+    
+    cout << *it << '\n';
+    
+    
+6. `upper bound and lower bound in sets ` : they work exactly as they did in vector array but there will be minute difference
+    in the synax , first create a set and then insert values and then directly create a iterator because our set is already
+    sorted and then in iterator write `d.lower_bound(5) or d.upper_bound(5)` because if we write `lower_bound(d.begin(),d.end(),5`
+    then this will work on `O(N)` wherease first one will work at `O(log(N))` and you won't encounter TLE. and after writing
+    iterator just dereference it . 
+    1. ```cpp
+	   set <int> d;
+    for(int i = 0 ; i < n ; i++){
+        int a;
+        cin >> a;
+        d.insert(a);
+    }
+    auto it = d.lower_bound(5);
+    if(it == d.end()){
+        cout << "NOT! Found" << '\n';
+        return ;
+    }
+    
+    cout << *it << '\n';
+	   ```
+	   
+	   
+7. `Upper bound and lower bound in maps` : They also work similar to upper bound and lower bound in maps means in this 
+    also we have to create a iterator that will be like `auto it = m.upper_bound(5);` because this will work for `O(log(N))` 
+    and in maps upper bound and lowerbound works on the keys and we don't need to sort the maps because they are already 
+    sorted and after dererencing the iterator we can use that iterator to print either key or corresponding values
+        auto it = r.upper_bound(5);
+    cout << (*it).second << '\n';
+    
+    
+8. `Index Conversion for the iterator used to find either lower bound or upper bound`: To get the integer index, subtract the 
+    beginning iterator `int idx = lower_bound(a.begin(), a.end(), x) - a.begin();` works for vectors and static_array.
+    
