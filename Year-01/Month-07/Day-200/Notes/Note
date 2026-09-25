@@ -1,0 +1,50 @@
+1.  `a+b≡3(mod4)` :   We define that x≡y(modm) whenever x−y is an integer multiple of m. As per this a+b ≡ 3 (mod4)
+    will be only possible whenever a+b-3 mod 4 will give 0.
+    
+    
+2. `Whenever you are running a loop less than square root of any number n` : then instead of calling sqrt in c++ , 
+    use (i * i) <= n  because sqrt is a library function and to make our loop more optimised .
+    
+    
+3. 1. `What is divisor of factor` : a is said to be factor or divisor of b if it divides b without any remaind 
+  that is `b%a == 0`. 
+2. `Notation` : `a|b` this means a is a divisor of 
+3. `Time complexity` :`O(N)` means this will work for n<= 10 ^ 6.
+4. `Optimised method to calculate divisors` : We can observe that if d divides n then n/d will also divides n . 
+  So we will loop from 1 to till sqrt(n) sqrt(n) will be rounded down and make sure n is not equal to d/n (to 
+  avoid repetition). 
+5. ```cpp
+   // Code for calculating divisors of a number n by optimised method:
+   vector <int> d;
+    for(int i = 1 ; (i*i <= n) ; i++){
+        if(n % i == 0){
+            d.push_back(i);
+            if(i != n/i){
+                d.push_back(n/i);
+            }
+        }
+    }
+   ```
+6.  `Time complexity of optimised way of calculating divisors` : `O(sqrt(N))` , and this will work 
+  till n <= 10 ^ 12. and this optimised way is standard cp technique for calculating divisors of a number n . 
+  remember to avoid double count of i .
+7. `Number of factors of a number n that will be tau(n)` : 
+	1. `Mathematical proof ` : n in terms of its prime factors p1 to pn and powers alpha 1 to alpha n , 
+`n = p1^alpha1 * p2^alpha2 ...` then `tau(n) = (alpha1+1)*(alpha2+1)...`.
+	2. `Implementation in c++` :it will works only when n>1.
+		1. ```
+		   long long countDivisors(long long n){
+    long long ans = 1;
+    for(long long i = 2 ; (i*i) <= n ; i++){
+        int cnt = 0 ;
+        while(n%i == 0){
+            n /= i;
+            cnt++;
+        }
+        ans *= (cnt+1);
+    }
+    if(n > 1) ans *= 2;
+    return ans ;
+		   ```
+8. `sum of all factors that is alpha(n)` : we will use geometric progression geometic sum and this can be 
+  computed using . We will using below formula that is product of 
