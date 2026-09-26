@@ -1,0 +1,11 @@
+1. `Product of factors that is mu(n)` : we will calculate first number of factors using `tau(n)` (supose we get x 
+    from tau(n))and then we will divide them by 2 (x/2) and that obtained number will the exponent for the number
+    whose divisors we are calculating so product of factors will be `n raise to x/2`. Make sure you didn't included
+    repeating divisors especially in the case of perfect squares. 
+    
+    
+2. `Smarter way to take input in a vector array` : 
+        vector <int> d(n);
+    vector <int> e(n);
+    for(auto &x :d) cin >> x;
+    for(auto &x :e) cin >> x;
