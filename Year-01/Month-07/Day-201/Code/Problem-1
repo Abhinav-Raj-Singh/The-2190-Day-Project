@@ -1,0 +1,30 @@
+// Problem-1
+// Codeforces 2051/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){   
+    int n;
+    cin >> n;
+    vector <int> d(n);
+    vector <int> e(n);
+    for(auto &x :d) cin >> x;
+    for(auto &x :e) cin >> x;
+    int ans = d[n-1];
+    for(int i = 0 ; i < n-1 ; i++){
+        ans += max(0,(d[i]-e[i+1]));
+    }
+    cout << ans << '\n';
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+    return 0;
+}
