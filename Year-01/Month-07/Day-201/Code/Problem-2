@@ -1,0 +1,39 @@
+// Problem-2
+// Codeforces 2050/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){   
+    int n,m;
+    cin >> n >> m;
+    vector <string> d(n);
+    for(auto &x :d) cin >> x;
+    int l = 0;
+    int cnt = 0;
+    for(int i = 0 ; i < n ; i++){
+        l += (d[i].size());
+        cnt++;
+        if(l == m){
+            cout << cnt << '\n';
+            return;
+        }
+        else if(l > m){
+            cout << cnt-1 << '\n';
+            return ;
+        }
+        
+    }
+    cout << cnt << '\n';
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+    return 0;
+}
