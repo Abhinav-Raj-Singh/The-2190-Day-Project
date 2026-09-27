@@ -1,0 +1,12 @@
+1. `Converting a whole string to a integer provided that string consists of digits` : `int num = stoi(s);` now
+    num will contain a number that is extracted from  s string using stoi.
+    
+    
+2. `Converting individual char from a string to numeric type provided that char has a valid digit` : `int r = s[i] -'0';` 
+    now r will have ith char from string in form of a integer. 
+    
+    
+3. `make sure while using max(a,b)` : a and b should be of same type means if a is int then b should be int (a is long long 
+    and b is int then this wont work and willl throw instance overloaded error).
+    
+    
