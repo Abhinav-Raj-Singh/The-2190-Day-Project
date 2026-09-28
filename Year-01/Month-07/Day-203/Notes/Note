@@ -1,0 +1,35 @@
+1. `Precomputing divisors of all numbers till N`: wer will use sieve style for performing this task . We made a
+    vector of vector and then made a nested loop and then first loop will run from i = 1 to till N inclusive and
+    inside loop will run from j = i to j equal to N and we will increment j by i and then pushback that to j .
+    
+	- Divisors will be already in sorted `ascending` order . 
+	- `Constraints` : 1<= N <= 1e6 ; many queries can be asked for a divisor. 
+	- `Time complexity` : `O(N log(N))`.
+	
+ ```cpp
+    int r;
+    cin >> r;
+    int N = 1e6;
+    vector <vector <int>> d(N+1);
+    for(int i = 1 ; i <= N ; i++){
+        for(int j = i ;  j <= N ; j+=i){
+            d[j].push_back(i);
+        }
+    }
+    for(auto & c : d[r]){
+        cout << c << ' ';
+    }
+    cout << '\n';
+    
+    
+2. `Sometimes in cp we have to round up if some number exceeds by some even decimals ` : but then because of int it get rounded
+    down then for suppose we have to perform this for a number x do in this way `(x+(y-1))/y` number is x and we wanted to do this
+    operation by dividing with y number.
+    
+    
+3. `If we have given find gcd(x,y)+y y from 1 to less than x` : Then this is possible for x-1 as gcd(x,x-1)+x-1 gives x and consider
+    x to be the maximum value . 
+    
+    
+4. `For any number x we are doing modulo with y there are 2 modulos possible` : consider x as 4 and y as 3 then we have `4%3` is 
+    1 which we get in c++ but one more is possible that is `3-(4%3)` sometimes this also needs to us .
