@@ -1,0 +1,38 @@
+// Problem-2(method-2)
+// Codeforces - 1931/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    int n , sz = 26;
+    cin >> n;
+    string mn = "zzz",cur;
+    for(int i = 0 ; i < sz ; i++){
+        for(int j = 0 ; j < sz ; j++){
+            for(int k = 0 ; k < sz ; k++){
+                if(i+j+k + 3 == n){
+                cur += char(i+'a');
+                cur += char(j+'a');
+                cur += char(k+'a');
+                mn = min(mn,cur);
+                }
+            }
+        }
+    }
+    cout << mn << '\n';
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+    return 0;
+}
