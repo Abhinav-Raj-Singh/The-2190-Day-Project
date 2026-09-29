@@ -1,0 +1,43 @@
+// Problem-5(method-2)
+// Codeforces - 1883/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+#define fast_io ios_base::sync_with_stdio(0);cin.tie(0);
+typedef long long ll;
+#define fl(n) for(int i = 0 ; i < n ; i++)
+#define vi(v,n) vector <int> v(n);
+#define flvi(v,n) for(int i = 0 ; i < n ; i++){cin >> v[i];};
+#define flvo(v,n) for(int i = 0 ; i < n ; i++){cout << v[i] << ' ';}; cout << '\n';
+#define otn(r) cout << r << '\n'
+#define ot(r) cout << r 
+#define otc(r) cout << r << ' ' 
+
+void solve(){
+ 
+    string s;
+    cin >> s;
+    ll pos = 1;
+    ll cnt = 0;
+    for(auto c :s){
+        ll x = c-'0';
+        if(x == 0){
+            x = 10;
+        }
+        cnt += abs(pos-x);
+        pos = x;
+
+    }
+    otn(cnt+4);
+}
+
+int main(){
+
+    fast_io;
+    int t;
+    cin >> t;
+    while(t--){
+        solve();
+    }
+    return 0;
+}
