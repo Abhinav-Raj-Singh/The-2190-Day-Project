@@ -23,7 +23,7 @@ void solve(){
     fl(n){
         cnt[s[i]-'A']++;
     }
-    fl(n){
+    fl(26){
         if(cnt[i] > i) ans++;
     }
     otn(ans);
