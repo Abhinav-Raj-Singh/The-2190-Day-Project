@@ -1,0 +1,116 @@
+1.  `When you have give a range and in that range for different queries you have to return number of divisors` : Then 
+    precompute them for efficient usage look the code below for better understanding.
+    
+    
+#include <bits/stdc++.h>
+using namespace std;
+const int N = 1e6;
+int cnt[N+1];
+
+void calculate(){
+
+   
+    for(int i = 1 ; i <= N ; i++){
+        for(int j = i ; j <= N ; j += i){
+            cnt[j]++;
+        }
+    }
+}
+
+
+void solve(){
+     int n;
+    cin >> n;
+    cout << cnt[n] << '\n';
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    calculate();
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+    return 0;
+}
+
+
+2. `Printing a number into a small letter character` : `cout << char(x+'a') << '\';` considering that x is a number less than equal to 25.
+
+
+3. `Storing any lexogrphically shorter string in a string` : `string s = min(r,p);` this will store lexographically shorter string in string s.
+
+
+4. `Modern c++ way to create a static array` : `array<int,26> cnt {}` by this we created a cnt array of 26 elements and initialized all 26 
+    elements of array cnt as default value (and default value for int is 0) . 
+    
+	1. This is modern c++ object type
+	2. `Value initialization` : `{}` initialize all elements as 0.
+	3. `size` : `cnt.size()`
+	4. `Passing to Functions` : value and reference both are possible . 
+	5. `It suppors almost all functions of vector array` : like comparing two arrays directly `a == b` check element by element 
+	6. `sorting` : `sort(cnt.begin(),cnt.end());` 
+	7. `iterators` : `.begin(),.end(),.rbegin(),r.end()`
+	8. `2d array` : `array <array <int,3> 3> grid{};` 
+	
+	
+5. `What is recursion ` : a function which calls itself that function is known as recurssive function. Recursion runs for infinite 
+    times until we didn't break intentionally or return a segmentation fault , we get segmentation fault as internal implementation
+    of recursion is done using stacks and stack stores memory of functions address because recurssion will refer previously called 
+    function's address and our computer allocate a particular space for stack and when that space get filled we get segmentation 
+    fault and not tle  and we get segmentation fault whenever we have any issue around memory.
+    
+    
+6. `Base condition in a recurssive function` : We write this in order to terminate our recurssive function and we place base condition 
+    before the recurssive condition. 
+    
+    	   #include <bits/stdc++.h>
+using namespace std;
+
+
+void func(int n){
+    if (n==0) return;
+    func(n-1);
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    func(5);
+    return 0;
+}
+    
+    
+7. `Demonstration of how recurssion actually works with a example below` : Below we have a recurssive function and there will be a 
+    difference that if we doing tasks before the calling the function again or after calling the function there will be difference
+    between them like below i did printing n after calling recurssive function then this will work as first run for `fucn(5)` --> 
+    `func(4)` --> `func(3)` --> `func(2)` --> `func(1)`  and as the our function sees next functions call this will run till only 
+    line 3 and in then n will get 0 and this start returning and as current stack condition is `12345` (i written stack as left to
+    right as top to bottom) so then return will call first `fucn(1)` --> `func(2)` --> `func(3)` --> `func(4)` --> `func(5)` and
+    once this sees return now functions will run for the rest of lines means for line number 4 , 5 and get ended now this will
+    print n means we will get output `12345` and if write `cout << n << '\n';` before `funct(n-1)` then we will get `54321` as
+    output stack will be still same because while returning the function we are printing nothing.
+    
+       #include <bits/stdc++.h>
+using namespace std;
+
+
+void func(int n){ // line 1.
+    if (n==0) return; // line 2. 
+    func(n-1); // line 3. 
+    cout << n << '\n'; // line 4.
+} // line 5.
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    func(5);
+    return 0;
+}
+
+
+8. `Accessing all characters of a string in a loop with auto method` : `for(auto c:s){ cout << c << ' ';}` we will get all elements 
+    from string s. And this thing even work for most of such related things like vectors , sets etc. This is modern method to print
+    characters out of a string.
