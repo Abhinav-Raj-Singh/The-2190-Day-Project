@@ -1,0 +1,3 @@
+1. `After recurssion call and before recurssion call` : Make sure that whatever we expected before calling next 
+	function that will print while going deep inside the recurssion wherease whatever we are expecting after
+	recurssive call that will print when the recurssion will return.
