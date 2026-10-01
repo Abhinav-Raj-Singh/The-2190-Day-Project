@@ -1,0 +1,50 @@
+1. `Understanding how this factorial function will work` : First its code will look like the below given , first we wrote as 
+    `if(n==0) return 1;` this will act as base condition , ` return factorial(n-1) * n;` this is the actuall call for the 
+    recurssion and assume n to be 5 first factorial will go deep inside the stack `factorial(4)*5;` this equation's answer 
+    is not known so this stack's slab will ask for next slab that is `factorial(3)*4` this is also not known then `factorial(2)*3`
+    --> `factorial(1)*2` --> `factorial(0)*1` now on this last one base condition will return the recrussion and factorial(0) will
+    be 1 because we said for n==  0 return 1 so this slab will get 1 and then recursion start going up with taking answer of each
+    equation which get hold `factorial(0)*1` give 1 , 1 is used in `factorial(1)*2` this will give 2 and then use 2 `factorial(2)*3`
+    give 6 , `factorial(3)*4` give 24 , `factorial(4)*5` give 120 and this was `factorial(5) asked` and we will get this as answer .
+
+       ```
+    #include <bits/stdc++.h>
+    using namespace std;
+
+    void func(int n){
+    if (n==0) return;
+    func(n-1);
+    cout << n << '\n';
+    }
+    int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    func(5);
+    return 0;
+    }
+       ```
+   
+2. `Time complexity of a recurssion` : this depends on 1. `Number of function calls` 2. `What is time complexity of each function` and final
+    complexity of that recurssive code will be multiplication of both the complexities , for above factorial n code time complexity will be 
+    `O(n)*O(1) --> O(n)` as n calls we made and each fucntions time complexity is 1. 
+    
+    
+3. `GCD` : Greatest common divisor of a and b bill the greatest positive integer that divides both a and b.
+
+	1. `How to calculate it ` : First do prime factorisation of a and b then take common factors which are common for both a and b and then 
+	    take their lowest available power . 
+	2. `Properties` :
+		1. `gcd(a,0)` : gcd of any non zero number with 0 will be always the non-zero number as every number divides the 0 so a will also so 
+		    `gcd(a,0)` is mod of a. and also by convention `gcd(0,0)` is 0.
+		2. `gcd(a,b) = gcd(|a|,|b|) ` : as signs doesn't matter in the calculation of gcd.
+		3. `if a divides b then gcd(a,b)` : this will be mod of a . 
+		4. `gcd(a,b) = gcd(a-b,b) if a>=b` :  as if a number `d|a` then `a = d*m`and `d|b` then `b = d*n` so `(a-b) = d(m-n)` so `d|(a-b)`.
+	3. `Euclidean algorithm` : this algorithm used to calculate `gcd(a,b)` this uses two core properties of gcd that are `gcd(a,0)` is a and 
+	    `gcd(a,b) = gcd(a-b,b) where a>=b`  we will use this second core property and then first to get our answer 
+		1. `Simple rules` : make sure a is greater than equal to b as a get smaller then b and both numbers are positive then swap a and b and 
+		    then again start subtracting till one number doesn't get 0 or negative then other non-negative and non-zero number will be our answer 
+		2. `Example` : `gcd(48,18)` currently a = 48 , b = 18 then we will use property 2 gcd((48-18,18)) = gcd(48,18) so gcd(30,18) again 2nd 
+		    property gcd(12,18) now a becomes 18 and b becomes 12 swap them gcd(18,12) again 2nd gcd (6,12) again swap gcd(12,6) gcd(6,6) gcd(0,6)
+		    now use first property answer is non -zero a that is 6. 
+		    
+		    
