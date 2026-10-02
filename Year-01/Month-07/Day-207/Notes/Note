@@ -1,0 +1,68 @@
+1. `Euclidean algorithm` : this algorithm used to calculate `gcd(a,b)` this uses two core properties of gcd that are `gcd(a,0)`
+    is a and `gcd(a,b) = gcd(a-b,b) where a>=b`  we will use this second core property and then first to get our answer 
+		1. `Simple rules` : make sure a is greater than equal to b as a get smaller then b and both numbers are positive then 
+	        swap a and b and then again start subtracting till one number doesn't get 0 or negative then other non-negative and
+            non-zero number will be our answer 
+		2. `Example` : `gcd(48,18)` currently a = 48 , b = 18 then we will use property 2 gcd((48-18,18)) = gcd(48,18) so gcd(30,18)
+		    again 2nd property gcd(12,18) now a becomes 18 and b becomes 12 swap them gcd(18,12) again 2nd gcd (6,12) again swap 
+		    gcd(12,6) gcd(6,6) gcd(0,6) now use first property answer is non -zero a that is 6. 
+		3. `Downside of euclidean algorithm` : despite this is the very very efficient but very very slow so we will use some 
+		    optimisation methods to make this more faster. 
+		4. `a = q.b + r , 0 <= r < b` : we will substract b q times from a till a get 0 or smaller than b and `r = a%b` and after 
+		    doing this operation we will swap if a is not zero or negative and we will perform same thing for swapped things . 
+			1. `Example` : `gcd(48,18)` 48 = q.18 + r (r = 48%18) , 48 = q.18 + 12 => q = 2. so now gcd(12,18) swap , `gcd(18,12)` 
+			    18 = q.12 + r(r = 18%12) -> 18 = q.12 + 6 q = 1 gcd(6,6)  now 1 times as 6 = q.6 + r (q = 1 and r = 0 ) and then 
+			    gcd(6,0) ans 6.
+			2. `So if we are using in recursion` : then we can simply write as `gcd(a,b)` as `gcd(b,a%b)`.
+		5. `Implementation of euclidean algorithm for calculating gcd of two numbers` : 
+			1. `Through recurssion` : In this `gcd_rec(b,a%b)` this will work on our euclidean's algorithm and this will 
+			    constantly swap the numbers to make sure that we are always reducing from the bigger number and this will 
+			    return a only when one number is 0 . We used llabs to make sure that both the numbers are positive .
+			    
+			2. ```cpp
+			   long long gcd_rec(long long a , long long b){
+    a = llabs(a);
+    b = llabs(b);
+    return (b == 0) ? a : gcd_rec(b,a%b);
+}
+			   ```
+			3. `Through iterative way` : In this we will run a while loop till `b!=0` and we will constantly swap a with b and b 
+			    with `a%b` so we can swap to ensure that we are always doing reduction from the bigger number and when b gets 
+			    zero we will return a. Usually this method is preferred in cp. As this iterative method is faster then the 
+			    recurssive one. 
+			4. ```cpp
+			   long long gcd_it(long long a , long long b){
+    a = llabs(a);
+    b = llabs(b);
+    while(b != 0){
+        long long r = a%b; 
+        a = b;
+        b = r;
+    }
+    return a;
+}
+			   ```
+			5. `Time and space complexity` : Time complexity of both methods will be `O(log(min(a,b)))` wherease space complexity of 
+			    recurssive will be `O(log(min(a,b)))` because of call stack and wherease for iterative it will be `O(1)` . But both 
+		        methods will be slowest for the consecutive fibonnaci series . 
+2. `LCM(Least Common Multiple)` : **LCM** (Lowest Common Multiple) finds the smallest multiple that is divisible by given numbers. 
+    `lcm(a,b) * gcd(a,b) = a*b` so we will use `lcm(a,b) = (a/gcd(a,b))*b` because if a and b both are bigger numbers then to avoid overflow .
+	1. `Implementation` : Refer below code 
+	2. ```cpp
+	   int lcm (int a,int b){
+    return (a/gcd(a,b))*b;
+}
+	   ```
+	   
+	   
+3. `Sum of all elements present in a array` : First `const vector<int> &a` we passed the vector array with `const and &` to avoid 
+    copying and making our recurssion more efficient. and then we write  sum as `sum(n-1,a) + a[n]` assuming that sum(n-1,a) will 
+    give sum of n-1 terms of a array n make and because we put base condition `n < 0` so make sure to give already n-1 as input means 
+    wanted to do sum of a array having 5 elements then pass 4 instead of 5 because passing 5 will throw error becauase of a[n].Also this 
+    code will give sum of n indices not necessary we want to find sum of all elements we can even find sum of selected elements of a array.
+    
+    1. int sum (int n ,  const vector<int> &a){
+        if(n < 0) return 0;
+        return sum(n-1,a) + a[n];
+        }
+    2.`Time complexity` : `time complexity of number of function calls * time complexity of each function` that is `O(n)*O(1)` that is `O(n)`.
