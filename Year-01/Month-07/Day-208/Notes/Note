@@ -1,0 +1,22 @@
+1. `For any vector array or any vector container in c++` : when you do `cout << s[i++] << '\n';` considering `i` is a iterator 
+    of a loop then this will first print `s[i]` and then increment i by 1 becausae this is post increment. 
+    
+    
+2. `Finding index of a character in a string` : `int i = s.find(s[i],i+1);` `s.find` will find index of character `s[i]` in 
+    string s from `i+1 to s.size()-1` and store in `i` . But make sure you use this under certain constraints because find doesn't
+    found s[i] this would create a issue be careful while using this could be used under two pointers . make sure i not declared 
+    previously if using in loop then don't use `int` with `i`.
+    
+    
+3. `Example 2 sum of all digits in a number` :  In recurssion always think that is it is possible to write original function in terms
+    of its own term with little bit variation over the recurssion runs and hit base condition and give the intended answer . In below
+    code we did `n/10 + n%10` because expecting that recursion of `n/10` will give sum of rest of digits and we extracted  `n%10`.
+    
+    	   int digit_sum(int n){
+    if(n == 0) return 0;
+    return digit_sum(n/10) + n%10 ; 
+}
+
+
+4. `Time complexity ` : `O(log(n))` as this will be called for number of digits in the number * 1 because time complexity of each function 
+    is 1.
