@@ -1,0 +1,16 @@
+1. `creating a map when int is key and value is pair` : `map <int,pair<int,int> > r`
+		1. `Inserting in such map` : `m.insert({a,{b,c}})` because value will be only one but that one will have further 
+        parts so 
+		    use `{}` braces.
+		2. `Accessing values from such map`: suppose c is a iterator for map created and we are in a loop then`c.first` 
+        this will
+		    give key `c.second.first` this will give first value of value part of the map `c.second.second` this will 
+        give second
+		    value of value part of a map. 
+		    
+		    
+2. `Sorting keys of a map in descending order`: by d efault keys of a map are sorted in ascending order but to sort 
+    them in descending order `map <int,pair<int,int> ,greater<int>> r`.
+
+
+3. `multimap` : this works almost as it as map works but use when you wanted to use duplicate keys . 
