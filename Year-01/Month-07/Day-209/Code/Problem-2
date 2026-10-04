@@ -1,0 +1,34 @@
+// Problem-2
+// Codeforces-223339/problem/O
+
+#include <bits/stdc++.h>
+using namespace std;
+#define fast_io ios_base::sync_with_stdio(0);cin.tie(0);
+typedef long long ll;
+#define fl(n) for(int i = 0 ; i < n ; i++)
+#define vi(v,n) vector <int> v(n);
+#define flvi(v,n) for(int i = 0 ; i < n ; i++){cin >> v[i];};
+#define flvo(v,n) for(int i = 0 ; i < n ; i++){cout << v[i] << ' ';}; cout << '\n';
+#define otn(r) cout << r << '\n'
+#define ot(r) cout << r 
+#define otc(r) cout << r << ' ' 
+
+long long fibonaci(int n){
+    if((n == 2) || (n==3)) return 1;
+   else if(n==1) return 0;
+    return fibonaci(n-1)+ fibonaci(n-2);
+}
+void solve(){
+    int n;
+    cin >> n;
+    cout << fibonaci(n) << '\n';
+}
+
+int main(){
+
+    fast_io;
+    
+        solve();
+    
+    return 0;
+}
