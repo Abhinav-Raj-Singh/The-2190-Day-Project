@@ -1,0 +1,30 @@
+// Problem-1
+// Codeforces-task/2165/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void moving(int n , int sr , int hlp, int dt){
+    if(n > 0){
+        moving(n-1,sr,dt,hlp);
+        cout << sr << " "<< dt << " " << '\n'; 
+        moving(n-1,hlp,sr,dt);
+    }
+}
+void solve(){
+    int n;
+    cin>> n;
+    cout << (1LL<<n)-1 << '\n';
+    int sr = 1;
+    int dt = 3;
+    int hlp = 2;
+    moving(n,sr,hlp,dt);
+    
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+    return 0;
+}
