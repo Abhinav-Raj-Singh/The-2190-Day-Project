@@ -1,0 +1,8 @@
+1. `Removing duplicate characters from a string s and keeping only unique characters` : `s.erase(unique(s.begin(),
+    s.end()),s.end());`this will remove all duplicate characters from string s and only keep unique characters only
+    make sure that all characters are of same case means different case but same character would be considered 
+    different and also s string should be sorted.
+    
+    
+2. `How to check whether a key exist in the map or not ` : suppose our map's key is integer `if(m.find(1) != m.end())
+    {cout << "YES" << '\'n;}` considering m is our map.
