@@ -1,0 +1,5 @@
+1. `When converting any entity to its subsequent` : Like when we have given minutes and we asked to 
+    convert in hours and minutes then suppose we have `n` minutes then `n/60` hours and `n%60`  will
+    be minutes this could be applied to even days , months , years if total number of days are given
+    `n/365` years, `(n%365)/30` months and `(n%365)%30` days . considering our year has 365 days , 
+    month has 30 days .
