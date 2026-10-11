@@ -1,0 +1,33 @@
+// Problem-1
+// Codeforces-1675/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    long long a;
+    long long b;
+    long long c;
+    long long x;
+    long long y;
+    cin >> a >> b >> c >> x >> y;
+    x -= a;
+    y -= b;
+    long long check = (x > 0 ? x : 0);
+    check += (y > 0 ? y : 0);
+    cout << ((check <= c ? "YES" : "NO")) << '\n';
+    
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+    return 0;
+}
