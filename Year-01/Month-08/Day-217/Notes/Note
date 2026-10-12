@@ -1,0 +1,5 @@
+1. `Storing a big number in a variable ` : `long long mn = 1e10;`
+
+2. `Storing largest possible integer in variable` : `int max = INT_MAX;`.
+
+3. `Storing smallest possible integer in variable` : `int min = INT_MIN;`.
