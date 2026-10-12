@@ -1,0 +1,35 @@
+// Problem-3
+// Codeforces-1619/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    string s;
+    cin >> s;
+    if(s.size() == 1 || s.size() % 2 != 0){
+    cout << ("NO") << '\n';
+    return ; 
+    }
+     
+    else{
+        string a = s.substr((s.size()/2),s.size()/2);
+        string b = s.substr(0,s.size()/2);
+
+        
+        cout << (a == b ? "YES" : "NO") << '\n';
+    }
+    
+}
+
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+        solve();
+    }
+    
+    return 0;
+}
