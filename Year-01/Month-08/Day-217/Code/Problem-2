@@ -1,0 +1,33 @@
+// Problem-2
+// Codeforces-1624/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    long long n;
+    cin >> n;
+    vector <long long int> d(n);
+    long long mx = 0;
+    long long mn = 1e10;
+    for(int i = 0 ; i < n ; i++){
+        cin >> d[i];
+        mx = max(mx,d[i]);
+        mn = min(mn,d[i]);
+    }
+    cout << (mx - mn) << '\n'; 
+    
+    
+}
+
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+        solve();
+    }
+    
+    return 0;
+}
