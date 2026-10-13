@@ -1,0 +1,59 @@
+1. `Passing through referece` : we can pass can pass any variable of any data type with reference 
+    in a function using `&` and we can even pass any container or even pointers in a function by 
+    reference but we usually pass that variables or containers with reference only either they has
+    multiple elements present in them (usually containers) or we have to modify that data type or 
+    container and even reflect back (means we have to take output from the function also). Because 
+    by passing with reference wherever require by condition this will save copying and make our 
+    function more optimised. 
+    
+    
+2. `Backtracking in cp`: This concept requires when there are multiple possibilites could be drawn
+    after a certain step and if this happen we use backtracking . This is nothing but `pop_back()`
+    then we will go through all first possibility and then popback() all first possibilities and 
+    then go with second option for all things . 
+    
+	1. `Example` : below code is the solution for a standard cp problem for backtracking that is 
+	generating parenthesis . First we will define a function in terms of its own function because 
+	that is the core idea of recursion . considering n as 2 then first `"",2,2`  will be called and 
+	then  `"(",1,2` then `"((",0,2` then `"(()",0,1` then `"(())",0,0` then this will get into vector
+	d and then its control will goes to open and then this `"(()",0,1` because of `pop_back` and then
+	`"(( ",0,2` and then its control will goes to close despite close won't run but the remaining lines
+	that are `pop_back`  because recursion is now going back and this will run all not runed lines then
+	`"((",2,2` this will get `"(",2,2` and `"",2,2` now very first `"(",1,2` will complete lits remaining
+	lines that is `"(",1,2` will become `"()",1,1` and then `"()(",1,1` and then`()(),0,0` this will hit 
+	return and this again go back and then remove all parenthesis and our string s will get empty again. 
+	How emptying is string possible because we are not making a separate copy of a string for our recursion
+	we are passing it with reference that is using ampersand because this will make our recursion more optimised
+	as well as this will allow us backtracking. 
+	
+	```cpp
+vector <string> d;
+void generate(string &s , int open , int close){
+    if(open == 0 && close == 0){
+        d.push_back(s);
+        return ;
+    }
+    if(open > 0){
+        s.push_back('(');
+        generate(s,open-1,close);
+        s.pop_back();
+    }
+    if(close > 0){
+        if(open < close){
+            s.push_back(')');
+            generate(s,open,close-1);
+            s.pop_back();
+        }
+    }
+}
+void solve(){
+    int n;
+    cin >> n;
+    string s;
+    generate(s,n,n);
+    for(auto &c : d){
+        cout << c << '\n';
+    }
+    
+}
+	   ```
