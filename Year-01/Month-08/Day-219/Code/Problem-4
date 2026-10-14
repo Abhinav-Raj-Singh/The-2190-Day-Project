@@ -1,0 +1,25 @@
+// Problem-4
+// Codeforces-326175/problem/C
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    char c;
+    cin >> c;
+    if(c == 'z'){
+        cout << 'a' << '\n';
+        return ;
+    }
+    cout << char(c+1) << '\n';
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    
+    solve();
+    
+    return 0;
+}
