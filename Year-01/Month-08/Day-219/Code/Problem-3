@@ -1,0 +1,35 @@
+// Problem-3
+// Codeforces-326175/problem/B
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    long long a,b,c;
+    cin >> a >> b >> c;
+    if(a%c == 0 && b%c == 0){
+        cout << "Both" << '\n';
+    }
+    else if(a%c == 0){
+        cout << "Memo" << '\n';
+        
+    } 
+    else if(b%c == 0){
+        cout << "Momo" << '\n';
+        
+    }
+    else{
+        cout << "No One" << '\n';
+
+    }
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    
+    solve();
+    
+    return 0;
+}
