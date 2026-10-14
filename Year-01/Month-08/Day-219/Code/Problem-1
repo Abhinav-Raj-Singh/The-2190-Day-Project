@@ -1,0 +1,21 @@
+// Problem-1
+// Codeforces-219158/problem/F
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+   string m , s;
+   cin >> m >> s;
+   cout << ((m.back()-'0')+ (s.back()-'0')) << '\n';
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    
+    solve();
+    
+    return 0;
+}
