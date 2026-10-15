@@ -1,0 +1,25 @@
+// Problem-2
+// Codeforces-219432/problem/I
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    string s;
+    cin >> s;
+    string p = s;
+    reverse(p.begin(),p.end());
+    cout << stoi(p) << '\n';
+    cout << ((p == s)? "YES" : "NO") << '\n';
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    
+    
+    solve();
+    
+    return 0;
+}
