@@ -1,0 +1,37 @@
+// Problem-1
+// Codeforces-1607/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    string s,p;
+    cin >> s >> p;
+    unordered_map <char,int> d;
+    for(int i = 1 ; i <= s.size() ; i++){
+        d.insert({s[i-1],i});
+    }
+   
+    int current = d[p[0]];
+    
+    int cnt = 0;
+    for(int i = 1 ; i < p.size() ; i++){
+        int r = d[p[i]];
+        if(r != current){
+            cnt += abs(current -r);
+            current = r;
+        }
+    }
+    cout << cnt << '\n';
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+    return 0;
+}
