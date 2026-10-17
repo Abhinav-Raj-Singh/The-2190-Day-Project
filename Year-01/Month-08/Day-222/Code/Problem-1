@@ -1,0 +1,28 @@
+// Problem-1
+// Codeforces-1593/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    long long a , b , c; 
+    cin >> a >> b >> c;
+    long long m = (max(b,c)) - a+1;
+    long long n = (max(a,c)) - b+1;
+    long long o = (max(a,b)) - c+1;
+    cout << (max(0ll,m)) << ' ';
+    cout << (max(0ll,n)) << ' ';
+    cout << (max(0ll,o)) << '\n';
+     
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+    return 0;
+}
