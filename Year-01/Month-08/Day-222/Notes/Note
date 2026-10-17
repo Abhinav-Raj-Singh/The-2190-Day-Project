@@ -1,0 +1,6 @@
+1. `0 is a integer until you explicitly not change its type ` : `max(0,m)` where m 
+    is long long then we will encounter a error that is argument list inside max 
+    function is not same `max(0ll,m)` as max works only on same data type variables 
+    only. and this will extend until the range of int means any positive or negative
+    number written directly in this manner will be int by default if fall under the 
+    range of int and then  long int and  long long int . 
