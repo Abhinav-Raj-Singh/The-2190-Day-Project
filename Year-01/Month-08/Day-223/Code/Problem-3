@@ -1,0 +1,25 @@
+// Problem-3
+// Codeforces-219856/problem/E
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    string s;
+    cin >> s;
+    long long ans = 0;
+    for(long long i = 0 ; i < s.size() ; i++){
+        ans += (s[i]-'0');
+    }
+    cout << ans << '\n';
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+    
+    
+    return 0;
+}
