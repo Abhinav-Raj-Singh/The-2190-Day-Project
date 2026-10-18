@@ -1,0 +1,65 @@
+// Problem-5
+// Codeforces-219856/problem/L
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    int ss , t;
+    cin >> ss >> t;
+    string s;
+    cin >> s;
+    while(t--){
+        
+        string r;
+        cin >> r;
+        if(r == "pop_back"){
+            s.pop_back();
+        } 
+        else if(r == "front"){
+            cout << s.front() << '\n';
+        }
+        else if(r == "back"){
+            cout << s.back() << '\n';
+        }
+        else if(r == "sort"){
+            int a,b;
+            cin >> a >> b;
+            sort(s.begin()+a-1 ,s.begin()+b);
+        }
+        else if(r == "reverse"){
+            int a,b;
+            cin >> a >> b;
+            reverse(s.begin()+a-1 ,s.begin()+b);
+        }
+        else if(r == "print"){
+            int a;
+            cin >> a;
+            cout << s[a-1] << '\n' ;
+        }
+        else if(r == "substr"){
+            int a,b;
+            cin >> a >> b;
+            string ans = s.substr(a-1,b-a+1);
+
+            cout << ans << '\n';
+        }
+        else if(r == "push_back"){
+            
+            char c;
+            cin >> c;
+            s.push_back(c);
+        }
+
+    }
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    
+    solve();
+    
+    return 0;
+}
