@@ -1,0 +1,64 @@
+// Problem-4
+// Codeforces-219856/problem/K
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    string s,t;
+    cin >> s >> t;
+    for(int i = 0 ; i < max(s.size(),t.size()) ; i++){
+        if(i < s.size()){
+            cout << s[i];
+        }
+        if(i < t.size()){
+            cout << t[i];
+
+        }// Problem-4
+// Codeforces-219856/problem/K
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    string s,t;
+    cin >> s >> t;
+    for(int i = 0 ; i < max(s.size(),t.size()) ; i++){
+        if(i < s.size()){
+            cout << s[i];
+        }
+        if(i < t.size()){
+            cout << t[i];
+
+        }
+    }
+    cout << '\n';
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+    return 0;
+}
+
+    }
+    cout << '\n';
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+    return 0;
+}
