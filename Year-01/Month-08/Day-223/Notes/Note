@@ -1,0 +1,9 @@
+1. `s.front()` : printing this will give very first character of string s.
+
+
+2. `selected sorting for a string s` : `sort(s.begin()+a,s.begin()+b+1)` this will sort our 
+    string s from ath index to bth index of the string s. 
+    
+    
+3. `selected reversing for a string s` : `reverse(s.begin()+a,s.begin()+b+1)` this will reverse
+    our string s from ath index to bth index of the string s. 
