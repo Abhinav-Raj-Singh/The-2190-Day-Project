@@ -1,0 +1,37 @@
+// Problem-1
+// Codeforces-1579/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    string s;
+    cin >> s;
+    int cnta = 0;
+    int cntb = 0;
+    int cntc = 0;
+    for(int i = 0 ; i < s.size() ; i++){
+        if(s[i] == 'A'){
+            cnta++;
+        }
+        else if(s[i] == 'B'){
+            cntb++;
+        }
+        if(s[i] == 'C'){
+            cntc++;
+        }
+    }
+    cout << ((cnta + cntc == cntb)? "YES" : "NO") << '\n';
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+    return 0;
+}
