@@ -1,0 +1,19 @@
+1. `Note:` when you are performing any algorithm on a selected part of a string or any 
+    container or anything like substring , sorting , reversing a string then make sure 
+    to use `if(a>b) swap(a,b);`  this will make sure our starting part of a algorithm that 
+    is `a` is always less than b.
+    
+    
+2. `Basics of command line interface (CLI)` : 
+	1. `Opening terminal ` : `ctrl+alt+t`
+	2. `Copy paste shortcut keys` : `ctrl+shift+c` for copy and `ctrl+shift+v` for paste 
+	    on command line
+	3. `auto completion` : type name of external program , file name or builtin command 
+	    partial and then press tab if there is only one possibility for that then this 
+	    will autocomplete otherwise double pressing tab will list (including previous tab)
+        will list all possibilities for that partial typing . 
+	4. `opening vs code through terminal in linux` : open terminal and type `code` this 
+	    will open vs code `code 20-10-2026` this will open vs code with particular file 
+	    that is `20-10-2026`.  And opening particular folder from desktop then `cd ~/Downloads /19-10-2026 & code`
+	    this will launch `19-10-2026` folder in vs code. (means we opening that folder in 
+	    our vs code by this one command only). 
