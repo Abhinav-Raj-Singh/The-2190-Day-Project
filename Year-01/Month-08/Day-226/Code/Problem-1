@@ -1,0 +1,33 @@
+// Problem-1
+// Codeforces-1547/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int ax,ay,bx,by,fx,fy;
+    cin >> ax >> ay >> bx >> by >> fx >> fy;
+    int cnt = abs(bx-ax) + abs(by -ay);
+    if((ax == bx && bx == fx) && (fy < by || fy < ay) && (fy > ay || fy > by) ){
+        cnt += 2;
+    }
+    else if((ay == by && by == fy) && (fx < bx || fx < ax) && (fx > ax || fx > bx) ){
+        
+        cnt += 2;
+    }
+
+    
+    cout << cnt << '\n';
+    
+}
+
+int main(){
+    
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+
+}
