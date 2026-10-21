@@ -1,0 +1,66 @@
+1. `ls` : type this to list all content available in current directory in CLI. By default `ls` 
+    gives in alphabetical order.
+    
+2. `pwd` : whenever we are doing any operation(creation , deletion , rename of a file) this will
+    happens inside the current directory and `pwd` tells us in which directory(folder) we are 
+    currently working in . Generally when we open a fresh terminal by default we are in home 
+    directory(folder) but we are not then type `cd` command to get to home directory.
+	
+3. `how file system works in computer` : filesystem organizes in a way of upside down tree . root 
+    directory (represented by `/` forward slash) is the main directory which holds the other directories.
+    In this we have `bin` which has builtin programs stored , `Users` which has our personal data and 
+    files , `data` which contains other miscellaneous files , `temp` this holds the programs which 
+    don't require to hold for long time. And in `Users` there will be different directories for 
+    different users who are using this machine `/Users/abhinav` this will contains all files of 
+    abhinav `/Users/raman` this one for raman and so on.
+
+4. `forward slashes '/' has two meanings`: when used as prefix of the path of whole directory then 
+    this represents `root directory` and when used other than starting of path this acts as separator.
+
+5. `ls -F` : Use to get distinction among files , executables, directories and so in a directory. In 
+    linux `/` Directory , `*` program file (executable) ,`@` symbolic link, `=` socket , `|` FIFO/ named pipe.
+
+6. `cd ~/Desktop`: this will take you in `Desktop` directory in home folder (as in linux `~` represents home 
+    folder)  and `cd ~/Desktop/20-10-2026` this will take you to `20-10-2026` directory inside `Desktop folder` 
+    and on (use `cd` with folder name like `cd ~` this will take you to home directory  ) to go inside directory
+    (make sure that directory should be present in that particular directory) and to come back use `cd` like `cd 
+    ~/Desktop` this will take you to `Desktop` from `20-10-2026` directory or to get one level back `cd ..` this 
+    will take one level back.  and by typing only `cd` you will go to home directory.
+
+7. `ls --help`: `ls` is not just used to print the list of available contents in a particular directory combining 
+    `ls` with some functions gives differnt outputs you get all combinations of possible things by using `ls --help` 
+    this will list out all functionalities we can perform with `ls` using `--` and what each could be used for like 
+    `ls --size` this will allocated size of each sub file or whatever content our current directory.
+
+8. `--help`: almost all builtin commands of terminal supports `--help` which tell all possible functionality can be 
+    achieved using that particular command and what is the use of that command.
+
+9. `When to use short and long options` : when you used help for any command and access all commands then you will 
+    found that for any functionality there is one shorter version and one longer version . Use shorter version when
+    you are running that particular command in terminal directly wherease use longer version when you are curating
+    any particular file that will run multiple commands automatically.
+
+10. `man ls` : this is also very similar to `ls --help` but here you will get all things in a page manner so you 
+    can go back forward using up and down arrows and `q` to quit, `b` to reach top of the page(this words like page up)
+    , spacebar to reach bottom of the page(this works like page down) , `/` then type what you wanted to search in the
+    page and then all words of what you searched get highlighted, `n` to move forward on the highlighted words and 
+    `shif+n` to move backward. and even man is applicable for almost all builtin commands in terminal like `--help` 
+    as man only convers `ls--help` in pager manner. 
+
+11. `ls -t` : this will sort your list in chronological order of time(newest edit will short first).
+
+12. `ls -r` : this used to reverse the alphabetical order.
+
+13. `(ls -r -t) or (ls -t -r) or (ls -rt) `: we use any one from these to sort our list in reverse order with respect
+    to time we edited that directory or file or any program that is present in that particular directory. And using 
+    in any order will works same because command line treats as same means that using any one command line will 
+    concluse reverse the order of list on the basis of time of edited . 
+
+14. `Even you can use all ls functionality on a different directory other then the directory on which you are working` 
+    : mans `ls Desktop` this will list all content of `Desktop` directory `ls -F Desktop` this will classify all 
+    contents of the `Desktop`. means `ls` + `functionality of ls you wanted to use` + `on which directory you wanted 
+    to use`. But make sure you that your current must exist that particular directory because by default our directory
+    is home and which has Desktop so this works fine otherwise we will encounter an error. 
+
+15. `cd`: this is not just change directory it will change working directory in our terminal . many terminals don't 
+    provide our current working directory when we change it using `cd` but use `pwd` this will print that.
