@@ -1,0 +1,33 @@
+// Problem-2
+// Codeforces-problem/119/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int a,b,s;
+    cin >> a >> b >> s;
+    while(true){
+        int r = gcd(a,s);
+        if(s < r){
+            cout << '1' << '\n';
+            return;
+        }
+        s -= r;
+        r = gcd(b,s);
+        if(s < r){
+            cout << '0' << '\n';
+            return;
+            
+        }
+        s -= r;
+    }
+
+}
+
+int main(){
+    
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    solve();
+    return 0;
+}
