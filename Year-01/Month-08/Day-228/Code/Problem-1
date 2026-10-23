@@ -1,0 +1,44 @@
+// Problem-1
+// Codeforces-1935/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve(){
+    long long n;
+    cin >> n;
+    string s;
+    cin >> s;
+    string r = s;
+    reverse(r.begin(),r.end());
+   if(s == r){
+       cout << s<< '\n';
+       return ;
+   }
+    for(int i = 0 ; i < s.size() ; i++){
+        if(s[i] < s[s.size()-i-1]){
+            cout << s<< '\n';
+            return;
+        }
+        else if(s[i] > s[s.size()-i-1] ){
+            cout << r << s << '\n';
+            return;
+            
+        }
+        
+
+    }
+
+}
+
+int main(){
+
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int t;
+    cin >> t;
+    while(t--){
+    solve();
+    }
+    return 0;
+}
