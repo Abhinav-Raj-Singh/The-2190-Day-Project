@@ -1,0 +1,61 @@
+1. `if you wanted to keep only one letter from a continuous letter sequence
+    of same letters` : for this use `s.erase(unique(s.begin(),s.end()),s.end())`
+    like `AABBAA` this will give you `ABA` and not `AB` to get `AB` you need to
+    first sort the string so all things get in a proper sequence.
+    
+    
+2. `finding index of minimum number in a vector array`: first find the minimum 
+    element using `min_element` and then index of that using `mini-d.begin()` 
+    and store in a integer data type. And similarly we can use this concept to 
+    find maximum .
+     ```cpp
+    auto mini = min_element(d.begin(),d.end());
+    int mini_i = mini-d.begin(); 
+    ```
+    
+    
+3. `going up one level in subdirectory level in terminal` : use `cd ..`
+
+
+4. `going down one leve in subdirectory level in terminal`: `cd ~/Desktop` this will 
+    take you in desktop and then type `cd` + `valid_sub_directory` that subdirectory 
+    must exist in current working directory.
+    
+    
+5. `ls -F -a` : this will saw all files even hidden files means and even `./` that will
+    be represent our current working directory and `../` will be previous directory(means
+    parent directory of our working directory) then our current directory and even other 
+    files present in working directory will be get listed by this command. and doing `cd .`
+    won't do anything because that will change our current directory to current directory 
+    means no change will happen but by `cd ..` this will change our current directory to its
+    previous parent directory . 
+    
+    
+6. `combining ` : we can combine multiple commands using `-` as `ls -F -a` could be written as 
+    `ls -Fa`.
+
+
+7. `going to home directory directly`: typing `cd` command without any argument this will reach us 
+    to our home directory. 
+    
+    
+8. `relative and absolute path`: using `ls` and `cd` we can define either absolute or relative path
+    , but there is one more to define absolute path `~/` use as prefix here `~` home directory and `/` 
+    root path and define the path you require and this will work as absolute path.
+    
+    
+9. `~`: terminal detects this as current user's home directory.
+	
+	
+10. `cd -`: this would world like jump button in tv's remote means you could directly jump to the previous 
+    directory by using this command and again typing this you would back to current working directory . 
+	
+	
+11. `General syntax of a terminal` : `$ ls -F /` this is the general syntax then `$` will be known as `prompt`
+    second word will be `command` , third word will be `option` and fourth word will be `argument` and `command`
+    ,`option` or `argument` could contain any possible number of letters(but that should be valid ). And `-` is 
+    short option and `--` long option. `arguments` tells what to operate on command (target) wherease `option` 
+    will control how command will behave.Sometimes options and arguments are referred to as **parameters**. A 
+    command can be called with more than one option and more than one argument, but a command doesn’t always 
+    require an argument or an option. sometimes `options` are even referred as `switches or flags` when takes 
+    no argument.
