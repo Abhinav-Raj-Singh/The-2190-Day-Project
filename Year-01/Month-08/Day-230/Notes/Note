@@ -1,0 +1,83 @@
+1. `Creating Directories`: we will use `mkdir` + `name` this name will the name of the 
+    directory which we curated and as this is relative path this directory will be get 
+    created in our current working directory and `mkdir` is make directory. 
+    
+    
+2. `Creating subdirectories in a directory`: `mkdir` is not just limited to create a directory
+    only `mkdir -p ../Project/data ../Project/results` by this combining `-p` allows this we gone
+    one directory previous using `..` and then we created `data` and `results` sub directories in
+    `Project` directory. we can even achieve this creating directory or subdirectory task by file
+    explorer directly but some cases using terminal tends to be more efficient.
+    
+    
+3. `Good names for files or directories`: some tips for naming for files and directories while curating
+    them using terminal.
+    
+		1. `Avoid spaces and use either - or _`: as command prompt consider spaces as separation and would
+		    create multiple directories or files of that name instead of giving one instead of use `- or _` as
+		    `north_pacific_gyre` or `north-pacific-gyre` both are correct but avoid `north pacific gyre`.
+		2. `Dont begin name with -` : as command treat `-` as taking options.
+		3. `Stick with lower case letters, numbers , full stop , - , _`: try to avoid special characters as 
+		    they have diffeernt meanings when use in terminal and even if you wanted to void these rules 
+	        write the name in single quotes that will treated as it is as you want and won't create any problem.
+	        It is often recommended to use lower case letters in file names because windows and macos terminals
+	        are often case insensitive and often treate thesis and Thesis as same. 
+	        
+	        
+4. `creating text file using terminal`: `nano draft.txt` using this `nano` editor will open with a file `draft`
+    as `txt` format make sure this `nano` editor is most easy to learn and use and it only supports basic work
+    only like plain texts , no images , no tables etc supported. after typing `nano draft.txt` this will open 
+    text terminal and then type what you wanted to in this file and to keep the name default we typed with command
+    press `ctrl + o` and then press `enter` and then `ctrl + x` now our `draft.txt` is created with the data we gave
+    input , we can even use default text editor to save the file at what location we wanted usually we use this to 
+    create a file at current working directory.`nano` doesn't leave any output on the terminal but you can see file 
+    created in the directory by `ls`. 
+    
+    
+5. `creating empty file using terminal and when this require`: `touch new_file.txt` now our current directory will 
+    have this file with 0 byte that means empty file this requires us when some programs require a empty file to 
+    fill output get from that particular program.And size of empty file will be of 0 bytes.
+    
+    
+6. `something.something`: any file is written in this format usually , second part after dot is extension and this 
+    helps to distinguish files like `.txt` for text files , `.pdf` for pdf and so on. 
+    
+    
+7. `moving files and directories`: `mv thesis/drafts.txt thesis/quotes.txt` this will rename our `drafts.txt` to 
+    `quotes.txt` why because when both address are same then `mv` will work as renaming. As we are saying `mv`(moving)
+    a file from a address to same address just different name then this will act as renaming. now moving any file 
+    `mv thesis/quotes.txt .` we gave second argument as final location that is our current directory and this will move 
+    our file. We can even pair to move files like `mv count.txt check.txt ~/Desktop` then these two files will move to 
+    desktop in this we can pair multiple files from our current directory to move.make sure first either you are copying 
+    any file or directory relative then your current directory must has both destinations which file you are copying and
+    to which directory , now copying file `cp quotes.txt thesis/quotes.txt` and to copy directory `cp -r alkanes anima-counts/alkanes`
+    and we included this r because this will copy all contents of the directory which we copied.making copy of a whole 
+    directory for backup in current working directory use `cp -r animal-counts animal-counts-backup`. for both cp and 
+    mv if you provide same destination and a different name with same extension this will act as renaming wherease different
+    location will act as copying or moving . 
+    
+    
+8. `removing files and directories`: `rm files.txt` this will remove `files.txt` if this present in our current working 
+    directory. by deleting from terminal we deleted for forever we can use some tools to recover but there is no guarantee.
+    but `rm -i files.txt` will ask to if we wanted to delete or not type `Y` for yes and `N` for no. Deleting directory
+    use `rm -r -data` this will delete recurssively all files and content from `data` directory and even whole 
+    directory itself `rm -i -r -data` this will confirm whether we wanted to delete `data` then `Y` for yes and 
+    `N` for no and then ask for each file and content present in that directory and we have to confirm for each 
+    content manually. Because we are doing permanant deletion we will get a change to view what we are deleting by that `-i`.
+    
+    
+9. `working with multiple directories or files`: whether we wanted to delete any file , directory individually or multiple
+    together just list name and if we are copying and moving then when there will be more than two arguments then last one
+    will be treated as destination and for deletion we can simply link them one by one . but make sure last argument should
+    be location otherwise you will hit error.
+    
+    
+10. `wild card characters`: 
+		1. `*`: when this combined with any extension like `*.txt` then this will list all files having that extension in
+	    our current working directory and when used as `pa*` then this will list all files having `pa` as prefix we can use
+	    for any number of valid letters as prefix. and even `*check.txt` will present this `check.txt` and even all other 
+	    files having that `check` as end  of name. 
+		2. `?`: this is used as a ignorant means `??check.txt` and this will show all files having `check.txt` after ignoring 
+		first 2 characters of name.
+		3. `Note`: wildcards alone won't work you have to combine them with `ls` command to use them and if there is no match
+		found then would return error otherwise matched contents will flash. 
