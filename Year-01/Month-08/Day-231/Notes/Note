@@ -1,0 +1,85 @@
+1. `mkdir note`: make sure that `mkdir` will create only subdirectory 
+    if a directory exist , if not then it throw error when parent directory
+    doesn't exist in which which we wanted to create a sub directory. but to 
+    bypass this we can use `-p` `mkdir -p new/first new/second` despite parent
+    directory `new` doesn't exist this command will curate `new` first and then
+    `first` and `second` as subdirectories in `new` using one command only.
+    
+    
+2. `To get size of a file or folder in a human readable format through terminal`: 
+    then use `ls -sh`.
+
+
+3. `Creating Repository on github`: press on `+` from homepage of your github account 
+    in which you wanted to create repo and then enter name , then switch on `readme.md` 
+    and then click on `create repository` button. This will redirect to that repository
+    newly created `test-git` .
+    
+    
+4. `accessing a repo from github to local machine through git`: to access this through 
+    git on our local machine go to main branch and then click on green `code` button 
+    then click on `ssh` button and then copy url below `ssh` and then create a directory 
+    in which you wanted to make a local copy of that desired github repository through 
+    terminal and then open that directory in terminal and then type 
+    `git clone git@github.com:Abhinav-Raj-Singh/git-test.git` `git` + `clone` + `url taken from ssh` 
+    and then this will ask for password (if you set up password during creation of ssh key on your 
+    machine) you set to access any directory on your local machine through your github account. 
+    To in that currently pulled repository to our local machine and then run `git remote -v`
+    and this will confirm by giving some ouput with your username.
+    
+    
+5. `Basic git workflow`: we will see some basic and most used basic commands
+	1. `git status`: once you did some editions like you created a file `hello_world.txt`
+	under `git-test` and this `git status` will show this file in red colour under 
+	`untracked files` section this means file is not staged
+	2. `git add`: this will move your newly created file in the repo after cloning the 
+	repo at local machine to `stage` section this section is like waiting room , means this 
+	is pre step for committing. `git add hello_world.txt` and then `git status` then 
+	`hello_world.txt` will show in green colour under `changes to be committed` section.
+	3. `git commit -m "Add hello_world.txt` : by this command you have commited the file 
+	and then `git status` nothing to commit working tree is clean you have successfully 
+	commited. when you type `git status` you will get 
+	`Your branch is ahead of 'origin/main' by 1 commit.`  this means that you have newer
+	snapshots on local repo as of remote repo.
+	4. `git log`: typing this you will get all commits made on that repository.
+	
+	
+6. `Modify a file or two`: open your `readme.md` file in vs code type `code .` and then 
+    type something in `readme.md` and then save and then `ctrl + backtick` this will 
+    open vs code terminal and then type `git status` and you will `changes not staged for commit` 
+    and then `git add README.md` now `git status` we will see that file in green colour under
+    `changes to be committed` and do changes to `hello_world.txt` and then save and then 
+    `git add .` this will `stage` all the directories , subdirectories basically all the 
+    content which is to be `staged` in our current working directory. and then 
+    `git commit -m "Add hello_world.txt and README.md"` this will commit both the files. 
+    and `q` to exist when stuck during checking `git log`.
+    
+    
+7. `Push your work to github`: `git push` or `git push origin main` since we have only 
+    main branch only then we can prefer only git push . and this will sync your remote 
+    directory with latest work you did on that cloned repo in your local machine. and when 
+    you do `git status` now 
+    `Your branch is up to date with 'origin/main'.nothing to commit, working tree clean` 
+    this means our repo is pushed back successfully.
+    
+    
+8. `Avoid using github directly`: as a beginner direct don't interact with github interact 
+    through local machine only because this could create trouble which would require advance 
+    git knowledge to fix them.
+    
+    
+9. `We are describing what new we did`: `git commit -m " hell_world.txt"` in this command 
+    in double quotes we actually mention what we did with `hello_world.txt` file in this snapshot.
+    
+    
+10. `program | action | destination`:This basic Git syntax is .
+
+
+11. `Git best practices`: 
+	1. `Atomic commits`: these are reffered to only one feature or task of your program so mark 
+	`atomic commits` as `commit message` when you worked on something small because if something 
+	get wrong that could be fixed and reverted easily.
+	2. `changing the git commit message editor`: change you vs code default `commit` editor 
+	because once you changed even if you missed `-m` flag that will be fine.and even once you 
+	changed default editor in `vs code` then typing `git commit` will act as this will open 
+	new window and then ask name for the commit and then press `commit` button there.
