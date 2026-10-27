@@ -1,0 +1,64 @@
+1. `HTLM(hyper text markup language) is used for`: HTML (HyperText Markup Language) defines the 
+    structure and content of webpages. We use HTML elements to create all of the paragraphs, headings, 
+        lists, images, and links that make up a typical webpage.
+
+	1. `Elements and tags`: almost all elements are pieces of content that are wrapped in opening 
+        and closnig html tags.HTML tags are essential building blocks that define the structure and 
+        content of a webpage.Opening tag tells browser that this is the start of the `html`  and closing 
+        this is the end. `Example`: `<p>` foward tag for starting of paragraph `element` , `</p>` this 
+        is the ending tag for paragraph `element` only difference is this slash. a fill paragraph element 
+        would look like `<p> some text here </p>` and `<p>` opening tag , `some text here` content wrapped 
+        between opening and closing tag , `</p>` closing tag.You can think of elements as containers for 
+        content.`html` has a vast list of predefined tags that could be used to generate almost all kinds 
+        of differen`elements`
+	2. `Why using appropriate and correct tag` : because this would help our website to rank better and 
+        we have to do semantic use of tags because different people interact with web in differet manner.
+	3. `Void elements`: tags which contain no content as they don't have any closing tag like `<br>` , `<img>`
+        previously programmers use `<br />` , `<img />` for void elements but no this is discouraged and even 
+        could throw error so use `<br>` , `<img>`.
+
+
+2. `HTML boilerplate`: To write any program there is basic structure (boilerplate) that is considered to be 
+    good practice to write before creating what you intended to do .
+
+	1. `Creating an HTML File`: `index.html` this file usually contains homepage of our website and web 
+        server searches for this file when any person lands on our website and if this file is not present 
+        in our website then this could create problem.
+	2. `Doctype`: Every page starts with a doctype declaration and this tells web browser to render our 
+        code in which version of html latest one is `<!DOCTYPE html>` open created file and add this line 
+        to top of the file.
+	3. `HTML element`: then we need to provide `html` element because this will be important even more when 
+        we will manipulate `html` with `javascript` as `<html lang="en">` `</html>`. here `lang` is the 
+        `html element attribute` this gives more information about `html element`.
+	4. `what is lang attribute`: this attribute help to access the content of the webpage properly and 
+        proper pronunciation even when user is using screen reader.
+	5. `head element`: in this we put `meta` and `title` or our webpage .
+	6. `meta`: information about our webpage to render and remember to not include any tag related to 
+        the main content of our webpage inside this head element write`<head>` inside `html` opening tag 
+        and then write `<meta charset="UTF-8">` `<title>My First Webpage</title>` these  2 lines exactly 
+        after opening tag of `head element` and then write `</head>` closing head element. writing encoding 
+        with `charset` is very important as it ensures that our webpage displays special characters of different 
+        languages correctly in browser.
+	7. `Title element`:this is the second element that must included in `head` tag of our document because 
+        this will be the title that will show our user in human readable form in tab of our website in browser. 
+        if we didn't wrote `title element` then this would show default name of our file `index.html` that won't 
+        be meaningful.
+	8. `Body element`: this is kind of final element to complete our `html boilerplate` this displays all 
+        information which  is intended to show our user images,links,text and so on . this will go inside 
+        `<html>` tag but after `</head>` `<body> </body>` .
+	9. `Viewing html files in the browser`:there are multiple ways to achieve this:
+		1. `first`: drag and drop in address bar of browser.
+		2. `second`: double click on file that will open to default browser of system.
+		3. `third`: `ctl+o` in browser and then select.
+		4. `fourth`: through terminal go to the directory which contains that file to 
+            open and then `brave index.html`(name of browser to open the file and then full 
+            name of the file to open in that browser).
+
+	10. `Vs code shortcut to generate boilerplate directly`: type `!` in empty file having `.html` with 
+        its name and then press `enter`.
+	11. `Root directory`: usually we create a folder and that we consider as `root directory` means that 
+        will contain all things regarding our website at one place in that particular directory.
+	12. `Note`: by convention we prefer to write all things in lowercase in tags expect `!DOCTYPE`.
+	13. `Note`: html page usually contains two parts only that are `head` and `body`.
+	14. `Note`: title inside the head is also even used if someone is searching thar particular page of 
+        your webiste on browser.
