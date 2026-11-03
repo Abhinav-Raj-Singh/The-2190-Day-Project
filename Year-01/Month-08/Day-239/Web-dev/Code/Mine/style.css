@@ -1,0 +1,46 @@
+/*Below css style is 1 */
+
+/* .main .list{
+    color:red
+}
+
+.subsection{
+    color: blue;
+} */
+
+/*Below css style is 2 */
+
+
+/* #subsection {
+    color: blue;
+}
+
+.main .list {
+    color: red;
+} */
+
+
+/*Below css style is 3 */
+/* rule 1 */
+#subsection {
+    background-color: yellow;
+    color: blue;
+}
+
+/* rule 2 */
+.main #subsection {
+    color: red;
+}
+
+/*Below css style is 4 */
+
+/* styles.css */
+
+#parent {
+  color: red;
+}
+
+.child {
+  color: blue;
+}
+
