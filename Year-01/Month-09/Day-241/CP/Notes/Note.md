@@ -5,6 +5,3 @@
 
 
 3. `While Vs for`: in cp when we don't know how many times our `loop` will run then in that case consider `while` loop otherwise `for` `loop`.
-
-
-4. 
