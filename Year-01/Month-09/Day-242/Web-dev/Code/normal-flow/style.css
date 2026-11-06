@@ -1,0 +1,12 @@
+body{
+    width: 500px;
+    margin: 0 auto ;
+    /* float: left; */
+}
+p{
+    border: 2px solid red;
+    background-color: pink;
+}
+span{
+    background-color: white;
+}
