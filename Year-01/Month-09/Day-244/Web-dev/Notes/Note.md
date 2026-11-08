@@ -31,6 +31,8 @@
 
 	4. `git branch`: this will show all `branches` your `repo` has and mark current working branch with a `asterisk` as prefix of that `branch's name`.
 
+	5. `publishing any branch on github`: type `git push -u origin branch-name`.
+
 2. `Git naming notes`:
 
 	1. `First word of title`: it is good practice to `capitalize` very first word of the `git commit message`.
