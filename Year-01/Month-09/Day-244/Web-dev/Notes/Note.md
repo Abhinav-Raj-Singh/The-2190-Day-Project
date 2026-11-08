@@ -33,6 +33,8 @@
 
 	5. `publishing any branch on github`: type `git push -u origin branch-name`.
 
+	6. `compare and pull`: after publish any `branch on github` you will get this option on `github` click on this and then write a title as `WIP: name of that brach` and then click on `Create pull request` and after finishing work in this `branch` then `merge` only before not.
+
 2. `Git naming notes`:
 
 	1. `First word of title`: it is good practice to `capitalize` very first word of the `git commit message`.
