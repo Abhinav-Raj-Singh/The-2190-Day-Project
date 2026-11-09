@@ -10,3 +10,4 @@
 
 1. `merge branch with main`: open that `branch ` then click on `merge status` and then `merge pull request` then enter `commit message` and `extended description` and then click on `confirm merge`.
 
+2. `sync just merged repo with repo on your local machine`: switch to `main branch` in `local repo` then type `git pull origin main`.
