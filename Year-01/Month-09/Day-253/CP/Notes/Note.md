@@ -1,0 +1,1 @@
+1. `when wanted to give specific values to a variable and looping using that`: `for(auto x: {a,b,c})` by this way first time `x` `a` , second time `x` is `b` and third time `x` is `c`.
